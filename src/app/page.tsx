@@ -4,7 +4,17 @@
 import Image from 'next/image';
 import { PropsWithChildren, useState } from 'react';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 import { NavBar } from './components/NavBar';
+
+type ProjectOverviewProps = {
+  client: string;
+  title: string;
+  period: string;
+  ctaLink: string;
+  subtitle: string;
+  tags: string[];
+};
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -94,9 +104,111 @@ export default function Home() {
           </svg>
         )}
       </button>
+      <ProjectOverview
+        client="@nebula-labs"
+        title="Nebula Planner"
+        tags={['Case Study', 'UX Research', 'UI Design', 'Website']}
+        subtitle="Designing a website tool to aid UT Dallas students in planning their four-year degree."
+        period="Jan 2023 - March 2023"
+        ctaLink="https://planner.utdnebula.com"
+      />
     </div>
   );
 }
+
+type PillTagProps = {
+  className?: string;
+};
+type PillLinkProps = PillTagProps & {
+  href?: string;
+};
+
+const PillTag = ({
+  children,
+  className = 'bg-hn-pink text-black',
+}: PropsWithChildren<PillTagProps>) => (
+  <p className={`rounded-full px-4 py-2 ${className}`}>{children}</p>
+);
+const PillLink = ({
+  children,
+  className = 'bg-white text-black',
+  href = '',
+}: PropsWithChildren<PillLinkProps>) => (
+  <Link href={href} className={`rounded-full px-4 py-2 ${className}`}>
+    {children}
+  </Link>
+);
+
+const ProjectOverview = ({
+  client,
+  period,
+  title,
+  subtitle,
+  tags,
+  ctaLink,
+  children,
+}: PropsWithChildren<ProjectOverviewProps>) => {
+  const tagColors = ['bg-hn-pink', 'bg-hn-blue', 'bg-hn-green', 'bg-hn-yellow'];
+  return (
+    <div className="flex flex-col gap-9 w-full px-10">
+      <div className="flex justify-between">
+        <p>{client}</p>
+        <p>{period}</p>
+      </div>
+      <div className="backdrop-blur-xl flex flex-col rounded-lg bg-gradient-to-r from-black/[15] to-black/[0.0375] border">
+        <div className="flex justify-between items-center p-4">
+          <div className="flex gap-4">
+            {tags.map((tag, index) => (
+              <PillTag
+                key={`pill-tag-${index}`}
+                className={`${tagColors[index % tagColors.length]} text-black`}
+              >
+                {tag}
+              </PillTag>
+            ))}
+          </div>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="10" stroke="white" strokeWidth="2" />
+          </svg>
+        </div>
+        <div className="flex justify-between items-center p-4">
+          <div className="flex flex-col gap-2 p-4">
+            <h3 className="font-bold text-4xl">{title}</h3>
+            <p>{subtitle}</p>
+            <PillLink
+              href={ctaLink}
+              className="bg-white text-black flex items-center gap-1"
+            >
+              Read More{' '}
+              <svg
+                width="11"
+                height="10"
+                viewBox="0 0 11 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M4.09638 8.29497C3.82302 8.02161 3.82302 7.57839 4.09638 7.30503L6.40141 5L4.09638 2.69497C3.82302 2.42161 3.82302 1.97839 4.09638 1.70503C4.36975 1.43166 4.81297 1.43166 5.08633 1.70503L7.88633 4.50502C8.1597 4.77839 8.1597 5.22161 7.88633 5.49497L5.08633 8.29497C4.81297 8.56834 4.36975 8.56834 4.09638 8.29497Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </PillLink>
+          </div>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 type PillSelectorProps = {
   options: string[];
   selected: number;
