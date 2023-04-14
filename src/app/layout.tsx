@@ -20,9 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${sans.className}`}>
       <body>
-        <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
