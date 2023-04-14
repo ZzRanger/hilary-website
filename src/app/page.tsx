@@ -2,7 +2,7 @@
 
 // TODO: refactor into separate components so we can use server components where possible
 import Image from 'next/image';
-import { PropsWithChildren, useState } from 'react';
+import { PropsWithChildren, ReactNode, useState } from 'react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { NavBar } from './components/NavBar';
@@ -112,9 +112,42 @@ export default function Home() {
         period="Jan 2023 - March 2023"
         ctaLink="https://planner.utdnebula.com"
       />
+      <Footer/>
     </div>
   );
 }
+
+const Footer = () => {
+  const links: { href: string; children: ReactNode }[] = [
+    {
+      href: '/about',
+      children: 'About',
+    },
+    {
+      href: '/resume',
+      children: 'Resume',
+    },
+    {
+      href: '/linkedin',
+      children: "LinkedIn",
+    },
+    {
+      href: '/mail',
+      children: "Email",
+    },
+  ];
+  return (
+  <footer className="flex flex-col items-center justify-center w-full gap-8 py-10 mb-16 border border-transparent border-t-white">
+    <div className="flex justify-center items-center p-0 gap-5 font-bold">
+        {links.map(({ href, children }) => (
+          <Link href={href} key={href}>
+            {children}
+          </Link>
+        ))}
+      </div>
+    <p>Copyright &copy; {new Date().getFullYear()} Hilary Nguyen. All rights reserved.</p>
+  </footer>
+)}
 
 type PillTagProps = {
   className?: string;
