@@ -55,7 +55,7 @@ export const NavBar = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl dark:bg-neutral-900 bg-white">
+    <div className="transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl dark:bg-neutral-900 bg-white">
       <h1 className="tracking-tight font-black">Hilary Nguyen</h1>
       <div className="rounded-full p-3 bg-hn-yellow">
         <Image src={profilePic} alt="" className="w-12 h-12" />

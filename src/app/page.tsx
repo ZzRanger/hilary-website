@@ -84,7 +84,7 @@ export default function Home() {
       />
       <button
         type="button"
-        className="dark:bg-[#374151] dark:text-white bg-[#f5f5f5] text-black rounded-full aspect-square p-3 self-end mr-5 shadow-lg"
+        className="transition-all dark:bg-[#374151] dark:text-white bg-[#f5f5f5] text-black rounded-full aspect-square p-3 self-end mr-5 shadow-lg hover:translate-y-1 hover:shadow-md"
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
         {/* TODO: Fix flash */}
@@ -217,7 +217,10 @@ const PillLink = ({
   className = 'bg-white text-black',
   href = '',
 }: PropsWithChildren<PillLinkProps>) => (
-  <Link href={href} className={`rounded-full px-4 py-2 ${className}`}>
+  <Link
+    href={href}
+    className={`w-max transition-all rounded-full px-4 py-2 hover:-translate-y-1 hover:drop-shadow-md border border-[#E5E7EB] ${className}`}
+  >
     {children}
   </Link>
 );
@@ -312,7 +315,7 @@ const PillSelector = ({
   selected,
   setSelected,
 }: PillSelectorProps) => (
-  <div className="flex flex-row items-center justify-center rounded-full dark:bg-[#6b7280] bg-[#F6F6F6] dark:text-white text-[#5F5F64] w-max overflow-clip px-1 font-semibold shadow-md">
+  <div className="transition-all flex flex-row items-center justify-center rounded-full dark:bg-[#6b7280] bg-[#F6F6F6] dark:text-white text-[#5F5F64] w-max overflow-clip px-1 font-semibold shadow-md">
     {/* TODO: Fix flash */}
     {options.map((option, index) => (
       <button
@@ -335,5 +338,9 @@ const SpecialText = ({
   children,
   className = '',
 }: PropsWithChildren<{ className?: string }>) => (
-  <span className={`font-ethereal font-medium underline decoration-4 underline-offset-8 ${className}`}>{children}</span>
+  <span
+    className={`font-ethereal font-medium underline decoration-4 underline-offset-8 ${className}`}
+  >
+    {children}
+  </span>
 );

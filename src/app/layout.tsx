@@ -30,7 +30,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${sans.variable} ${ethereal.variable}`}
     >
-      <body className="transition duration-500 dark:bg-[#171717] bg-[#ffffff]">
+      <body className="transition dark:bg-[#171717] bg-[#ffffff]">
         <Providers>{children}</Providers>
       </body>
     </html>
