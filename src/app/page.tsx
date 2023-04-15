@@ -1,6 +1,7 @@
 'use client';
 
 // TODO: refactor into separate components so we can use server components where possible
+// TODO: use the better figma font rendering thingies
 import Image from 'next/image';
 import { PropsWithChildren, ReactNode, useState } from 'react';
 import { useTheme } from 'next-themes';
@@ -24,10 +25,10 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center gap-6 bg-grid">
       <NavBar />
-      <div className="flex flex-col items-center text-6xl">
+      <div className="flex flex-col items-center text-5xl font-extrabold pt-40 pb-20">
         <h2>
           Hello, my name is{' '}
-          <SpecialText className="text-8xl">Hilary</SpecialText>!
+          <SpecialText className="text-7xl">Hilary</SpecialText>!
         </h2>
         <h2>
           I like to design <SpecialText>cool stuff</SpecialText>
@@ -83,9 +84,10 @@ export default function Home() {
       />
       <button
         type="button"
-        className="dark:bg-[#374151] dark:text-white bg-[#f5f5f5] text-black rounded-full aspect-square p-3"
+        className="dark:bg-[#374151] dark:text-white bg-[#f5f5f5] text-black rounded-full aspect-square p-3 self-end mr-5 shadow-lg"
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
+        {/* TODO: Fix flash */}
         {theme === 'light' ? (
           <svg
             width="50"
@@ -180,7 +182,7 @@ const Footer = () => {
   ];
   return (
     <footer className="flex flex-col items-center justify-center w-full gap-8 py-10 mb-16 border border-transparent border-t-white">
-      <div className="flex justify-center items-center p-0 gap-5 font-bold">
+      <div className="flex justify-center items-center p-0 gap-8 font-bold">
         {links.map(({ href, children }) => (
           <Link target="_blank" href={href} key={href}>
             {children}
@@ -311,12 +313,13 @@ const PillSelector = ({
   setSelected,
 }: PillSelectorProps) => (
   <div className="flex flex-row items-center justify-center rounded-full dark:bg-[#6b7280] bg-[#F6F6F6] dark:text-white text-[#5F5F64] w-max overflow-clip px-1 font-semibold shadow-md">
+    {/* TODO: Fix flash */}
     {options.map((option, index) => (
       <button
         type="button"
         key={`pill-option-${index}`}
         onClick={() => setSelected(index)}
-        className={`my-1 rounded-full px-4 py-1 ${
+        className={`my-1 rounded-full px-4 py-2 ${
           selected === index
             ? 'shadow-lg dark:bg-[#323943] bg-white dark:text-white text-black'
             : 'bg-inherit'
@@ -332,5 +335,5 @@ const SpecialText = ({
   children,
   className = '',
 }: PropsWithChildren<{ className?: string }>) => (
-  <span className={`font-ethereal underline ${className}`}>{children}</span>
+  <span className={`font-ethereal font-medium underline decoration-4 underline-offset-8 ${className}`}>{children}</span>
 );
