@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-grid {
+    background-size: 7.5%;
+}
+
+.light .bg-grid {
+    background-image: url('../../public/grid-light.svg');
+}
+
+.dark .bg-grid {
+    background-image: url('../../public/grid-dark.svg');
+}

@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import profilePic from '../../public/hn.png';
+import profilePic from '../../../public/hn.png';
 
 export const NavBar = () => {
   const links: { href: string; children: ReactNode }[] = [
@@ -53,7 +53,7 @@ export const NavBar = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-between mt-3 px-7 w-full py-5 text-2xl">
+    <div className="flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl dark:bg-neutral-900 bg-white">
       <h1 className="tracking-tight font-black">Hilary Nguyen</h1>
       <div className="rounded-full w-12 h-12 bg-hn-yellow">
         {/* TODO: Fix positioning */}
@@ -61,7 +61,7 @@ export const NavBar = () => {
       </div>
       <div className="flex justify-center items-center p-0 gap-5 text-lg">
         {links.map(({ href, children }) => (
-          <Link href={href} key={href}>
+          <Link target="_blank" href={href} key={href}>
             {children}
           </Link>
         ))}

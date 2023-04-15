@@ -2,7 +2,14 @@ import '@/styles/globals.css';
 
 // eslint-disable-next-line camelcase
 import { Plus_Jakarta_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import { Providers } from './providers';
+
+// TODO: Get correct font weight for ethereal
+const ethereal = localFont({
+  variable: '--font-ethereal',
+  src: '../../public/ethereal.otf',
+});
 
 // TODO: Add metadata
 export const metadata = {
@@ -21,9 +28,9 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sans.className} dark:bg-[#171717]`}
+      className={`${sans.variable} ${ethereal.variable}`}
     >
-      <body>
+      <body className="transition duration-500 dark:bg-[#171717] bg-[#ffffff]">
         <Providers>{children}</Providers>
       </body>
     </html>
