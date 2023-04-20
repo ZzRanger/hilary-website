@@ -1,26 +1,91 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import profilePic from '../../../public/hn.png';
 
-// TODO: fix flash
-
 export const NavBar = () => {
-  const links: { href: string; children: ReactNode }[] = [
+  const links: {
+    href: string;
+    children: ReactNode;
+    title: string;
+    icon: ReactNode;
+  }[] = [
     {
       href: '/about',
       children: 'About',
+      title: 'About',
+      icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.111 6.11111C13.111 7.82933 11.7181 9.22222 9.99986 9.22222C8.28165 9.22222 6.88875 7.82933 6.88875 6.11111C6.88875 4.39289 8.28165 3 9.99986 3C11.7181 3 13.111 4.39289 13.111 6.11111Z"
+            stroke="currentColor"
+            strokeWidth="1.336"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9.99986 11.5556C6.99298 11.5556 4.55542 13.9931 4.55542 17H15.4443C15.4443 13.9931 13.0067 11.5556 9.99986 11.5556Z"
+            stroke="currentColor"
+            strokeWidth="1.336"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
     },
     {
       href: '/play',
       children: 'Play',
+      title: 'Play',
+      icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.7777 8.44444V3L3.77771 11.5556H9.22216L9.22215 17L16.2222 8.44444L10.7777 8.44444Z"
+            stroke="currentColor"
+            strokeWidth="1.336"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
     },
     {
       href: '/resume',
       children: 'Resume',
+      title: 'Resume',
+      icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.66653 10H12.3332M7.66653 13.1111H12.3332M13.8888 17H6.11098C5.25187 17 4.55542 16.3036 4.55542 15.4444V4.55556C4.55542 3.69645 5.25187 3 6.11098 3H10.4555C10.6618 3 10.8596 3.08194 11.0054 3.22781L15.2165 7.43886C15.3624 7.58472 15.4443 7.78255 15.4443 7.98883V15.4444C15.4443 16.3036 14.7479 17 13.8888 17Z"
+            stroke="currentColor"
+            strokeWidth="1.336"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
     },
     {
       href: '/linkedin',
+      title: 'LinkedIn',
       children: (
         <svg
           width="30"
@@ -35,9 +100,34 @@ export const NavBar = () => {
           />
         </svg>
       ),
+      icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.66671 9.16659V13.3333M6.66671 6.66659V6.67492M10 13.3333V9.16659M3.33337 4.99992C3.33337 4.55789 3.50897 4.13397 3.82153 3.82141C4.13409 3.50885 4.55801 3.33325 5.00004 3.33325H15C15.4421 3.33325 15.866 3.50885 16.1786 3.82141C16.4911 4.13397 16.6667 4.55789 16.6667 4.99992V14.9999C16.6667 15.4419 16.4911 15.8659 16.1786 16.1784C15.866 16.491 15.4421 16.6666 15 16.6666H5.00004C4.55801 16.6666 4.13409 16.491 3.82153 16.1784C3.50897 15.8659 3.33337 15.4419 3.33337 14.9999V4.99992Z"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13.3333 13.3332V10.8332C13.3333 10.3911 13.1577 9.96722 12.8452 9.65466C12.5326 9.3421 12.1087 9.1665 11.6667 9.1665C11.2246 9.1665 10.8007 9.3421 10.4882 9.65466C10.1756 9.96722 10 10.3911 10 10.8332"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
     },
     {
       href: '/mail',
+      title: 'Mail',
       children: (
         <svg
           width="30"
@@ -52,21 +142,112 @@ export const NavBar = () => {
           />
         </svg>
       ),
+      icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 6.88875L9.13713 10.9802C9.65964 11.3285 10.3404 11.3285 10.8629 10.9802L17 6.88875M4.55556 15.4443H15.4444C16.3036 15.4443 17 14.7479 17 13.8888V6.11098C17 5.25187 16.3036 4.55542 15.4444 4.55542H4.55556C3.69645 4.55542 3 5.25187 3 6.11098V13.8888C3 14.7479 3.69645 15.4443 4.55556 15.4443Z"
+            stroke="currentColor"
+            strokeWidth="1.336"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ),
     },
   ];
+
+  const ref = useRef<HTMLDivElement>(null);
+  const [sticky, setSticky] = useState(true);
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (ref.current) {
+      const { height } = ref.current.getBoundingClientRect();
+      const isSticky = () => {
+        setSticky(!(window.scrollY >= height * 0.5));
+      };
+      window.addEventListener('scroll', isSticky);
+      return () => {
+        window.removeEventListener('scroll', isSticky);
+      };
+    }
+  }, [ref]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [sticky]);
   return (
-    <div className="transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl dark:bg-neutral-900 bg-white">
-      <h1 className="tracking-tight font-black">Hilary Nguyen</h1>
+    <div
+      ref={ref}
+      className={`transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl dark:bg-neutral-900 bg-white sticky top-0 ${
+        !sticky ? 'bg-transparent dark:bg-transparent' : ''
+      }`}
+    >
+      {sticky && <h1 className="tracking-tight font-black">Hilary Nguyen</h1>}
       <div className="rounded-full p-3 bg-hn-yellow">
         <Image src={profilePic} alt="" className="w-12 h-12" />
       </div>
-      <div className="flex justify-center items-center p-0 gap-5 text-lg">
-        {links.map(({ href, children }) => (
-          <Link target="_blank" href={href} key={href}>
-            {children}
-          </Link>
-        ))}
-      </div>
+      {sticky ? (
+        <div className="flex justify-center items-center p-0 gap-5 text-lg">
+          {links.map(({ href, children }) => (
+            <Link target="_blank" href={href} key={href}>
+              {children}
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <button
+          type="button"
+          className="relative"
+          onClick={() => setOpen((o) => !o)}
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M6 10C6 8.89543 6.89543 8 8 8H32C33.1046 8 34 8.89543 34 10C34 11.1046 33.1046 12 32 12H8C6.89543 12 6 11.1046 6 10Z"
+              fill="currentColor"
+            />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M6 20C6 18.8954 6.89543 18 8 18H32C33.1046 18 34 18.8954 34 20C34 21.1046 33.1046 22 32 22H8C6.89543 22 6 21.1046 6 20Z"
+              fill="currentColor"
+            />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M18 30C18 28.8954 18.8954 28 20 28H32C33.1046 28 34 28.8954 34 30C34 31.1046 33.1046 32 32 32H20C18.8954 32 18 31.1046 18 30Z"
+              fill="currentColor"
+            />
+          </svg>
+          <div
+            className={`flex flex-col absolute right-0 bg-white dark:bg-neutral-800 shadow-md rounded-md overflow-clip my-2 ${
+              open ? 'block' : 'hidden'
+            }`}
+          >
+            {links.map(({ href, title, icon }) => (
+              <Link target="_blank" href={href} key={href}>
+                <div className="flex items-center text-xs px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 font-medium">
+                  <span>{icon}</span>
+                  <span>{title}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </button>
+      )}
     </div>
   );
 };
