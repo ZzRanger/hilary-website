@@ -50,7 +50,7 @@ const projects: ReactNode[][] = [
       tags={['Brand Identity', 'Graphic Design', 'Illustrator', 'InDesign']}
       subtitle="Developing a branding for Nebula Labs, a student organization utilizing technology to assist students."
       period="Jan 2023 - March 2023"
-      ctaLink="#"
+      ctaLink="https://www.hilary-nguyen.com/nebula-labs"
     >
       <Image src={Nebula} alt="" width="350" className="left right-0" />
     </ProjectOverview>,
@@ -60,7 +60,7 @@ const projects: ReactNode[][] = [
       tags={['Branding', 'Printing', 'Packaging', 'Adobe Creative Suite']}
       subtitle="A for-profit magazine project inspired by Genshin Impact and the xianxia genre of Chinese literature."
       period="Dec 2021 - May 2023"
-      ctaLink="#"
+      ctaLink="https://www.hilary-nguyen.com/decension-1"
     >
       <Image src={Decension} alt="" width="375" className="left right-0" />
     </ProjectOverview>,
@@ -71,11 +71,12 @@ const projects: ReactNode[][] = [
       subtitle="Creating cyber-punk theme branding and social media for System DLC, a fantasy zine. "
       period="Dec 2021 - May 2023"
       ctaLink="#"
+      ctaMsg="Coming Soon"
     >
       <Image src={SystemDlc} alt="" width="375" />
     </ProjectOverview>,
     <PillLink
-      href="/playground"
+      href="https://www.hilary-nguyen.com/playground"
       className="bg-white text-black flex items-center gap-1"
     >
       Proceed to Playground{' '}
