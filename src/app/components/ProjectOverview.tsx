@@ -34,7 +34,7 @@ export const ProjectOverview = ({
       <div
         className={`backdrop-blur-xl flex flex-col rounded-lg overflow-clip border ${cardClasses} group dark:from-black/25 dark:to-black/15 dark:bg-gradient-to-tr`}
       >
-        <div className="flex justify-between items-center p-4">
+        <div className="flex justify-between items-center px-10 py-8">
           <div className="flex gap-4">
             {tags.map((tag, index) => (
               <PillTag
@@ -62,7 +62,7 @@ export const ProjectOverview = ({
           </svg>
         </div>
         <div className="flex justify-between items-center">
-          <div className="flex flex-col gap-8 p-4 dark:text-white text-black">
+          <div className="flex flex-col gap-8 p-10 dark:text-white text-black">
             <h3 className="font-bold text-4xl">{title}</h3>
             <p>{subtitle}</p>
             <PillLink

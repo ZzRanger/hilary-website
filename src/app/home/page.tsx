@@ -35,7 +35,7 @@ export default function Home() {
         />
       </div>
       <ThemeSwitcher />
-      <div className="flex flex-col gap-12 mb-36 items-center px-10">
+      <div className="flex flex-col gap-12 mb-36 items-center px-10 max-w-screen-lg">
         {projects[option].map((project, index) => (
           <Fragment key={`project-${index}`}>{project}</Fragment>
         ))}
