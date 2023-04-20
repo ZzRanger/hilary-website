@@ -6,6 +6,10 @@
     background-size: 7.5%;
 }
 
+.bg-blobs {
+    background-image: url("../../public/blobs.png")
+}
+
 .light .bg-grid {
     background-image: url('../../public/grid-light.svg');
 }

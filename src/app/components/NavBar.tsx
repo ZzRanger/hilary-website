@@ -126,7 +126,7 @@ export const NavBar = () => {
       ),
     },
     {
-      href: 'https://www.linkedin.com/in/hilary-nguyen/',
+      href: 'mailto:nguyenhilary0907@gmail.com',
       title: 'Mail',
       children: (
         <svg
@@ -184,11 +184,11 @@ export const NavBar = () => {
   return (
     <div
       ref={ref}
-      className={`transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl dark:bg-neutral-900 bg-white sticky top-0 ${
+      className={`transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl sticky top-0 ${
         !sticky
           ? 'bg-transparent dark:bg-transparent'
-          : 'border-b dark:border-b-white border-b-[#323943]'
-      }`}
+          : 'border-b dark:border-b-white border-b-[#323943] dark:bg-neutral-900 bg-white'
+      } z-10`}
     >
       {sticky && (
         <h1 className="tracking-tight font-black text-3xl">Hilary Nguyen</h1>
@@ -203,7 +203,7 @@ export const NavBar = () => {
       {sticky ? (
         <div className="flex justify-center items-center p-0 gap-5 text-lg">
           {links.map(({ href, children }) => (
-            <Link target="_blank" href={href} key={`nav-expanded-${href}`}>
+            <Link target="_blank" href={href} key={`-nav-${href}`}>
               {children}
             </Link>
           ))}
@@ -246,7 +246,7 @@ export const NavBar = () => {
             }`}
           >
             {links.map(({ href, title, icon }) => (
-              <Link target="_blank" href={href} key={`nav-hamburger-${href}`}>
+              <Link target="_blank" href={href} key={`-nav-hamburger-${href}`}>
                 <div className="flex items-center text-lg px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 text-neutral-700 dark:text-neutral-200 font-medium">
                   <span>{icon}</span>
                   <span>{title}</span>

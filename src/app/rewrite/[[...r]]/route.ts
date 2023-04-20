@@ -8,9 +8,10 @@ export async function GET(req: NextRequest) {
     'User-Agent': req.headers.get('User-Agent') || '',
   };
   const url = `${headers.origin}${req.nextUrl.pathname}`;
-  console.log(url);
   const res = await fetch(url, {
     headers,
+    body: req.body,
+    method: req.method,
   });
   return new Response(res.body, {
     status: res.status,

@@ -26,13 +26,13 @@ export const ProjectOverview = ({
 }: PropsWithChildren<ProjectOverviewProps>) => {
   const tagColors = ['bg-hn-pink', 'bg-hn-blue', 'bg-hn-green', 'bg-hn-yellow'];
   return (
-    <div className="flex flex-col gap-6 w-full px-10">
+    <div className="flex flex-col gap-6 w-full">
       <div className="flex justify-between text-lg">
         <p>{client}</p>
         <p>{period}</p>
       </div>
       <div
-        className={`backdrop-blur-xl flex flex-col rounded-lg border ${cardClasses} group`}
+        className={`backdrop-blur-xl flex flex-col rounded-lg border ${cardClasses} group dark:from-black/25 dark:to-black/15 dark:bg-gradient-to-tr`}
       >
         <div className="flex justify-between items-center p-4">
           <div className="flex gap-4">

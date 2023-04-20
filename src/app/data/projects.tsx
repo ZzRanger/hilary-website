@@ -1,6 +1,13 @@
 import type { ReactNode } from 'react';
+import Image from 'next/image';
 import { ProjectOverview } from '../components/ProjectOverview';
 import { PillLink } from '../components/PillLink';
+import Planner from '../../../public/planner.png';
+import Lezhin from '../../../public/lezhin.png';
+import TaipeiMetro from '../../../public/metro-app.png';
+import Decension from '../../../public/zine.png';
+import SystemDlc from '../../../public/SYSTE.png';
+import Nebula from '../../../public/NEBULA LAB.png';
 
 const projects: ReactNode[][] = [
   [
@@ -11,7 +18,9 @@ const projects: ReactNode[][] = [
       subtitle="Designing a website tool to aid UT Dallas students in planning their four-year degree."
       period="Jan 2023 - March 2023"
       ctaLink="https://www.hilary-nguyen.com/planner"
-    />,
+    >
+      <Image src={Planner} alt="" width="450" className="left right-0" />
+    </ProjectOverview>,
     <ProjectOverview
       client="@lezhin-webtoon"
       title="Lezhin Comic App Redesign"
@@ -19,7 +28,9 @@ const projects: ReactNode[][] = [
       subtitle="Redesign of Lezhin, a webtoon mobile app to enhance user reading experience."
       period="June 2022 - July 2022"
       ctaLink="https://www.hilary-nguyen.com/lezhin"
-    />,
+    >
+      <Image src={Lezhin} alt="" width="450" className="left right-0" />
+    </ProjectOverview>,
     <ProjectOverview
       client="@taipei-mrt"
       title="Taipei Metro App"
@@ -28,7 +39,9 @@ const projects: ReactNode[][] = [
       period="Dec 2023 - Jan 2023"
       ctaLink="#"
       ctaMsg="Coming Soon"
-    />,
+    >
+      <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
+    </ProjectOverview>,
   ],
   [
     <ProjectOverview
@@ -38,7 +51,9 @@ const projects: ReactNode[][] = [
       subtitle="Developing a branding for Nebula Labs, a student organization utilizing technology to assist students."
       period="Jan 2023 - March 2023"
       ctaLink="#"
-    />,
+    >
+      <Image src={Nebula} alt="" width="350" className="left right-0" />
+    </ProjectOverview>,
     <ProjectOverview
       client="@genshinxianxia"
       title="Descension"
@@ -46,7 +61,9 @@ const projects: ReactNode[][] = [
       subtitle="A for-profit magazine project inspired by Genshin Impact and the xianxia genre of Chinese literature."
       period="Dec 2021 - May 2023"
       ctaLink="#"
-    />,
+    >
+      <Image src={Decension} alt="" width="375" className="left right-0" />
+    </ProjectOverview>,
     <ProjectOverview
       client="@taipei-mrt"
       title="System DLC"
@@ -54,7 +71,9 @@ const projects: ReactNode[][] = [
       subtitle="Creating cyber-punk theme branding and social media for System DLC, a fantasy zine. "
       period="Dec 2021 - May 2023"
       ctaLink="#"
-    />,
+    >
+      <Image src={SystemDlc} alt="" width="375" />
+    </ProjectOverview>,
     <PillLink
       href="/playground"
       className="bg-white text-black flex items-center gap-1"
