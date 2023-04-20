@@ -10,7 +10,7 @@ const projects: ReactNode[][] = [
       tags={['Case Study', 'UX Research', 'UI Design', 'Website']}
       subtitle="Designing a website tool to aid UT Dallas students in planning their four-year degree."
       period="Jan 2023 - March 2023"
-      ctaLink="#"
+      ctaLink="https://www.hilary-nguyen.com/planner"
     />,
     <ProjectOverview
       client="@lezhin-webtoon"
@@ -18,15 +18,16 @@ const projects: ReactNode[][] = [
       tags={['Case Study', 'UX Research', 'UI Design', 'Mobile']}
       subtitle="Redesign of Lezhin, a webtoon mobile app to enhance user reading experience."
       period="June 2022 - July 2022"
-      ctaLink="#"
+      ctaLink="https://www.hilary-nguyen.com/lezhin"
     />,
     <ProjectOverview
       client="@taipei-mrt"
       title="Taipei Metro App"
       tags={['Case Study', 'UX Research', 'UI Design', 'Mobile']}
-      subtitle="Redesign of Lezhin, a webtoon mobile app to enhance user reading experience."
+      subtitle="Redesign of Taipei Metro App to provide users with an online reloading feature and a modern interface."
       period="Dec 2023 - Jan 2023"
       ctaLink="#"
+      ctaMsg="Coming Soon"
     />,
   ],
   [
@@ -55,7 +56,7 @@ const projects: ReactNode[][] = [
       ctaLink="#"
     />,
     <PillLink
-      href="/play"
+      href="/playground"
       className="bg-white text-black flex items-center gap-1"
     >
       Proceed to Playground{' '}

@@ -40,7 +40,7 @@ export const NavBar = () => {
       ),
     },
     {
-      href: '/play',
+      href: '/playground',
       children: 'Play',
       title: 'Play',
       icon: (
@@ -84,12 +84,12 @@ export const NavBar = () => {
       ),
     },
     {
-      href: '/linkedin',
+      href: 'https://www.linkedin.com/in/hilary-nguyen/',
       title: 'LinkedIn',
       children: (
         <svg
-          width="30"
-          height="30"
+          width="24"
+          height="24"
           viewBox="0 0 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -126,12 +126,12 @@ export const NavBar = () => {
       ),
     },
     {
-      href: '/mail',
+      href: 'https://www.linkedin.com/in/hilary-nguyen/',
       title: 'Mail',
       children: (
         <svg
-          width="30"
-          height="30"
+          width="24"
+          height="24"
           viewBox="0 0 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -185,17 +185,25 @@ export const NavBar = () => {
     <div
       ref={ref}
       className={`transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl dark:bg-neutral-900 bg-white sticky top-0 ${
-        !sticky ? 'bg-transparent dark:bg-transparent' : ''
+        !sticky
+          ? 'bg-transparent dark:bg-transparent'
+          : 'border-b dark:border-b-white border-b-[#323943]'
       }`}
     >
-      {sticky && <h1 className="tracking-tight font-black">Hilary Nguyen</h1>}
-      <div className="rounded-full p-3 bg-hn-yellow">
-        <Image src={profilePic} alt="" className="w-12 h-12" />
+      {sticky && (
+        <h1 className="tracking-tight font-black text-3xl">Hilary Nguyen</h1>
+      )}
+      <div
+        className={`rounded-full shadow-md ${
+          sticky ? 'relative translate-x-1/2' : ''
+        }`}
+      >
+        <Image src={profilePic} alt="" className="w-16 h-16" />
       </div>
       {sticky ? (
         <div className="flex justify-center items-center p-0 gap-5 text-lg">
           {links.map(({ href, children }) => (
-            <Link target="_blank" href={href} key={href}>
+            <Link target="_blank" href={href} key={`nav-expanded-${href}`}>
               {children}
             </Link>
           ))}
@@ -238,8 +246,8 @@ export const NavBar = () => {
             }`}
           >
             {links.map(({ href, title, icon }) => (
-              <Link target="_blank" href={href} key={href}>
-                <div className="flex items-center text-xs px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 font-medium">
+              <Link target="_blank" href={href} key={`nav-hamburger-${href}`}>
+                <div className="flex items-center text-lg px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 text-neutral-700 dark:text-neutral-200 font-medium">
                   <span>{icon}</span>
                   <span>{title}</span>
                 </div>
