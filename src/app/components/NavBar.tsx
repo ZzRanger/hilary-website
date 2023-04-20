@@ -62,7 +62,7 @@ export const NavBar = () => {
       ),
     },
     {
-      href: '/resume',
+      href: '/resume.pdf',
       children: 'Resume',
       title: 'Resume',
       icon: (

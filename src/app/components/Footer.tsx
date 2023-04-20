@@ -8,7 +8,7 @@ export const Footer = () => {
       children: 'About',
     },
     {
-      href: '/resume',
+      href: '/resume.pdf',
       children: 'Resume',
     },
     {
