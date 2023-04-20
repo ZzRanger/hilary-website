@@ -7,7 +7,7 @@ import { Fragment, PropsWithChildren, useState } from 'react';
 import { NavBar } from '../components/NavBar';
 import { PillSelector } from '../components/PillSelector';
 import projects from '../data/projects';
-import { ThemeSwitcher } from '../components/ThemeSwitcher';
+import ThemeSwitcher from '../components/ThemeSwitcher';
 import { Footer } from '../components/Footer';
 import Works from '../components/Works';
 

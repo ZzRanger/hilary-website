@@ -1,6 +1,8 @@
+"use client"
+
 import { useTheme } from 'next-themes';
 
-export const ThemeSwitcher = () => {
+const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
   return (
     <button
@@ -8,7 +10,7 @@ export const ThemeSwitcher = () => {
       className="transition-all dark:bg-[#374151] dark:text-white bg-[#f5f5f5] text-black rounded-full aspect-square p-3 self-end mr-5 shadow-lg hover:translate-y-1 hover:shadow-md fixed bottom-8 right-2 z-10"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
-      {theme === 'light' ? (
+      {theme === 'light' && (
         <svg
           width="50"
           height="50"
@@ -21,7 +23,8 @@ export const ThemeSwitcher = () => {
             fill="currentColor"
           />
         </svg>
-      ) : (
+      )}
+      {theme === 'dark' && (
         <svg
           width="50"
           height="50"
@@ -70,3 +73,5 @@ export const ThemeSwitcher = () => {
     </button>
   );
 };
+
+export default ThemeSwitcher;
