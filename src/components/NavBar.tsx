@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import profilePic from '../../../public/hn.png';
+import profilePic from '../../public/hn.png';
 
 export const NavBar = () => {
   const links: {

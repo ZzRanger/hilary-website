@@ -1,13 +1,14 @@
 import type { ReactNode } from 'react';
 import Image from 'next/image';
-import { ProjectOverview } from '../components/ProjectOverview';
+import { ProjectOverview } from '@/components/ProjectOverview';
+import Decension from '../../public/zine.png';
 import { PillLink } from '../components/PillLink';
-import Planner from '../../../public/planner.png';
-import Lezhin from '../../../public/lezhin.png';
-import TaipeiMetro from '../../../public/metro-app.png';
-import Decension from '../../../public/zine.png';
-import SystemDlc from '../../../public/SYSTE.png';
-import Nebula from '../../../public/NEBULA LAB.png';
+import Planner from '../../public/planner.png';
+import Lezhin from '../../public/lezhin.png';
+import TaipeiMetro from '../../public/metro-app.png';
+
+import SystemDlc from '../../public/SYSTE.png';
+import Nebula from '../../public/NEBULA LAB.png';
 
 const projects: ReactNode[][] = [
   [

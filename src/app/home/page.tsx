@@ -4,12 +4,13 @@
 // TODO: use the better figma font rendering thingies;
 import { Fragment, PropsWithChildren, useState } from 'react';
 
-import { NavBar } from '../components/NavBar';
-import { PillSelector } from '../components/PillSelector';
-import projects from '../data/projects';
-import ThemeSwitcher from '../components/ThemeSwitcher';
-import { Footer } from '../components/Footer';
-import Works from '../components/Works';
+import projects from '@/data/projects';
+import { NavBar } from '../../components/NavBar';
+import { PillSelector } from '../../components/PillSelector';
+
+import ThemeSwitcher from '../../components/ThemeSwitcher';
+import { Footer } from '../../components/Footer';
+import Works from '../../components/Works';
 
 export default function Home() {
   const options = ['UX/UI', 'Graphics'];
