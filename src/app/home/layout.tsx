@@ -24,5 +24,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="bg-grid">{children}</div>;
+  return (
+    <main className="transition dark:bg-[#171717] bg-[#ffffff]">
+      <div className="bg-grid">{children}</div>
+    </main>
+  );
 }
