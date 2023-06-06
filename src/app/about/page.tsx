@@ -9,6 +9,7 @@ import { NavBar } from '../../components/NavBar';
 import SilentHearts from '../../../public/silent_hearts.png';
 import Taiwan from '../../../public/taiwan.png';
 import Music from '../../../public/music.png';
+import Tokoyo from '../../../public/tokoyo.png';
 
 export default function Home() {
   return (
@@ -95,6 +96,82 @@ export default function Home() {
           </article>
         </section>
       </div>
+      <div>
+        <Image src={Tokoyo} alt="" />
+      </div>
+      <div className="grid gap-4 grid-cols-[1fr_2fr] w-full border-black border-2 p-16">
+        <div className="flex flex-col items-start bg-gray-100 rounded-3xl p-4 gap-6">
+          <div className="self-center text-[#BDBDBD] pb-4 text-xl">
+            Country Checklist
+          </div>
+
+          <label>
+            <input
+              className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
+              type="checkbox"
+            />
+            🇮🇹 Italy
+          </label>
+
+          <label>
+            <input
+              className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
+              type="checkbox"
+            />
+            🇹🇼 Taiwan
+          </label>
+          <label>
+            <input
+              className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
+              type="checkbox"
+            />
+            🇸🇬 Singapore
+          </label>
+
+          <label>
+            <input
+              className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
+              type="checkbox"
+            />
+            🇯🇵 Japan
+          </label>
+
+          <label>
+            <input
+              className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
+              type="checkbox"
+            />
+            🇨🇿 Czech Republic
+          </label>
+
+          <label>
+            <input
+              className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
+              type="checkbox"
+            />
+            🇩🇪 Germany
+          </label>
+        </div>
+
+        <div className="flex flex-col items-center bg-gray-100 rounded-3xl gap-12 p-4">
+          <div className="self-center text-[#BDBDBD] pb-4 text-xl">
+            Favorite Quote
+          </div>
+          <div className="text-3xl font-semibold pb-10 self-start px-6">
+            “You are mine, mine, I go shouting it to the afternoon's wind, and
+            the wind hauls on my widowed voice.”
+          </div>
+          <div className="text-3xl font-semibold self-start px-6">
+            — In My Sky At Twilight, Pablo Neruda
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
+
+const ArticleBackground: React.Component = ({
+  children,
+}: {
+  children: React.ReactElement;
+}) => <article className="bg-gray-100 rounded-3xl">{children}</article>;
