@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 .bg-grid {
-    background-size: 7.5%;
+  background-size: 7.5%;
 }
 
 .bg-blobs {
-    background-image: url("../../public/blobs.png");
-    background-size: 100%;
+  background-image: url('../../public/blobs.png');
+  background-size: 100%;
 }
 
 .light .bg-grid {
-    background-image: url('../../public/grid-light.svg');
+  background-image: url('../../public/grid-light.svg');
 }
 
 .dark .bg-grid {
-    background-image: url('../../public/grid-dark.svg');
+  background-image: url('../../public/grid-dark.svg');
 }

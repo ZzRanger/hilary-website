@@ -15,6 +15,9 @@ module.exports = {
         sans: ['var(--font-sans)'],
         ethereal: ['var(--font-ethereal)'],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
 };
