@@ -10,6 +10,8 @@
 import Image from 'next/image';
 
 import ImageSelector from '@/components/ImageSelector';
+import PlayIcon from '@/components/svg/PlayIcon';
+import SkipIcon from '@/components/svg/SkipIcon';
 import { NavBar } from '../../components/NavBar';
 
 import SilentHearts from '../../../public/silent_hearts.png';
@@ -128,6 +130,11 @@ const AppleMusic = () => (
     <Image src={Music} alt="" height="280" width="280" className="mt-40" />
     <div>UN Village</div>
     <div>Baekhyun — City Lights</div>
+    <div className="flex flex-row justify-around items-center w-40 border-2 border-[#BDBDBD] rounded-[200px]">
+      <SkipIcon />
+      <PlayIcon />
+      <SkipIcon className="rotate-180" />
+    </div>
   </ArticleBackground>
 );
 

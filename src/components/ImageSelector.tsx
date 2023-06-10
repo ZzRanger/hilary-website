@@ -69,7 +69,7 @@ function ImagePillSelector({
       className="relative flex flex-row justify-around items-center px-2"
     >
       <span
-        className={`absolute bg-white z-0 w-[35%] h-[80%] rounded-[300px] duration-500 ${marginMap[buttonState]} delay-75`}
+        className={`absolute bg-white z-0 w-[35%] h-[80%] rounded-[300px] duration-200 ${marginMap[buttonState]} delay-75`}
       />
       <MapIcon
         onClick={() => setButtonState(0)}
