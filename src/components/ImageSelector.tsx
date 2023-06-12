@@ -1,3 +1,5 @@
+'use client';
+
 import PhotoIcon from '@/components/svg/PhotoIcon';
 import HeartIcon from '@/components/svg/HeartIcon';
 import MapIcon from '@/components/svg/MapIcon';

@@ -5,19 +5,18 @@
  * https://github.com/vercel/next.js/discussions/30472
  */
 
-'use client';
-
 import Image from 'next/image';
 
 import ImageSelector from '@/components/ImageSelector';
-import PlayIcon from '@/components/svg/PlayIcon';
-import SkipIcon from '@/components/svg/SkipIcon';
+
+import ArticleBackground from '@/components/ArticleBackground';
+
+import SpotifyMusic from '@/components/SpotifyMusic';
+
+import Carousel from '@/components/Carousel';
 import { NavBar } from '../../components/NavBar';
 
 import SilentHearts from '../../../public/silent_hearts.png';
-
-import Music from '../../../public/music.png';
-import Tokoyo from '../../../public/tokoyo.png';
 
 export default function Home() {
   return (
@@ -30,11 +29,11 @@ export default function Home() {
         </section>
         <section className="flex flex-col gap-y-9">
           <ImageSelector />
-          <AppleMusic />
+          <SpotifyMusic />
         </section>
       </TwoColumnLayoutOne>
       <div>
-        <Image src={Tokoyo} alt="" />
+        <Carousel />
       </div>
       <div className="grid gap-4 grid-cols-[1fr_2fr] w-full border-black border-2 p-16">
         <CountryChecklist />
@@ -50,18 +49,6 @@ const TwoColumnLayoutOne = ({
   children: React.ReactElement | React.ReactElement[];
 }) => (
   <div className="grid grid-cols-[6fr_3fr] w-full p-16 gap-9">{children}</div>
-);
-
-const ArticleBackground = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactElement | React.ReactElement[];
-}) => (
-  <article className={`bg-gray-100 rounded-3xl ${className || ''}`}>
-    {children}
-  </article>
 );
 
 const AboutMe = () => (
@@ -121,19 +108,6 @@ const ReadingList = () => (
         up with me." <br /> "Lin Mu, you have to know, I will love you with all
         my heart."
       </div>
-    </div>
-  </ArticleBackground>
-);
-
-const AppleMusic = () => (
-  <ArticleBackground className="h-[728px] flex flex-col items-center">
-    <Image src={Music} alt="" height="280" width="280" className="mt-40" />
-    <div>UN Village</div>
-    <div>Baekhyun — City Lights</div>
-    <div className="flex flex-row justify-around items-center w-40 border-2 border-[#BDBDBD] rounded-[200px]">
-      <SkipIcon />
-      <PlayIcon />
-      <SkipIcon className="rotate-180" />
     </div>
   </ArticleBackground>
 );
