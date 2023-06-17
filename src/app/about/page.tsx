@@ -18,7 +18,7 @@ import { NavBar } from '../../components/NavBar';
 
 import SilentHearts from '../../../public/silent_hearts.png';
 
-export default function Home() {
+export default function About() {
   return (
     <main className="flex flex-col items-center gap-6 h-fit">
       <NavBar />
