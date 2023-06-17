@@ -15,7 +15,7 @@ export default function ImageSelector() {
   const [buttonState, setButtonState] = useState(0);
 
   return (
-    <div className="w-fit relative">
+    <div className="w-[420px] relative">
       <Image
         src={TaiwanPhoto}
         priority

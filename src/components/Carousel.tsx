@@ -13,7 +13,7 @@ export default function Carousel() {
 
   const indexArray = ['', '-translate-x-full', '-translate-x-[200%]'];
   return (
-    <div className="w-[90vw] relative rounded-md overflow-hidden">
+    <div className="w-[1214px] relative rounded-md overflow-hidden">
       {index !== 0 && (
         <ChevronIcon
           className="absolute top-[calc(50%-15px)] left-10 text-white rotate-180 z-20 cursor-pointer"

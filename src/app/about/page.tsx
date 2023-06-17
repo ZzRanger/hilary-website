@@ -20,24 +20,26 @@ import SilentHearts from '../../../public/silent_hearts.png';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center gap-6 w-screen">
+    <main className="flex flex-col items-center gap-6 h-fit">
       <NavBar />
-      <TwoColumnLayoutOne>
-        <section className="flex flex-col gap-y-9">
-          <AboutMe />
-          <ReadingList />
-        </section>
-        <section className="flex flex-col gap-y-9">
-          <ImageSelector />
-          <SpotifyMusic />
-        </section>
-      </TwoColumnLayoutOne>
-      <div>
-        <Carousel />
-      </div>
-      <div className="grid gap-4 grid-cols-[1fr_2fr] w-full border-black border-2 p-16">
-        <CountryChecklist />
-        <FavoriteQuote />
+      <div className="w-[1214px]">
+        <TwoColumnLayoutOne>
+          <section className="flex flex-col gap-y-9">
+            <AboutMe />
+            <ReadingList />
+          </section>
+          <section className="flex flex-col gap-y-9">
+            <ImageSelector />
+            <SpotifyMusic />
+          </section>
+        </TwoColumnLayoutOne>
+        <div>
+          <Carousel />
+        </div>
+        <div className="grid gap-9 grid-cols-[1fr_2fr] w-full py-16   border-box ">
+          <CountryChecklist />
+          <FavoriteQuote />
+        </div>
       </div>
     </main>
   );
@@ -48,11 +50,11 @@ const TwoColumnLayoutOne = ({
 }: {
   children: React.ReactElement | React.ReactElement[];
 }) => (
-  <div className="grid grid-cols-[6fr_3fr] w-full p-16 gap-9">{children}</div>
+  <div className="grid grid-cols-[6fr_3fr] w-full py-16 gap-9">{children}</div>
 );
 
 const AboutMe = () => (
-  <ArticleBackground className="flex flex-col py-10 pl-5 pr-[84px] justify-start">
+  <ArticleBackground className="flex flex-col py-6 pl-5 pr-[84px] justify-start h-[732px]">
     <div className="text-4xl font-extrabold pb-5">A little bit about me</div>
     <div className="mb-5">
       <div className="text-xl text-gray-400 ">WHO I AM</div>
@@ -88,16 +90,15 @@ const AboutMe = () => (
 );
 
 const ReadingList = () => (
-  <ArticleBackground className="flex flex-row px-10 py-6 gap-11">
-    <div className="h-full w-fit">
-      <Image
-        src={SilentHearts}
-        alt=""
-        height="220"
-        width="305"
-        className="left right-0"
-      />
-    </div>
+  <ArticleBackground className="flex flex-row h-[376px] box-border items-center gap-x-10">
+    <Image
+      src={SilentHearts}
+      alt=""
+      height="305"
+      width="220"
+      className="left-0 "
+    />
+
     <div className="flex flex-col justify-start items-start">
       <div className="text-xl text-gray-400 pb-16">Reading List</div>
       <div className="text-xl">Silent Hearts</div>
@@ -113,70 +114,48 @@ const ReadingList = () => (
 );
 
 const CountryChecklist = () => (
-  <ArticleBackground className="flex flex-col items-start p-4 gap-6">
+  <ArticleBackground className="flex flex-col items-start p-4 gap-6 h-[367px]">
     <div className="self-center text-[#BDBDBD] pb-4 text-xl">
       Country Checklist
     </div>
 
-    <label>
-      <input
-        className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
-        type="checkbox"
-      />
-      🇮🇹 Italy
-    </label>
+    <CountryEntry name="🇮🇹  Italy" />
+    <CountryEntry name="🇹🇼  Taiwan" />
 
-    <label>
-      <input
-        className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
-        type="checkbox"
-      />
-      🇹🇼 Taiwan
-    </label>
-    <label>
-      <input
-        className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
-        type="checkbox"
-      />
-      🇸🇬 Singapore
-    </label>
+    <CountryEntry name="🇸🇬  Singapore" />
+    <CountryEntry name="🇯🇵  Japan" />
+    <CountryEntry name="🇨🇿  Czech Republic" />
 
-    <label>
-      <input
-        className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
-        type="checkbox"
-      />
-      🇯🇵 Japan
-    </label>
-
-    <label>
-      <input
-        className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
-        type="checkbox"
-      />
-      🇨🇿 Czech Republic
-    </label>
-
-    <label>
-      <input
-        className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F]"
-        type="checkbox"
-      />
-      🇩🇪 Germany
-    </label>
+    <CountryEntry name=" 🇩🇪  Germany" className="mb-6" />
   </ArticleBackground>
 );
 
+const CountryEntry = ({
+  name,
+  className,
+}: {
+  name: string;
+  className?: string;
+}) => (
+  <label className={className}>
+    <input
+      className="border-1 border-[#BDBDBD] rounded-full focus:ring-0 focus:ring-offset-0 text-[#FAD67F] mr-2"
+      type="checkbox"
+    />
+    {name}
+  </label>
+);
+
 const FavoriteQuote = () => (
-  <ArticleBackground className="flex flex-col items-center gap-12 p-4">
-    <div className="self-center text-[#BDBDBD] pb-4 text-xl">
+  <ArticleBackground className="flex flex-col items-center h-[367px]">
+    <div className="self-center text-[#BDBDBD] pb-7 text-xl leading-[46px] pt-1">
       Favorite Quote
     </div>
-    <div className="text-3xl font-semibold pb-10 self-start px-6">
+    <div className="text-3xl font-semibold  self-start px-6 leading-[46px] mb-8">
       “You are mine, mine, I go shouting it to the afternoon's wind, and the
       wind hauls on my widowed voice.”
     </div>
-    <div className="text-3xl font-semibold self-start px-6">
+    <div className="text-3xl font-semibold self-start px-6 leading-[46px]">
       — In My Sky At Twilight, Pablo Neruda
     </div>
   </ArticleBackground>

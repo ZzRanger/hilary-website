@@ -50,7 +50,7 @@ const SpotifyMusic = () => {
   }, [trackIndex]);
 
   return (
-    <ArticleBackground className="h-[728px] flex flex-col items-center gap-y-14 relative overflow-hidden z-10">
+    <ArticleBackground className="h-[720px] flex flex-col items-center gap-y-14 relative overflow-hidden z-10">
       <div
         className={`bg-black absolute h-10 w-10 top-12 right-12 border-2 duration-500 -z-10 ${
           mouseOver || playing ? 'scale-[50]' : ''

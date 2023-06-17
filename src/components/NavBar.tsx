@@ -190,7 +190,7 @@ export const NavBar = () => {
         !sticky
           ? 'bg-transparent dark:bg-transparent'
           : 'border-b dark:border-b-white border-b-[#323943] dark:bg-neutral-900 bg-white'
-      } z-10`}
+      } z-50`}
     >
       {sticky && (
         <h1 className="tracking-tight font-black text-3xl">Hilary Nguyen</h1>
