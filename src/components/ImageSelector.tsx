@@ -37,7 +37,7 @@ export default function ImageSelector() {
         className={`${buttonState !== 2 ? 'hidden' : ''}`}
       />
 
-      <PhotoIcon className="w-[20%] h-fit absolute top-[5%] right-[5%] hover:shadow-2xl duration-200" />
+      <PhotoIcon className="absolute top-8 right-10 hover:shadow-2xl duration-200" />
       <ImagePillSelector
         buttonState={buttonState}
         setButtonState={setButtonState}

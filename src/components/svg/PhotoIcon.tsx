@@ -2,13 +2,15 @@ import { FC, SVGProps } from 'react';
 
 const PhotoIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    viewBox="0 0 64 58"
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
-    <rect width="64" height="57.863" fill="url(#pattern0)" />
+    <rect width="64" height="64" fill="url(#pattern0)" />
     <defs>
       <pattern
         id="pattern0"
@@ -16,10 +18,7 @@ const PhotoIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
         width="1"
         height="1"
       >
-        <use
-          xlinkHref="#image0_60_242"
-          transform="matrix(0.00333333 0 0 0.00368687 0 -0.0530303)"
-        />
+        <use xlinkHref="#image0_60_242" transform="scale(0.00333333)" />
       </pattern>
       <image
         id="image0_60_242"

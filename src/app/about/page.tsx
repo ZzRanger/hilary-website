@@ -36,7 +36,7 @@ export default function About() {
         <div>
           <Carousel />
         </div>
-        <div className="grid gap-9 grid-cols-[1fr_2fr] w-full py-16   border-box ">
+        <div className="grid gap-9 grid-cols-[1fr_2fr] w-full py-16 border-box ">
           <CountryChecklist />
           <FavoriteQuote />
         </div>
