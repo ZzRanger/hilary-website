@@ -1,11 +1,14 @@
+import H2 from '@/components/typography/H2';
+import Text, { Weight } from '@/components/typography/Text';
+
 export default function Empathy() {
   return (
     <section className="flex flex-col items-center text-center">
-      <h1 className="text-[50px] font-bold">👥 Empathy Map</h1>
-      <p className="leading-[50px] text-[30px] font-medium text-left w-[88vw]">
+      <H2>👥 Empathy Map</H2>
+      <Text weight={Weight.medium} className="text-left w-[88vw]">
         We created an empathy map to prioritize key problems and behaviors to
         determine the next design step
-      </p>
+      </Text>
       <article className="grid grid-cols-[2fr_3fr_3fr_3fr] gap-8 mb-28">
         <EmpathySquareLabel label="Says" />
         <EmpathySquare className="bg-[#2916C5]">
@@ -56,23 +59,27 @@ export default function Empathy() {
       <article className="h-screen rounded-[30px] bg-[#F5F5F5] w-[90vw] flex justify-center items-center">
         <div className="text-left flex flex-col  w-[80vw]">
           <ol className="list-decimal gap-y-10 space-y-10">
-            <h2 className="text-[50px] font-bold ml-[-40px]">
-              💡Interview Insight
-            </h2>
-            <li className="text-[30px] font-medium text-[#6E6E73]">
-              <span className="font-bold text-black">Lack of Automation: </span>{' '}
-              There's no automation process in the planning. Both students and
-              advising staff use Excel sheet and the university's course catalog
-              to transfer and collect course information
+            <H2 className="ml-[-40px]">💡Interview Insight</H2>
+            <li>
+              <Text weight={Weight.medium} className="text-[#6E6E73]">
+                <span className="font-bold text-black">
+                  Lack of Automation:{' '}
+                </span>
+                There's no automation process in the planning. Both students and
+                advising staff use Excel sheet and the university's course
+                catalog to transfer and collect course information
+              </Text>
             </li>
-            <li className="text-[30px] font-medium text-[#6E6E73]">
-              <span className="font-bold text-black">
-                Students don't understand their degree requirements:
-              </span>
-              Students' confusion caused by varying college systems and degree
-              requirements leads to advisors spending more time answering
-              questions, resulting in delayed responses as they try to catch up
-              with degree validation work.
+            <li>
+              <Text weight={Weight.medium} className=" text-[#6E6E73]">
+                <span className="font-bold text-black">
+                  Students don't understand their degree requirements:
+                </span>
+                Students' confusion caused by varying college systems and degree
+                requirements leads to advisors spending more time answering
+                questions, resulting in delayed responses as they try to catch
+                up with degree validation work.
+              </Text>
             </li>
           </ol>
         </div>

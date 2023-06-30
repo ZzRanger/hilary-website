@@ -1,15 +1,15 @@
+import Text from '@/components/typography/Text';
+
 export default function PlannerOverview() {
   return (
     <section className="flex flex-col text-center items-center h-[110vh] w-screen">
-      <h1 className="text-4xl font-extrabold leading-[44px] mb-[30px]">
-        Overview
-      </h1>
-      <p className="w-[845px] text-[30px] mb-[90px]">
-        “ Nebula Planner is a software created to help students plan their
+      <h1 className="text-4xl font-extrabold mb-[30px] text-black">Overview</h1>
+      <Text className="w-[845px] mb-[90px]">
+        “Nebula Planner is a software created to help students plan their
         college experience at a high level. Planner was born out of a need to
         replace Google Docs and hastily-crafted spreadsheets when planning
         degree plan.”{' '}
-      </p>
+      </Text>
       <article className="w-[900px] flex flex-row justify-between text-left mb-[90px]">
         <OverviewDescription
           title="Role"

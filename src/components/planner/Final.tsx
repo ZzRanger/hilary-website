@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import H2 from '@/components/typography/H2';
+import Text, { Weight } from '@/components/typography/Text';
 import One from '../../../public/planner/final/one.png';
 import Three from '../../../public/planner/final/three.png';
 import Five from '../../../public/planner/final/five.png';
@@ -12,23 +14,23 @@ import Eight from '../../../public/planner/final/eight.png';
 export default function Final() {
   return (
     <section className="my-[20vh] flex flex-col items-center space-y-[100px]">
-      <div className="text-[50px] font-bold">Final Prototype </div>
-      <div className="text-[30px] w-[90%]">
+      <H2>Final Prototype </H2>
+      <Text className="w-[90%]">
         The launch of Planner was highly successful, attracting over 100 student
         users to our software and generating significant interest from other
         students who wish to participate in our club. <br /> <br /> Our
         usability test after the revamped design shows that the majority of
         users were able to perform the tasks more effectively, up to 90%.
-      </div>
+      </Text>
       <button
-        className="w-fit px-[50px] py-[20px] rounded-[50px] border-4 border-black h-[90px] text-[30px] font-bold"
+        className="w-fit px-[50px] py-[20px] rounded-[50px] border-4 border-black h-[90px]"
         type="button"
       >
         <Link
           href="https://docs.google.com/document/d/1bjMusoKa8bbX2PaH81dSBQn4X0nfozgehsEzNn90Pds/edit"
           target="_blank"
         >
-          Click Here To View Final Product
+          <Text weight={Weight.bold}>Click Here To View Final Product</Text>
         </Link>
       </button>
       <article className="w-[90vw] grid grid-cols-2">

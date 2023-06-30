@@ -1,77 +1,80 @@
+import H2 from '@/components/typography/H2';
+import Text, { Weight } from '@/components/typography/Text';
+
 export default function Pain() {
   return (
     <section className="w-screen bg-[#F5F5F5] py-[120px] flex flex-col items-center gap-y-[70px]">
-      <div className="text-[30px] font-bold">Pain Points</div>
-      <div className="text-[50px] font-bold w-[70%] text-center">
+      <Text weight={Weight.bold}>Pain Points</Text>
+      <H2 className=" w-[70%] text-center">
         We identified various pain points with the old prototype
-      </div>
+      </H2>
       <article className="flex flex-row flex-wrap w-[82vw] gap-[2vw]">
         <PainCard className="bg-[#312E81]">
-          <div className="flex flex-col items-center text-center text-[30px]">
-            <div className=" font-bold">No Onboarding</div>
-            <div>
+          <div className="flex flex-col items-center text-center">
+            <Text weight={Weight.bold}>No Onboarding</Text>
+            <Text>
               Testing showed students were confused about next steps due to the
               website setup.
-            </div>
+            </Text>
           </div>
         </PainCard>
         <PainCard className="bg-[#312E81]">
-          <div className="flex flex-col items-center text-center text-[30px]">
-            <div className=" font-bold">Better UX Copywriting</div>
-            <div>
+          <div className="flex flex-col items-center text-center">
+            <Text weight={Weight.bold}>Better UX Copywriting</Text>
+            <Text>
               Interviews revealed confusion about certain function terms like
               "Template Plan."
-            </div>
+            </Text>
           </div>
         </PainCard>
         <PainCard className="bg-[#312E81]">
-          <div className="flex flex-col items-center text-center text-[30px]">
-            <div className=" font-bold">Transfer Credits</div>
-            <div>
+          <div className="flex flex-col items-center text-center">
+            <Text weight={Weight.bold}>Transfer Credits</Text>
+            <Text>
               Some students wanted a feature to view and understand their
               transfer credits.
-            </div>
+            </Text>
           </div>
         </PainCard>
         <PainCard className="bg-[#3730A3]">
-          <div className="flex flex-col items-center text-center text-[30px]">
-            <div className=" font-bold">Lack of Course Progress</div>
-            <div>
+          <div className="flex flex-col items-center text-center">
+            <Text weight={Weight.bold}>Lack of Course Progress</Text>
+            <Text>
               Students wanted a visual way to track major requirement progress.
-            </div>
+            </Text>
           </div>
         </PainCard>
         <PainCard className="bg-[#4338CA]">
-          <div className="flex flex-col items-center text-center text-[30px]">
-            <div className=" font-bold">Give Customization Option</div>
-            <div>
+          <div className="flex flex-col items-center text-center">
+            <Text weight={Weight.bold}>Give Customization Option</Text>
+            <Text>
               Students wanted more customization, like color-coding
               semesters/courses and editing semester durations.
-            </div>
+            </Text>
           </div>
         </PainCard>
         <PainCard className="bg-[#4F46E5]">
-          <div className="flex flex-col items-center text-center text-[30px]">
-            <div className=" font-bold">Better Plan Layout</div>
-            <div>The current course layout is cluttered and inefficient</div>
+          <div className="flex flex-col items-center text-center">
+            <Text weight={Weight.bold}>Better Plan Layout</Text>
+            <Text>The current course layout is cluttered and inefficient</Text>
           </div>
         </PainCard>
         <PainCard className="bg-[#312E81]">
-          <div className="flex flex-col items-center text-center text-[30px]">
-            <div className=" font-bold">No Onboarding</div>
-            <div>
+          <div className="flex flex-col items-center text-center">
+            <Text weight={Weight.bold}>No Onboarding</Text>
+            <Text>
               Testing showed students were confused about next steps due to the
               website setup.
-            </div>
+            </Text>
           </div>
         </PainCard>
         <PainCard className="bg-[#818CF8]">
-          <div className="flex flex-col items-center text-center text-[30px]">
-            <div className=" font-bold">No Onboarding</div>
-            <div>
+          <div className="flex flex-col items-center text-center">
+            <Text weight={Weight.bold}>No Onboarding</Text>
+            <Text>
               Testing showed students were confused about next steps due to the
               website setup.
-            </div>
+            </Text>
           </div>
         </PainCard>
       </article>

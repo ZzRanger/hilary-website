@@ -1,26 +1,33 @@
+'use client';
+
 import Image, { StaticImageData } from 'next/image';
+import H2 from '@/components/typography/H2';
+
+import Line from '@/components/planner/Line';
+import Text, { Weight } from '@/components/typography/Text';
 import Person1 from '../../../public/planner/person1.png';
 import Person2 from '../../../public/planner/person2.png';
 import Person3 from '../../../public/planner/person3.png';
 
 export default function Problem() {
   return (
-    <section className="h-[210vh] bg-black flex flex-col text-white items-center text-center pt-[120px]">
-      <h3 className="text-[30px] font-bold leading-[72px] mb-[40px]">
+    <section className="py-[120px] bg-black flex flex-col text-white items-center text-center ">
+      <Text weight={Weight.semibold} className="mb-[40px]">
         The Problem
-      </h3>
-      <h1 className="text-[50px] font-semibold leading-[72px] w-[1100px] mb-[72px]">
+      </Text>
+      <H2 className="w-[1100px] mb-[72px]">
         UT Dallas enrollment surge creates demand for degree planning resources
-      </h1>
-      <p className="w-[1100px] mb-[40px] font-medium text-[30px] leading-[44px]">
+      </H2>
+      <Line />
+      {/* <p className="w-[1100px] mb-[40px] font-medium text-[30px] leading-[44px]">
         The University of Texas at Dallas (UTD) 's enrollment has grown rapidly
         with over 29,000 students, including 4,560 new freshmen in Fall 2021.
       </p>
       <p className="w-[1100px] font-bold text-[30px] leading-[44px] mb-40">
         This growth leads to increasing demand for resources to help students
         unfamiliar with the degree planning process.
-      </p>
-      <div className="flex flex-row w-[90vw] justify-around">
+      </p> */}
+      <div className="flex flex-row w-[90vw] justify-around mt-[20vh]">
         <ProblemTile
           image={Person1}
           title="Complex Degree Planning"
@@ -56,7 +63,9 @@ const ProblemTile = ({
       alt="image"
       className=" h-32 w-32 top-[-64px] absolute"
     />
-    <h3 className="text-[30px] font-bold leading-[44px]">{title}</h3>
+    <Text weight={Weight.bold} className=" leading-[44px]">
+      {title}
+    </Text>
     <p className="text-xl">{body}</p>
   </article>
 );

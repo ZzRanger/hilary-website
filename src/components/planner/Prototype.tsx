@@ -1,16 +1,20 @@
+import H2 from '@/components/typography/H2';
+import Text, { Weight } from '@/components/typography/Text';
 import Link from 'next/link';
 
 export function Prototype() {
   return (
     <section className="flex flex-col items-center space-y-[100px] my-[10vh]">
       <div>
-        <div className="text-[30px] font-bold mb-[44px]">Prototypes</div>
-        <div className="text-[50px] font-bold">Usability Testing Prototype</div>
+        <Text weight={Weight.bold} className="mb-[44px]">
+          Prototypes
+        </Text>
+        <H2>Usability Testing Prototype</H2>
       </div>
-      <div className="text-[30px]">
+      <Text>
         After testing with users and getting their feedback, a few details were
         changed on the final prototype:
-      </div>
+      </Text>
       <iframe
         title="figma"
         style={{
@@ -22,34 +26,47 @@ export function Prototype() {
         allowFullScreen
       />
       <article className="bg-[#F5F5F5] w-[90vw] flex flex-col items-center justify-center py-[82px] rounded-[30px]">
-        <ol className="list-decimal text-[30px] font-medium">
+        <ol className="list-decimal">
           <li>
-            We added full titles of course names on each individual course
+            <Text weight={Weight.medium}>
+              We added full titles of course names on each individual course
+            </Text>
           </li>
           <li>
-            Sidebars were moved to the right because of screen size limit
-            ability
+            <Text weight={Weight.medium}>
+              Sidebars were moved to the right because of screen size limit
+              ability
+            </Text>
           </li>
           <li>
-            Remove the Import option on Individual Plan (because no one was
-            using it)
+            <Text weight={Weight.medium}>
+              Remove the Import option on Individual Plan (because no one was
+              using it)
+            </Text>
           </li>
-          <li>Give users the ability to override their plan pre-requisites</li>
           <li>
-            Added in the ability for users to see courses’ information from
-            UTD’s Course Catalog
+            {' '}
+            <Text weight={Weight.medium}>
+              Give users the ability to override their plan pre-requisites
+            </Text>
+          </li>
+          <li>
+            <Text weight={Weight.medium}>
+              Added in the ability for users to see courses’ information from
+              UTD’s Course Catalog
+            </Text>
           </li>
         </ol>
       </article>
       <button
-        className="w-fit px-[50px] py-[20px] rounded-[50px] border-4 border-black h-[90px] text-[30px] font-bold"
+        className="w-fit px-[50px] py-[20px] rounded-[50px] border-4 border-black h-[90px]"
         type="button"
       >
         <Link
           href="https://docs.google.com/document/d/1bjMusoKa8bbX2PaH81dSBQn4X0nfozgehsEzNn90Pds/edit"
           target="_blank"
         >
-          Click Here To View Revisions
+          <Text weight={Weight.bold}>Click Here To View Revisions</Text>
         </Link>
       </button>
       <iframe
