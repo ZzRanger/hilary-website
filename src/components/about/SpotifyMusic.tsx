@@ -2,16 +2,16 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import PlayIcon from './svg/PlayIcon';
-import SkipIcon from './svg/SkipIcon';
+
+import UNVillageIcon from '@public/un-village.png';
+import BeenThroughIcon from '@public/been-through.png';
+import MysteryIcon from '@public/mystery.png';
+import SpotifyIcon from '@public/spotify.png';
+import PlayIcon from '../svg/PlayIcon';
+import SkipIcon from '../svg/SkipIcon';
 
 import ArticleBackground from './ArticleBackground';
-import PauseIcon from './svg/PauseIcon';
-import UNVillageIcon from '../../public/un-village.png';
-import BeenThroughIcon from '../../public/been-through.png';
-import MysteryIcon from '../../public/mystery.png';
-
-import SpotifyIcon from '../../public/spotify.png';
+import PauseIcon from '../svg/PauseIcon';
 
 const tracks = [
   {

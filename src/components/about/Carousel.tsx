@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Tokyo from '../../public/tokyo.png';
-import Japan from '../../public/japan.png';
-import Singapore from '../../public/singapore.png';
-import ChevronIcon from './svg/ChevronIcon';
-import EllipseIcon from './svg/EllipseIcon';
+import Tokyo from '@public/tokyo.png';
+import Japan from '@public/japan.png';
+import Singapore from '@public/singapore.png';
+import ChevronIcon from '../svg/ChevronIcon';
+import EllipseIcon from '../svg/EllipseIcon';
 
 export default function Carousel() {
   const [index, setIndex] = useState(0);

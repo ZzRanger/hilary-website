@@ -7,13 +7,13 @@
 
 import Image from 'next/image';
 
-import ImageSelector from '@/components/ImageSelector';
+import ImageSelector from '@/components/about/ImageSelector';
 
-import ArticleBackground from '@/components/ArticleBackground';
+import ArticleBackground from '@/components/about/ArticleBackground';
 
-import SpotifyMusic from '@/components/SpotifyMusic';
+import SpotifyMusic from '@/components/about/SpotifyMusic';
 
-import Carousel from '@/components/Carousel';
+import Carousel from '@/components/about/Carousel';
 import { NavBar } from '../../components/NavBar';
 
 import SilentHearts from '../../../public/silent_hearts.png';

@@ -7,9 +7,9 @@ import TequilaIcon from '@/components/svg/TequilaIcon';
 
 import Image from 'next/image';
 import { useState } from 'react';
-import TaiwanPhoto from '../../public/taiwan.png';
-import HeartPhoto from '../../public/heartphoto.png';
-import TequilaPhoto from '../../public/tequilaphoto.png';
+import TaiwanPhoto from '@public/taiwan.png';
+import HeartPhoto from '@public/heartphoto.png';
+import TequilaPhoto from '@public/tequilaphoto.png';
 
 export default function ImageSelector() {
   const [buttonState, setButtonState] = useState(0);
