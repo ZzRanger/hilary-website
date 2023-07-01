@@ -1,21 +1,21 @@
-import Text from '@/components/typography/Text';
+import Text, { Weight } from '@/components/typography/Text';
 
 export default function PlannerOverview() {
   return (
-    <section className="flex flex-col text-center items-center h-[110vh] w-screen">
+    <section className="flex flex-col text-center items-center w-screen mt-[25vh]">
       <h1 className="text-4xl font-extrabold mb-[30px] text-black">Overview</h1>
       <Text className="w-[845px] mb-[90px]">
         “Nebula Planner is a software created to help students plan their
         college experience at a high level. Planner was born out of a need to
         replace Google Docs and hastily-crafted spreadsheets when planning
-        degree plan.”{' '}
+        degree plan.”
       </Text>
       <article className="w-[900px] flex flex-row justify-between text-left mb-[90px]">
+        <OverviewDescription title="Role" body="UI/UX Designer, Research" />
         <OverviewDescription
-          title="Role"
+          title="Tools"
           body="Figma, Jira, Confluence, Notions"
         />
-        <OverviewDescription title="Tools" body="UI/UX Designer, Research" />
         <OverviewDescription
           title="Team"
           body="Team of 8 Engineers and 2 Designers"
@@ -24,9 +24,11 @@ export default function PlannerOverview() {
       </article>
       <button
         type="button"
-        className=" text-3xl text-white rounded-[200px] bg-[#6266F9] p-4 flex justify-center items-center font-medium"
+        className="rounded-[200px] bg-[#6266F9] px-6 py-[10px] flex justify-center items-center shadow-md"
       >
-        Check Out Final Product
+        <Text className="leading-[44px] text-white" weight={Weight.medium}>
+          Check Out Final Product
+        </Text>
       </button>
     </section>
   );

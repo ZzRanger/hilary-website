@@ -3,7 +3,7 @@ import PlannerOverview from '@/components/planner/Overview';
 import PlannerHero from '@/components/planner/Hero';
 import IPadGraphic from '@/components/planner/IPadGraphic';
 import Problem from '@/components/planner/Problem';
-import Resaerch from '@/components/planner/Research';
+import Research from '@/components/planner/Research';
 import Interview from '@/components/planner/Interview';
 import Advising from '@/components/planner/Advising';
 import Empathy from '@/components/planner/Empathy';
@@ -20,13 +20,13 @@ import Next from '@/components/planner/Next';
 
 export default function Planner() {
   return (
-    <main className="flex flex-col pb-80">
+    <main className="flex flex-col items-center bg-white w-screen">
       <NavBar />
       <PlannerHero />
       <PlannerOverview />
       <IPadGraphic />
       <Problem />
-      <Resaerch />
+      <Research />
       <Interview />
       <Advising />
       <Empathy />

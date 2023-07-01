@@ -97,7 +97,7 @@ export default function App() {
 
   return (
     <article>
-      <canvas ref={canvasEl} className=" w-[50vw]" />
+      <canvas ref={canvasEl} className=" w-[54vw]" />
     </article>
   );
 }

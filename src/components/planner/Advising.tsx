@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Advising() {
   return (
-    <section className="h-[250vh] flex flex-col items-center text-center bg-black text-white justify-evenly">
+    <section className="h-[300vh] w-screen flex flex-col items-center text-center bg-black text-white justify-evenly">
       <div>
         <Text weight={Weight.bold} className="mb-[10vh]">
           Meeting College Staff
@@ -40,7 +40,7 @@ export default function Advising() {
           </Link>
         </button>
       </article>
-      <article className="text-left flex flex-col gap-y-10 w-[65vw]">
+      <article className="text-left flex flex-col gap-y-10 w-[72vw]">
         <ol className="list-decimal gap-y-10 space-y-10">
           <H2 className="ml-[-40px]">💡Interview Insight</H2>
           <Text weight={Weight.medium}>

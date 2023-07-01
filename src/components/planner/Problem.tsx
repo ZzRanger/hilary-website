@@ -11,7 +11,7 @@ import Person3 from '../../../public/planner/person3.png';
 
 export default function Problem() {
   return (
-    <section className="py-[120px] bg-black flex flex-col text-white items-center text-center ">
+    <section className="py-[120px] bg-black flex flex-col text-white items-center text-center w-screen rounded-[20px]">
       <Text weight={Weight.semibold} className="mb-[40px]">
         The Problem
       </Text>
@@ -19,14 +19,11 @@ export default function Problem() {
         UT Dallas enrollment surge creates demand for degree planning resources
       </H2>
       <Line />
-      {/* <p className="w-[1100px] mb-[40px] font-medium text-[30px] leading-[44px]">
-        The University of Texas at Dallas (UTD) 's enrollment has grown rapidly
-        with over 29,000 students, including 4,560 new freshmen in Fall 2021.
-      </p>
-      <p className="w-[1100px] font-bold text-[30px] leading-[44px] mb-40">
-        This growth leads to increasing demand for resources to help students
-        unfamiliar with the degree planning process.
-      </p> */}
+      <Text className="w-[80%] mt-[10vh]">
+        UTD's enrollment skyrockets over the past few years, prompting the need
+        for additional resources to assist students in navigating the degree
+        planning process.
+      </Text>
       <div className="flex flex-row w-[90vw] justify-around mt-[20vh]">
         <ProblemTile
           image={Person1}
@@ -48,6 +45,10 @@ export default function Problem() {
   );
 }
 
+/**
+ * TODO: Implement glass effect & animation on scroll
+ * https://www.asmallstudio.com/
+ */
 const ProblemTile = ({
   image,
   title,
@@ -57,15 +58,16 @@ const ProblemTile = ({
   title: string;
   body: string;
 }) => (
-  <article className="relative h-[70vh] w-80 rounded-3xl border-white border-2 flex flex-col justify-evenly items-center">
+  <article className="animate-intro relative h-[70vh] w-[380px] rounded-3xl border-white border-2 flex flex-col justify-evenly items-center">
     <Image
       src={image}
       alt="image"
       className=" h-32 w-32 top-[-64px] absolute"
     />
-    <Text weight={Weight.bold} className=" leading-[44px]">
+    {/* <div className="w-32 h-32 bg-[#6166f0] opacity-55 animate-ping rounded-full absolute top-[-64px]" /> */}
+    <Text weight={Weight.bold} className="leading-[44px] w-[80%]">
       {title}
     </Text>
-    <p className="text-xl">{body}</p>
+    <p className="text-xl  px-10">{body}</p>
   </article>
 );

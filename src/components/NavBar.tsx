@@ -213,7 +213,7 @@ export const NavBar = () => {
       ) : (
         <button
           type="button"
-          className="relative"
+          className="relative mix-blend-difference "
           onClick={() => setOpen((o) => !o)}
         >
           <svg
