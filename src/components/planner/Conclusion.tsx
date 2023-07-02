@@ -19,12 +19,12 @@ export default function Conclusion() {
           </div>
           <div>
             <span className="font-bold text-[32px]">
-              1. Improved Communication
+              2. Ongoing User Testing:
             </span>
             <br />
-            Utilizing project management tools like Jira and Notion helped
-            bridge the gap between the engineers and the design team, leading to
-            better coordination and informed decision-making.
+            Even after finalizing the prototype, we identified areas that needed
+            further refinement and improvement. Continuous iteration and user
+            feedback are vital for enhancing the user experience.
           </div>
           <div>
             <span className="font-bold text-[32px]">

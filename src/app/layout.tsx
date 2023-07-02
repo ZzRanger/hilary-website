@@ -17,7 +17,10 @@ export const metadata = {
   description: 'Hilary Nguyen',
 };
 
-const sans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-sans' });
+const sans = Plus_Jakarta_Sans({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-sans',
+});
 
 export default function RootLayout({
   children,

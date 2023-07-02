@@ -10,6 +10,7 @@ module.exports = {
         'hn-blue': '#BEE3E6',
         'hn-yellow': '#FAD67F',
         'hn-green': '#D1E1D6',
+        'hn-lezhin': '#D93831',
       },
       fontFamily: {
         sans: ['var(--font-sans)'],
