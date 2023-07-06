@@ -10,7 +10,10 @@ import Final5 from '@public/lezhin/final5.png';
 
 export default function LezhinConclusion() {
   return (
-    <section className="py-[92px] w-[90vw] flex flex-col items-center space-y-[80px]">
+    <section
+      id="lezhin-conclusion"
+      className="py-[92px] w-[90vw] flex flex-col items-center space-y-[80px]"
+    >
       <H2>Conclusion</H2>
       <Text className="w-[89vw] leading-[50px]">
         The new prototype resulted in users completing the given tasks in

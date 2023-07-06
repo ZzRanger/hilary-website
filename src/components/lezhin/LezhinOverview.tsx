@@ -3,7 +3,10 @@ import Text, { Weight } from '@/components/typography/Text';
 
 export default function LezhinOverview() {
   return (
-    <section className="flex flex-col text-center items-center w-screen mt-[32vh]">
+    <section
+      id="lezhin-overview"
+      className="flex flex-col text-center items-center w-screen mt-[32vh]"
+    >
       <h1 className="text-4xl font-extrabold mb-[30px] text-black">Overview</h1>
       <Text className="w-[845px] mb-[90px]">
         ““Lezhin, a webtoon reading app, faced sales struggles and competition

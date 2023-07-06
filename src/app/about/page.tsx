@@ -13,10 +13,7 @@ import ArticleBackground from '@/components/about/ArticleBackground';
 
 import SpotifyMusic from '@/components/about/SpotifyMusic';
 
-import Carousel from '@/components/Carousel';
-import Tokyo from '@public/about/tokyo.png';
-import Singapore from '@public/about/singapore.png';
-import Austria from '@public/about/austria.png';
+import Carousel from '@/components/about/Carousel';
 import { NavBar } from '../../components/NavBar';
 
 import SilentHearts from '../../../public/silent_hearts.png';
@@ -42,17 +39,7 @@ export default function About() {
           </section>
         </TwoColumnLayoutOne>
         <div>
-          <Carousel indicators={IndicatorType.inside}>
-            <Image src={Tokyo} priority alt="" />
-            <Image src={Tokyo} priority alt="" />
-            <Image src={Tokyo} priority alt="" />
-            <Image src={Singapore} alt="" />
-            <Image src={Singapore} alt="" />
-            <Image src={Singapore} alt="" />
-            <Image src={Austria} alt="" />
-            <Image src={Austria} alt="" />
-            <Image src={Austria} alt="" />
-          </Carousel>
+          <Carousel />
         </div>
         <div className="grid gap-9 grid-cols-[1fr_2fr] w-full py-16 border-box ">
           <CountryChecklist />

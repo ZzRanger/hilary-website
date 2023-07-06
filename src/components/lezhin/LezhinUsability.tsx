@@ -4,7 +4,10 @@ import Link from 'next/link';
 
 export default function UserSurvey() {
   return (
-    <div className="bg-hn-lezhin w-full flex items-center justify-center">
+    <div
+      id="lezhin-usability"
+      className="bg-hn-lezhin w-full flex items-center justify-center"
+    >
       <section className="flex flex-col text-left items-center gap-[70px] py-[60px] w-[80%]  text-white">
         <Text weight={Weight.bold}>Usability Test</Text>
         <H2 className="text-center">

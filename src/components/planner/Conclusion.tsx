@@ -3,7 +3,10 @@ import Text from '@/components/typography/Text';
 
 export default function Conclusion() {
   return (
-    <section className="flex flex-col items-center space-y-[100px]">
+    <section
+      id="planner-conclusion"
+      className="flex flex-col items-center space-y-[100px]"
+    >
       <H2>Conclusion</H2>
       <Text>
         <article className="flex flex-col text-left space-y-[30px] w-[90vw]">

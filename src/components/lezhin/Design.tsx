@@ -5,7 +5,10 @@ import IPadMockup from '../../../public/lezhin/iPadMockup.png';
 
 export default function Design() {
   return (
-    <section className="flex flex-row h-[150vh] w-screen bg-black items-center tabular-nums gap-x-[40px]">
+    <section
+      id="lezhin-design"
+      className="flex flex-row h-[150vh] w-screen bg-black items-center tabular-nums gap-x-[40px]"
+    >
       <article className="w-[50%]">
         <Image src={IPadMockup} alt="Macbook" />
       </article>

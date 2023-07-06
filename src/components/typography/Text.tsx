@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export enum Weight {
   normal = 'font-normal',
   medium = 'font-medium',
@@ -5,20 +7,25 @@ export enum Weight {
   bold = 'font-bold',
 }
 
-const Text = ({
+interface HTMLElementProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
+  className?: string;
+  weight?: Weight;
+  children: ReactNode;
+}
+
+const Text: React.FC<HTMLElementProps> = ({
   className = '',
   weight = Weight.normal,
   children,
-}: {
-  className?: string;
-  weight?: Weight;
-  children:
-    | React.ReactElement
-    | React.ReactElement[]
-    | string
-    | (string | React.ReactElement)[];
-}) => (
-  <article className={`text-[30px] ${className} ${weight}`}>{children}</article>
+  ...props
+}: HTMLElementProps) => (
+  <article className={`text-[30px] ${className} ${weight}`} {...props}>
+    {children}
+  </article>
 );
 
 export default Text;

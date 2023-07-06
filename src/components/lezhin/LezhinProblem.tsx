@@ -3,7 +3,6 @@
 import Image, { StaticImageData } from 'next/image';
 import H2 from '@/components/typography/H2';
 
-import Line from '@/components/planner/Line';
 import Text, { Weight } from '@/components/typography/Text';
 import Doggo from '@public/lezhin/doggo.png';
 import ThumbsDown from '@public/lezhin/thumbsDown.png';
@@ -12,7 +11,10 @@ import X from '@public/lezhin/x.png';
 
 export default function LezhinProblem() {
   return (
-    <section className="mt-[45vh] bg-hn-lezhin flex flex-col text-white items-center w-screen rounded-[20px]">
+    <section
+      id="lezhin-problem"
+      className="mt-[45vh] bg-hn-lezhin flex flex-col text-white items-center w-screen rounded-[20px]"
+    >
       <div className="w-[3px] h-[20vh] mt-[calc(-20vh+1px)] bg-black" />
       <div className="w-[3px] h-[20vh] bg-white" />
       <article className="flex flex-col items-center gap-y-[46px]">

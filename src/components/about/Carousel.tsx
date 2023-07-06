@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Tokyo from '@public/tokyo.png';
-import Japan from '@public/japan.png';
-import Singapore from '@public/singapore.png';
+import Tokyo from '@public/about/tokyo.png';
+import Austria from '@public/about/austria.png';
+import Singapore from '@public/about/singapore.png';
 import ChevronIcon from '../svg/ChevronIcon';
 import EllipseIcon from '../svg/EllipseIcon';
 
@@ -48,31 +48,69 @@ export default function Carousel() {
         />
       </div>
       <div
-        className={`flex flex-row  ${indexArray[index]} z-0 duration-300 ease-in-out`}
+        className={`flex flex-row w-full  ${indexArray[index]} z-0 duration-300 ease-in-out`}
       >
-        <Image
-          src={Tokyo}
-          priority
-          alt=""
-          className={`${
-            index === 0 ? 'z-10' : 'z-0'
-          } scale-[1.01] duration-500`}
-        />
-        <Image
-          src={Japan}
-          alt=""
-          className={`${
-            index === 1 ? 'z-10' : 'z-0'
-          } scale-[1.01] duration-500`}
-        />
-        <Image
-          src={Singapore}
-          alt=""
-          className={`${
-            index === 2 ? 'z-10' : 'z-0'
-          } scale-[1.01] duration-500`}
-        />
+        <div className="relative flex-shrink-0 w-fit h-fit box-border rounded-md">
+          <Image
+            src={Tokyo}
+            priority
+            alt=""
+            className={`${index === 0 ? 'z-10' : 'z-0'}  duration-500`}
+          />
+          <Caption
+            caption="View of Tokyo 🇯🇵 Top of Tokyo Government Tower"
+            location="Tokyo, Japan"
+          />
+        </div>
+        <div className="relative flex-shrink-0 w-fit h-fit box-border rounded-md">
+          <Image
+            src={Singapore}
+            alt=""
+            className={`${index === 1 ? 'z-10' : 'z-0'} duration-500`}
+          />
+          <Caption
+            caption="View of Singapore's skyline at night 🇸🇬 🌌"
+            location="Singapore, Singapore"
+          />
+        </div>
+        <div className="relative flex-shrink-0 w-fit h-fit box-border rounded-md">
+          <Image
+            src={Austria}
+            alt=""
+            className={`${index === 2 ? 'z-10' : 'z-0'}  duration-500`}
+          />
+          <Caption
+            caption="🇦🇹 Vienna  at sunset  🌅"
+            location="Vienna, Austria"
+          />
+        </div>
       </div>
     </div>
   );
 }
+
+const Caption = ({
+  caption,
+  location,
+}: {
+  caption: string;
+  location: string;
+}) => (
+  <div
+    className="absolute top-[calc(50%-89px)] left-[104px] flex flex-col items-center w-[280px] h-[178px] justify-evenly"
+    style={{
+      borderRadius: '20px',
+      background:
+        'radial-gradient(220.77% 112.20% at 42.83% 0.00%, #CCC8C8 0%, rgba(255, 255, 255, 0.00) 100%)',
+      boxShadow: '0px 4px 19px 3px rgba(0, 0, 0, 0.25)',
+      backdropFilter: 'blur(21px)',
+    }}
+  >
+    <div className="text-center">Info</div>
+    <hr className="bg-[#828282] h-[1px] w-full border-0" />
+    <div className="w-60 text-center py-6">{caption}</div>
+    <hr className="bg-[#828282] h-[1px] w-full border-0" />
+    <div>{location}</div>
+    <hr />
+  </div>
+);

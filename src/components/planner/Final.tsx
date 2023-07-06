@@ -13,7 +13,10 @@ import Eight from '../../../public/planner/final/eight.png';
 
 export default function Final() {
   return (
-    <section className="my-[20vh] flex flex-col items-center space-y-[100px]">
+    <section
+      id="planner-final"
+      className="my-[20vh] flex flex-col items-center space-y-[100px]"
+    >
       <H2>Final Prototype </H2>
       <Text className="w-[90%]">
         The launch of Planner was highly successful, attracting over 100 student
@@ -31,7 +34,7 @@ export default function Final() {
         </Link>
       </button>
       <article className="w-[90vw] grid grid-cols-2">
-        <div className=" flex flex-col space-y-[4vh]" id="planner-final">
+        <div className=" flex flex-col space-y-[4vh]">
           <Image src={One} alt="image" style={{ width: '43vw' }} />
           <Image src={Three} alt="image" style={{ width: '43vw' }} />
           <Image src={Five} alt="image" style={{ width: '43vw' }} />

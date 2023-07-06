@@ -11,7 +11,10 @@ import Person3 from '../../../public/planner/person3.png';
 
 export default function Problem() {
   return (
-    <section className="py-[120px] bg-black flex flex-col text-white items-center text-center w-screen rounded-[20px]">
+    <section
+      id="planner-problem"
+      className="py-[120px] bg-black flex flex-col text-white items-center text-center w-screen rounded-[20px]"
+    >
       <Text weight={Weight.semibold} className="mb-[40px]">
         The Problem
       </Text>

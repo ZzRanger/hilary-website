@@ -1,10 +1,12 @@
 import ScrollLink from '@/components/ScrollLink';
 import Text, { Weight } from '@/components/typography/Text';
-import Link from 'next/link';
 
 export default function PlannerOverview() {
   return (
-    <section className="flex flex-col text-center items-center w-screen mt-[25vh]">
+    <section
+      id="planner-overview"
+      className="flex flex-col text-center items-center w-screen mt-[25vh]"
+    >
       <h1 className="text-4xl font-extrabold mb-[30px] text-black">Overview</h1>
       <Text className="w-[845px] mb-[90px]">
         “Nebula Planner is a software created to help students plan their

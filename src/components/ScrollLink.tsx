@@ -16,10 +16,11 @@ const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
     const targetId = e.currentTarget.href.split('#')[1];
 
     const elem = document.getElementById(targetId);
-    window.scrollTo({
-      top: elem?.getBoundingClientRect().top,
-      behavior: 'smooth',
-    });
+    elem?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // window.scrollTo({
+    //   top: elem?.getBoundingClientRect().top,
+    //   behavior: 'smooth',
+    // });
   };
   return (
     <Link {...props} onClick={handleScroll}>
