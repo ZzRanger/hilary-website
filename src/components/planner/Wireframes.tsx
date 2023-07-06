@@ -13,10 +13,10 @@ export default function Wireframes() {
         solutions.
       </h1>
       <Image src={Mockups} alt="image" className="w-[90%]" />
-      <ol className="list-disc text-left w-[80%] space-y-10 my-[10vh]">
-        <Text>
+      <ol className="list-disc w-[80%]">
+        <Text className=" text-left leading-[50px] space-y-10 my-[10vh]">
           <li>
-            ✅ Enable users to
+            ✅ Enable users to{' '}
             <span className="font-bold">
               color-code individual semesters, plans, and courses
             </span>
@@ -28,7 +28,7 @@ export default function Wireframes() {
             track their progress more efficiently.
           </li>
           <li>
-            ✅ Allow users to
+            ✅ Allow users to{' '}
             <span className="font-bold">
               rename their plan and change their major plan
             </span>

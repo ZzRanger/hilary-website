@@ -17,18 +17,25 @@ export default function UsabilityDescription() {
         So, we started to test how easy it was to use the old model and listened
         to the problems students were facing.
       </Text>
-      <div className="h-[120vh] bg-slate-200 w-screen">Add video here</div>
-      <Text weight={Weight.medium} className="w-[80%]">
+      <iframe
+        title="old video"
+        src="https://drive.google.com/file/d/1wr8oAnSEb6RfL5l0TYxvrvzbAC4U774b/preview"
+        allow="autoplay"
+        style={{
+          borderRadius: '30px',
+          height: '100vh',
+          width: '90vw',
+        }}
+      />
+
+      <Text weight={Weight.medium} className="w-[80%] text-[#6E6E73]">
         Nebula Planner Old Version
       </Text>
       <button
         className="w-[420px] rounded-[50px] border-4 border-black h-[90px]"
         type="button"
       >
-        <Link
-          href="https://docs.google.com/document/d/1bjMusoKa8bbX2PaH81dSBQn4X0nfozgehsEzNn90Pds/edit"
-          target="_blank"
-        >
+        <Link href="https://beta.planner.utdnebula.com/" target="_blank">
           <Text weight={Weight.bold}>View Old Prototype</Text>
         </Link>
       </button>
@@ -55,7 +62,7 @@ export default function UsabilityDescription() {
           type="button"
         >
           <Link
-            href="https://docs.google.com/document/d/1bjMusoKa8bbX2PaH81dSBQn4X0nfozgehsEzNn90Pds/edit"
+            href="https://www.notion.so/xodaydream/Nebula-Planner-Interviews-Tasks-b5758f4f280844b0ad093593067fd8c5?pvs=4"
             target="_blank"
           >
             <Text weight={Weight.bold}>View User Interview Database</Text>

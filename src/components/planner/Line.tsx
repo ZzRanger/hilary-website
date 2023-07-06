@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Chart, { ChartConfiguration } from 'chart.js/auto';
 
-export default function App() {
+export default function Line() {
   const canvasEl = useRef<HTMLCanvasElement>(null);
 
   const colors = {

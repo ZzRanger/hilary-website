@@ -13,7 +13,7 @@ export default function UserSurvey() {
           impact on user usage.
         </H2>
         <button
-          className="w-fit px-[48px] py-[20px] rounded-[50px] border-4 border-black h-[90px]"
+          className="w-fit px-[48px] py-[20px] rounded-[50px] border-4 border-white h-[90px]"
           type="button"
         >
           <Link
@@ -27,13 +27,13 @@ export default function UserSurvey() {
           <div className="text-left flex flex-col w-[80%]">
             <ol className="list-disc gap-y-10 space-y-10 leading-[50px]">
               <H2 className="ml-[-40px]">💡 Test Key Insight</H2>
-              <Text weight={Weight.bold}>
+              <Text weight={Weight.medium}>
                 <li>
                   3 out of 4 users took a long time trying to find a specific
                   genre on the app due to the built of the app's search engine
                 </li>
               </Text>
-              <Text weight={Weight.bold}>
+              <Text weight={Weight.medium}>
                 <li>
                   Task 1 (finding genre on the app search engine) and Task 6
                   (Finding the day of the week the comic is updated) took the

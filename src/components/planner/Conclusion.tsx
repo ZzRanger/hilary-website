@@ -3,10 +3,10 @@ import Text from '@/components/typography/Text';
 
 export default function Conclusion() {
   return (
-    <section className="py-[92px] flex flex-col items-center space-y-[100px]">
+    <section className="flex flex-col items-center space-y-[100px]">
       <H2>Conclusion</H2>
-      <article className="flex flex-col text-left space-y-[30px] w-[90vw]">
-        <Text>
+      <Text>
+        <article className="flex flex-col text-left space-y-[30px] w-[90vw]">
           <div>Some of my key takeaways from this project are:</div>
           <div>
             <span className="font-bold text-[32px]">
@@ -35,8 +35,8 @@ export default function Conclusion() {
             ideas, ensuring timely implementation and avoiding potential
             implementation challenges.
           </div>
-        </Text>
-      </article>
+        </article>
+      </Text>
     </section>
   );
 }

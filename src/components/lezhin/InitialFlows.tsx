@@ -1,5 +1,11 @@
+import Carousel from '@/components/Carousel';
 import H2 from '@/components/typography/H2';
 import Text, { Weight } from '@/components/typography/Text';
+import Image from 'next/image';
+import Flow1 from '@public/lezhin/flow1.png';
+import Flow2 from '@public/lezhin/flow2.png';
+import Flow3 from '@public/lezhin/flow3.png';
+import Flow4 from '@public/lezhin/flow4.png';
 
 export default function InitialFlows() {
   return (
@@ -9,9 +15,13 @@ export default function InitialFlows() {
         I decided to map out Lezhin's current user journey to better map out
         specific problems within the app
       </H2>
-      <article className="h-[130vh] w-screen bg-blue-500">
-        Add carousel here
-      </article>
+      <Carousel className="w-[60vw]">
+        <Image src={Flow1} priority alt="" />
+        <Image src={Flow2} priority alt="" />
+        <Image src={Flow3} priority alt="" />
+        <Image src={Flow4} priority alt="" />
+      </Carousel>
+
       <Text className="tabular-nums">
         <article className="text-left flex flex-col gap-y-10  leading-[50px] bg-[#F5F5F5] rounded-[20px] p-10">
           <Text weight={Weight.bold}>

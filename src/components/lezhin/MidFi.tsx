@@ -18,15 +18,16 @@ export default function MidFi() {
 
         <article className="h-[130vh] flex flex-row w-screen justify-center gap-x-[60px]">
           <iframe
+            title="midfi embd"
             style={{
               borderRadius: '30px',
               width: '35vw',
               height: '100%',
             }}
-            title="lezhin Figma embed"
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FDxtU7q9aINP8fCPSqB78wB%2FLezhin-Redesign%3Fpage-id%3D343%253A1363%26type%3Ddesign%26node-id%3D348-1566%26viewport%3D409%252C511%252C0.3%26scaling%3Dscale-down%26starting-point-node-id%3D348%253A1566%26show-proto-sidebar%3D1%26mode%3Ddesign%26t%3Dh4gBaTToZ9j9TJh5-1"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FDxtU7q9aINP8fCPSqB78wB%2FLezhin-Redesign%3Fpage-id%3D343%253A1363%26type%3Ddesign%26node-id%3D348-1566%26viewport%3D409%252C511%252C0.3%26scaling%3Dscale-down%26starting-point-node-id%3D348%253A1566%26t%3DsnnsVAyky4MYOkGx-1%26mode%3Ddesign"
             allowFullScreen
           />
+
           <div className="h-full">
             <Image src={Sketch} alt="analysis" className="h-full w-full" />
           </div>
@@ -62,7 +63,7 @@ export default function MidFi() {
           type="button"
         >
           <Link
-            href="https://www.notion.so/xodaydream/a243681ff68b4dd9a8c52be8342417e5?v=65aa8257649c47af8d442743b2dbc8cf"
+            href="https://www.figma.com/file/N11MRidgLccdYcsCl5qKgM/Lezhin-Final?type=design&node-id=64-2980&mode=design"
             target="_blank"
           >
             <Text weight={Weight.bold}>

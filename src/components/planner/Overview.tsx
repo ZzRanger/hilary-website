@@ -1,4 +1,6 @@
+import ScrollLink from '@/components/ScrollLink';
 import Text, { Weight } from '@/components/typography/Text';
+import Link from 'next/link';
 
 export default function PlannerOverview() {
   return (
@@ -27,7 +29,7 @@ export default function PlannerOverview() {
         className="rounded-[200px] bg-[#6266F9] px-6 py-[10px] flex justify-center items-center shadow-md"
       >
         <Text className="leading-[44px] text-white" weight={Weight.medium}>
-          Check Out Final Product
+          <ScrollLink href="#planner-final">Check Out Final Product</ScrollLink>
         </Text>
       </button>
     </section>

@@ -18,7 +18,7 @@ export default function Pain() {
             </Text>
           </div>
         </PainCard>
-        <PainCard className="bg-[#312E81]">
+        <PainCard className="bg-[#3730A3]">
           <div className="flex flex-col items-center text-center">
             <Text weight={Weight.bold}>Better UX Copywriting</Text>
             <Text>
@@ -27,7 +27,7 @@ export default function Pain() {
             </Text>
           </div>
         </PainCard>
-        <PainCard className="bg-[#312E81]">
+        <PainCard className="bg-[#4338CA]">
           <div className="flex flex-col items-center text-center">
             <Text weight={Weight.bold}>Transfer Credits</Text>
             <Text>
@@ -36,7 +36,7 @@ export default function Pain() {
             </Text>
           </div>
         </PainCard>
-        <PainCard className="bg-[#3730A3]">
+        <PainCard className="bg-[#4F46E5]">
           <div className="flex flex-col items-center text-center">
             <Text weight={Weight.bold}>Lack of Course Progress</Text>
             <Text>
@@ -44,7 +44,7 @@ export default function Pain() {
             </Text>
           </div>
         </PainCard>
-        <PainCard className="bg-[#4338CA]">
+        <PainCard className="bg-[#6366f1]">
           <div className="flex flex-col items-center text-center">
             <Text weight={Weight.bold}>Give Customization Option</Text>
             <Text>
@@ -53,28 +53,10 @@ export default function Pain() {
             </Text>
           </div>
         </PainCard>
-        <PainCard className="bg-[#4F46E5]">
+        <PainCard className="bg-[#818cf8]">
           <div className="flex flex-col items-center text-center">
             <Text weight={Weight.bold}>Better Plan Layout</Text>
             <Text>The current course layout is cluttered and inefficient</Text>
-          </div>
-        </PainCard>
-        <PainCard className="bg-[#312E81]">
-          <div className="flex flex-col items-center text-center">
-            <Text weight={Weight.bold}>No Onboarding</Text>
-            <Text>
-              Testing showed students were confused about next steps due to the
-              website setup.
-            </Text>
-          </div>
-        </PainCard>
-        <PainCard className="bg-[#818CF8]">
-          <div className="flex flex-col items-center text-center">
-            <Text weight={Weight.bold}>No Onboarding</Text>
-            <Text>
-              Testing showed students were confused about next steps due to the
-              website setup.
-            </Text>
           </div>
         </PainCard>
       </article>

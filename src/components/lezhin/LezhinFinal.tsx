@@ -6,7 +6,10 @@ import Image from 'next/image';
 
 export default function LezhinFinal() {
   return (
-    <section className="rounded-[20px] h-fit w-screen flex flex-col items-center text-center gap-y-[10vh] py-[30vh]">
+    <section
+      className="rounded-[20px] h-fit w-screen flex flex-col items-center text-center gap-y-[10vh] py-[30vh]"
+      id="lezhin-final"
+    >
       <Text weight={Weight.bold}>Final Prototype</Text>
       <H2 className="leading-[74px] w-[80vw]">
         After testing with users and getting their feedback, a few details were
@@ -21,7 +24,7 @@ export default function LezhinFinal() {
             height: '100%',
           }}
           title="lezhin Figma embed"
-          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN11MRidgLccdYcsCl5qKgM%2FLezhin-Final%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-178%26viewport%3D233%252C524%252C0.13%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A178%26show-proto-sidebar%3D1%26mode%3Ddesign%26t%3Dmcjm4qPjiEvchuBZ-1"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN11MRidgLccdYcsCl5qKgM%2FLezhin-Final%3Fembed_host%3Dshare%26kind%3D%26node-id%3D1-178%26page-id%3D0%253A1%26scaling%3Dscale-down%26starting-point-node-id%3D1%253A178%26t%3D88XO4QwErzBdOUk7-1%26type%3Ddesign%26viewport%3D233%252C524%252C0.13%26mode%3Ddesign"
           allowFullScreen
         />
         <div className="text-left flex flex-col gap-y-10 w-[50vw]">

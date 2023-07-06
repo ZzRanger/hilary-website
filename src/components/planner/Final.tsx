@@ -26,15 +26,12 @@ export default function Final() {
         className="w-fit px-[50px] py-[20px] rounded-[50px] border-4 border-black h-[90px]"
         type="button"
       >
-        <Link
-          href="https://docs.google.com/document/d/1bjMusoKa8bbX2PaH81dSBQn4X0nfozgehsEzNn90Pds/edit"
-          target="_blank"
-        >
+        <Link href="https://planner.utdnebula.com/" target="_blank">
           <Text weight={Weight.bold}>Click Here To View Final Product</Text>
         </Link>
       </button>
       <article className="w-[90vw] grid grid-cols-2">
-        <div className=" flex flex-col space-y-[4vh]">
+        <div className=" flex flex-col space-y-[4vh]" id="planner-final">
           <Image src={One} alt="image" style={{ width: '43vw' }} />
           <Image src={Three} alt="image" style={{ width: '43vw' }} />
           <Image src={Five} alt="image" style={{ width: '43vw' }} />

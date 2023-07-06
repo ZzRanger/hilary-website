@@ -31,7 +31,7 @@ export default function LezhinProblem() {
       <div className="w-[900px] text-center text-[40px] font-medium">
         However despite its success, the company faces these challenges
       </div>
-      <div className="flex flex-row w-[90vw] justify-around mt-[20vh]">
+      <div className="flex flex-row w-[90%] justify-between mt-[20vh]">
         <ProblemTile image={ThumbsDown} title="Low User Ratings">
           <ul className="text-left list-disc text-xl mx-10 leading-[30px]">
             <li>

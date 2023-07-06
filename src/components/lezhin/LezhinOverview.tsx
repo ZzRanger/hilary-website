@@ -1,3 +1,4 @@
+import ScrollLink from '@/components/ScrollLink';
 import Text, { Weight } from '@/components/typography/Text';
 
 export default function LezhinOverview() {
@@ -24,7 +25,7 @@ export default function LezhinOverview() {
         className="rounded-[200px] bg-hn-lezhin px-6 py-[10px] flex justify-center items-center shadow-md"
       >
         <Text className="leading-[44px] text-white" weight={Weight.medium}>
-          Check Out Final Product
+          <ScrollLink href="#lezhin-final">Check Out Final Product</ScrollLink>
         </Text>
       </button>
     </section>

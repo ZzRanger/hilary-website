@@ -5,8 +5,8 @@ import Architecture from '../../../public/planner/architecture.png';
 
 export default function Information() {
   return (
-    <section className="flex flex-col items-center text-center mt-[44px]">
-      <Text weight={Weight.bold} className="mt-[30vh]">
+    <section className="flex flex-col items-center text-center my-[178px]">
+      <Text weight={Weight.bold} className="mb-[44px]">
         Informational Architecture
       </Text>
       <H2 className="w-[80%] mb-[100px]">

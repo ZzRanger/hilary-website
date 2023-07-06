@@ -32,7 +32,7 @@ export default function Competitive() {
         </button>
       </div>
       <article className="text-left flex flex-col gap-y-10 w-[72vw]">
-        <ol className="list-decimal gap-y-10 space-y-10 my-[20vh]">
+        <ol className="list-decimal gap-y-10 space-y-10 mt-[20vh]">
           <H2 className="ml-[-40px]">💡Analysis Insight</H2>
 
           <Text weight={Weight.medium}>
