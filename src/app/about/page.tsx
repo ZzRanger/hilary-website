@@ -59,10 +59,10 @@ const TwoColumnLayoutOne = ({
 );
 
 const AboutMe = () => (
-  <ArticleBackground className="flex flex-col py-6 pl-5 pr-[84px] justify-start h-[732px]">
-    <div className="text-4xl font-extrabold pb-5">A little bit about me</div>
-    <div className="mb-5">
-      <div className="text-xl text-gray-400 ">WHO I AM</div>
+  <ArticleBackground className="flex flex-col py-10 pl-5 pr-[84px] justify-center h-[732px] gap-y-10">
+    <div className="text-4xl font-extrabold">A little bit about me</div>
+    <div className="">
+      <div className="text-xl text-gray-400 leading-10 font-bold">WHO I AM</div>
       <div className="leading-8 ">
         I'm a self-taught designer passionate about improving the lives of
         others through my design work. I seek to learn new things every day,
@@ -71,8 +71,10 @@ const AboutMe = () => (
       </div>
     </div>
 
-    <div className="mb-5">
-      <div className="text-xl text-gray-400">MY DESIGN JOURNEY</div>
+    <div className="">
+      <div className="text-xl text-gray-400 leading-10 font-bold">
+        MY DESIGN JOURNEY
+      </div>
       <div className="leading-8">
         I started my design journey by arming myself with a curious mind, a
         laptop, and Adobe Photoshop. I dedicated myself to learning and growing
@@ -82,8 +84,10 @@ const AboutMe = () => (
       </div>
     </div>
 
-    <div className="mb-5">
-      <div className="text-xl text-gray-400">MY ASPIRATION</div>
+    <div className="">
+      <div className="text-xl text-gray-400 leading-10 font-bold">
+        MY ASPIRATION
+      </div>
       <div className="leading-8">
         The design world is always evolving, adapting to the world's needs, and
         so is a designer's job. I hope to grow into a creative professional by
@@ -95,24 +99,26 @@ const AboutMe = () => (
 );
 
 const ReadingList = () => (
-  <ArticleBackground className="flex flex-row h-[376px] box-border items-center gap-x-10">
-    <Image
-      src={SilentHearts}
-      alt=""
-      height="305"
-      width="220"
-      className="left-0 "
-    />
+  <ArticleBackground className="flex justify-center items-center p-12">
+    <div className="flex flex-row h-fit box-border items-center gap-x-10">
+      <Image
+        src={SilentHearts}
+        alt=""
+        height="305"
+        width="220"
+        className="left-0 "
+      />
 
-    <div className="flex flex-col justify-start items-start">
-      <div className="text-xl text-gray-400 pb-16">Reading List</div>
-      <div className="text-xl">Silent Hearts</div>
-      <div className="text-base text-gray-400 pb-16">Jing Shui Bian</div>
-      <div className="text-sm leading-8 w-[400px]">
-        Lu Rong said, "I can't afford to want anything, but I still want you.
-        So, sometimes, don't be angry with me because of Meimei, and don't break
-        up with me." <br /> "Lin Mu, you have to know, I will love you with all
-        my heart."
+      <div className="flex flex-col justify-start items-start">
+        <div className="text-xl text-gray-400 pb-8">Reading List</div>
+        <div className="text-xl">Silent Hearts</div>
+        <div className="text-base text-gray-400 pb-4">Jing Shui Bian</div>
+        <div className="text-sm leading-8 w-[400px]">
+          Lu Rong said, "I can't afford to want anything, but I still want you.
+          So, sometimes, don't be angry with me because of Meimei, and don't
+          break up with me." <br /> "Lin Mu, you have to know, I will love you
+          with all my heart."
+        </div>
       </div>
     </div>
   </ArticleBackground>
@@ -120,7 +126,7 @@ const ReadingList = () => (
 
 const CountryChecklist = () => (
   <ArticleBackground className="flex flex-col items-start p-4 gap-6 h-[367px]">
-    <div className="self-center text-[#BDBDBD] pb-4 text-xl">
+    <div className="self-center text-[#BDBDBD] pb-3 text-xl">
       Country Checklist
     </div>
 
@@ -156,12 +162,14 @@ const FavoriteQuote = () => (
     <div className="self-center text-[#BDBDBD] pb-7 text-xl leading-[46px] pt-1">
       Favorite Quote
     </div>
-    <div className="text-3xl font-semibold  self-start px-6 leading-[46px] mb-8">
-      “You are mine, mine, I go shouting it to the afternoon's wind, and the
-      wind hauls on my widowed voice.”
-    </div>
-    <div className="text-3xl font-semibold self-start px-6 leading-[46px]">
-      — In My Sky At Twilight, Pablo Neruda
+    <div className="flex flex-col w-[640px]">
+      <div className="text-3xl font-semibold leading-[46px] mb-8">
+        “You are mine, mine, I go shouting it to the afternoon's wind, and the
+        wind hauls on my widowed voice.”
+      </div>
+      <div className="text-3xl font-semibold leading-[46px]">
+        — In My Sky At Twilight, Pablo Neruda
+      </div>
     </div>
   </ArticleBackground>
 );
