@@ -7,19 +7,11 @@ export default function Usability() {
   return (
     <section
       id="planner-usability"
-<<<<<<< Updated upstream
       className="flex flex-row h-[120vh] w-screen bg-black items-center"
     >
       <Image src={Macbook3} alt="Macbook" className="w-[80%]" />
       <article className="flex flex-col w-[50%] text-white">
         <H1 className="mb-10">Usability Test</H1>
-=======
-      className="grid grid-cols-[3fr_2fr] h-[120vh] w-screen bg-black place-items-center"
-    >
-      <Image src={Macbook3} alt="Macbook" className="w-fit" />
-      <article className="flex flex-col text-white flex-shrink-0 ">
-        <H1 className="mb-10">💻 Usability Test</H1>
->>>>>>> Stashed changes
         <Text weight={Weight.medium}>1. Old Prototype</Text>
         <Text weight={Weight.medium}>2. Testing Key Insight</Text>
         <Text weight={Weight.medium}>3. Pain Point</Text>
