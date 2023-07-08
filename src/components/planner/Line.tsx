@@ -56,7 +56,11 @@ export default function Line() {
       type: 'line',
       data,
       options: {
+<<<<<<< Updated upstream
         responsive: true,
+=======
+        maintainAspectRatio: false, // *** Important : this is required or a strange vanishing zoom out effect occurs with the graph.
+>>>>>>> Stashed changes
 
         plugins: {
           title: {

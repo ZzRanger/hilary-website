@@ -49,7 +49,11 @@ export default function PieSurvey2() {
                 // eslint-disable-next-line react/no-this-in-sfc
                 const lbl = this.getLabelForValue(value as number);
                 if (typeof lbl === 'string' && lbl.length > 10) {
+<<<<<<< Updated upstream
                   return `${lbl.substring(0, 20)}...`;
+=======
+                  return `${lbl.substring(0, 12)}...`;
+>>>>>>> Stashed changes
                 }
                 return lbl;
               },

@@ -15,6 +15,7 @@ export default function Interview() {
     <>
       {/* Included wrapper div w/ black background so that top & bottom border looks rounded & meshes cleanly */}
       <div className="bg-gradient-to-b from-white to-black h-[200vh] w-screen">
+<<<<<<< Updated upstream
         <section className="relative z-10 h-[200vh] flex flex-col items-center text-center justify-between py-20 bg-[#F5F5F5] rounded-[50px]">
           <H1>Interviews</H1>
           <Text weight={Weight.medium} className="w-[80%]">
@@ -23,6 +24,18 @@ export default function Interview() {
             gathered
             <span className="font-bold"> 141 responses</span>
           </Text>
+=======
+        <section className="flex flex-col items-center text-center gap-y-[100px] py-20 bg-[#F5F5F5] rounded-[50px]">
+          <article className="flex flex-col items-center gap-y-[20px]">
+            <H1>Interviews</H1>
+            <Text weight={Weight.medium} className="w-[80%]">
+              We surveyed and interviewed students to understand their degree
+              planning habits and perceptions of advising quality. The survey
+              gathered
+              <span className="font-bold"> 141 responses</span>
+            </Text>
+          </article>
+>>>>>>> Stashed changes
           <Carousel indicators={IndicatorType.outside} className="w-[90vw]">
             {graphs.map((elm) => (
               <div className="w-[90vw] flex flex-col justify-center items-center gap-y-20 pb-10 flex-shrink-0">
