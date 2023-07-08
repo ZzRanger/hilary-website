@@ -7,7 +7,6 @@ import NebulaLogo from '../../../public/planner/nebulaLogo.png';
 
 export default function PlannerHero() {
   return (
-<<<<<<< Updated upstream
     <section className="bg-[#6266F9] h-[140vh] flex flex-col items-center text-center text-white w-screen relative">
       <H1 className="mt-[25vh]">Nebula Planner</H1>
       <div className="font-medium text-[28px] leading-[40px] mt-8 w-[720px]">
@@ -15,15 +14,6 @@ export default function PlannerHero() {
         plan for a four-year degree.
       </div>
       <Image src={Macbook} alt="macbook" className="z-20 w-[80vw]" />
-=======
-    <section className="bg-[#6266F9] flex flex-col items-center text-center text-white w-screen relative">
-      <H1 className="mt-[25vh]">Nebula Planner</H1>
-      <div className="font-medium text-[2rem] leading-[40px] mt-8 w-[720px]">
-        Software assisting students at UT Dallas with organizing their academic
-        plan for a four-year degree.
-      </div>
-      <Image src={Macbook} alt="macbook" className="z-20 w-[1100px]" />
->>>>>>> Stashed changes
       <Image
         src={NebulaLogo}
         className="absolute top-[120px] left-0 z-0 w-[81vw]"
