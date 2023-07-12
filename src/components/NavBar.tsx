@@ -193,14 +193,18 @@ export const NavBar = () => {
       } z-50`}
     >
       {sticky && (
-        <h1 className="tracking-tight font-black text-3xl">Hilary Nguyen</h1>
+        <Link href="/">
+          <h1 className="tracking-tight font-black text-3xl">Hilary Nguyen</h1>
+        </Link>
       )}
       <div
         className={`rounded-full shadow-md ${
           sticky ? 'relative translate-x-1/2' : ''
         }`}
       >
-        <Image src={profilePic} alt="" className="w-16 h-16" />
+        <Link href="/">
+          <Image src={profilePic} alt="" className="w-16 h-16" />
+        </Link>
       </div>
       {sticky ? (
         <div className="flex justify-center items-center p-0 gap-5 text-lg">
