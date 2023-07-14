@@ -35,7 +35,7 @@ export default function LezhinFinal() {
           <Text weight={Weight.medium}>
             <ol className="list-decimal space-y-10 ml-[40px]">
               <li>
-                Sections adjusted to
+                Sections adjusted to{' '}
                 <span className="font-bold">accommodate longer titles</span> in
                 Last Read.
               </li>
@@ -56,7 +56,7 @@ export default function LezhinFinal() {
               <li>
                 <span className="font-bold">
                   The Daily tab is now called Schedule
-                </span>
+                </span>{' '}
                 to make its purpose clearer to users.
               </li>
             </ol>
