@@ -36,8 +36,8 @@ export default function Carousel({
   ];
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex flex-row flex-wrap justify-center gap-x-8 leading-[60px] z-[60] relative">
+    <div className=" overflow-hidden flex flex-col items-center relative">
+      <div className="flex flex-row flex-wrap justify-center gap-x-8 leading-[60px] z-[60]">
         {tabs.map((tab, idx) => (
           <Text
             weight={index === idx ? Weight.bold : Weight.normal}
@@ -51,29 +51,29 @@ export default function Carousel({
         ))}
       </div>
       <div
-        className={`overflow-hidden  flex flex-col flex-center items-center mt-20 w-[900px]  rounded-md ${
+        className={`overflow-hidden flex flex-col flex-center items-center mt-20 w-[800px]  rounded-md ${
           className ?? ''
         } ${indicatorColor[indicators]}`}
       >
         <div
-          className=" flex flex-row z-0 w-full duration-300 ease-in-out self-start"
+          className=" flex flex-row z-0 w-full duration-300 ease-in-out items-start"
           style={{ transform: test }}
         >
-          {children}
+          {children.map((elm) => (
+            <div className="w-[800px] h-fit flex-shrink-0">{elm}</div>
+          ))}
         </div>
       </div>
       <ChevronIcon
-        className={`absolute top-[calc(50%-15px)] rotate-180 z-20 cursor-pointer ${
-          indicators === IndicatorType.inside ? 'left-10' : '-left-10'
-        }
+        className={`absolute top-[calc(50%-15px)] rotate-180 z-20 cursor-pointer left-0
         ${index === 0 ? 'text-gray-400' : ''}`}
         onClick={() => setIndex(Math.max(index - 1, 0))}
       />
 
       <ChevronIcon
-        className={`absolute top-[calc(50%-15px)]   z-20 cursor-pointer ${
-          indicators === IndicatorType.inside ? 'right-10' : '-right-10'
-        } ${index === children.length - 1 ? 'text-gray-400' : ''}`}
+        className={`absolute top-[calc(50%-15px)]   z-20 cursor-pointer right-0 ${
+          index === children.length - 1 ? 'text-gray-400' : ''
+        }`}
         onClick={() => setIndex(Math.min(index + 1, children.length - 1))}
       />
     </div>

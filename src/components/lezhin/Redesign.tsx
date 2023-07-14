@@ -14,7 +14,7 @@ import Link from 'next/link';
 
 export default function Redesign() {
   return (
-    <div className="bg-hn-lezhin w-full flex items-center justify-center">
+    <div className="bg-hn-lezhin  border-2 w-screen border-black flex items-center justify-center">
       <section className="flex flex-col text-left items-center gap-[70px] py-[60px] w-[80%]  text-white">
         <H1>Redesign Features</H1>
         <RedesignCarousel>
