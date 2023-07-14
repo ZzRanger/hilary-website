@@ -24,10 +24,10 @@ export default function Competitive() {
           type="button"
         >
           <Link
-            href="https://docs.google.com/document/d/1bjMusoKa8bbX2PaH81dSBQn4X0nfozgehsEzNn90Pds/edit"
+            href="https://www.notion.so/xodaydream/d7f905692b284d7ba9dcbb6d98659fc8?v=05e59872fdd649219ca272d5135a7095&pvs=4"
             target="_blank"
           >
-            <Text weight={Weight.bold}>View Interview Notes</Text>
+            <Text weight={Weight.bold}>View Competitive Analysis</Text>
           </Link>
         </button>
       </div>

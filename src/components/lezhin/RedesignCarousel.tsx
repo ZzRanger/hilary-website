@@ -33,12 +33,11 @@ export default function Carousel({
     'Individual Comics',
     'My Library',
     'Comment',
-    'User Profile Page',
   ];
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex flex-row flex-wrap justify-center gap-x-8 leading-[60px]">
+      <div className="flex flex-row flex-wrap justify-center gap-x-8 leading-[60px] z-[60] relative">
         {tabs.map((tab, idx) => (
           <Text
             weight={index === idx ? Weight.bold : Weight.normal}
@@ -52,12 +51,12 @@ export default function Carousel({
         ))}
       </div>
       <div
-        className={`overflow-hidden  flex flex-col flex-center items-center mt-20 w-[60vw]  rounded-md ${
+        className={`overflow-hidden  flex flex-col flex-center items-center mt-20 w-[900px]  rounded-md ${
           className ?? ''
         } ${indicatorColor[indicators]}`}
       >
         <div
-          className="flex flex-row w-full z-0 duration-300 ease-in-out self-start"
+          className=" flex flex-row z-0 w-full duration-300 ease-in-out self-start"
           style={{ transform: test }}
         >
           {children}
