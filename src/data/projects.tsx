@@ -61,7 +61,7 @@ const projects: ReactNode[][] = [
       tags={['Branding', 'Printing', 'Packaging', 'Adobe Creative Suite']}
       subtitle="A for-profit magazine project inspired by Genshin Impact and the xianxia genre of Chinese literature."
       period="Dec 2021 - May 2023"
-      ctaLink="https://www.hilary-nguyen.com/decension-1"
+      ctaLink="https://www.hilary-nguyen.com/descension-1"
     >
       <Image src={Decension} alt="" width="375" className="left right-0" />
     </ProjectOverview>,
