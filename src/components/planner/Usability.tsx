@@ -9,8 +9,8 @@ export default function Usability() {
       id="planner-usability"
       className="flex flex-row h-[120vh] w-screen bg-black items-center"
     >
-      <Image src={Macbook3} alt="Macbook" className="w-[80%]" />
-      <article className="flex flex-col w-[50%] text-white">
+      <Image src={Macbook3} alt="Macbook" className="w-[65%]" />
+      <article className="flex flex-col w-[35%] text-white">
         <H1 className="mb-10">Usability Test</H1>
         <Text weight={Weight.medium}>1. Old Prototype</Text>
         <Text weight={Weight.medium}>2. Testing Key Insight</Text>

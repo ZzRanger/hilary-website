@@ -46,11 +46,10 @@ export default function LezhinFinal() {
                 due to Lezhin's top-up system.
               </li>
               <li>
-                All participants expressed a{' '}
                 <span className="font-bold">
-                  The community tab is now Free Coins
+                  The community tab is now Free Coins,
                 </span>{' '}
-                ,allowing easy access to the section for obtaining more coins
+                allowing easy access to the section for obtaining more coins
                 through comments and metrics on comics.
               </li>
               <li>

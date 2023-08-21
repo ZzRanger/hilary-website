@@ -50,9 +50,9 @@ const SpotifyMusic = () => {
   }, [trackIndex]);
 
   return (
-    <ArticleBackground className="h-[720px] flex flex-col items-center gap-y-14 relative overflow-hidden z-10">
+    <ArticleBackground className="h-full p-4 flex flex-col items-center gap-y-14 relative overflow-hidden  z-10">
       <div
-        className={`bg-black absolute h-10 w-10 top-12 right-12 border-2 duration-500 -z-10 ${
+        className={`bg-black absolute h-10 w-10 top-12 right-12 duration-500 -z-10 ${
           mouseOver || playing ? 'scale-[50]' : ''
         }`}
       />
@@ -76,7 +76,7 @@ const SpotifyMusic = () => {
       />
       <div className="flex flex-col text-center text-xl">
         <div
-          className={`font-bold duration-500 ${
+          className={`font-bold duration-500 dark:text-white ${
             mouseOver || playing ? 'text-white' : 'text-black'
           }`}
         >
@@ -94,12 +94,12 @@ const SpotifyMusic = () => {
         } duration-500 flex flex-row justify-center items-center w-60 gap-x-10 h-12 border-2 rounded-[200px]`}
       >
         <SkipIcon
-          className="cursor-pointer"
+          className="cursor-pointer dark:text-white"
           onClick={() => setTrackIndex((trackIndex - 1) % 3)}
         />
         {playing ? (
           <PauseIcon
-            className="cursor-pointer"
+            className="cursor-pointer dark:text-white"
             onClick={() => {
               audioRef.current?.pause();
               setPlaying(false);
@@ -107,7 +107,7 @@ const SpotifyMusic = () => {
           />
         ) : (
           <PlayIcon
-            className="cursor-pointer"
+            className="cursor-pointer dark:text-white"
             onClick={() => {
               audioRef.current?.play();
               setPlaying(true);
@@ -116,7 +116,7 @@ const SpotifyMusic = () => {
         )}
         <SkipIcon
           onClick={() => setTrackIndex((trackIndex + 1) % 3)}
-          className="rotate-180 cursor-pointer"
+          className="rotate-180 cursor-pointer dark:text-white"
         />
       </div>
 

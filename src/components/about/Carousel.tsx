@@ -13,21 +13,21 @@ export default function Carousel() {
 
   const indexArray = ['', '-translate-x-full', '-translate-x-[200%]'];
   return (
-    <div className="w-[1214px] relative rounded-md overflow-hidden">
+    <div className="w-full relative rounded-md overflow-hidden h-full shadow-2xl">
       {index !== 0 && (
         <ChevronIcon
-          className="absolute top-[calc(50%-15px)] left-10 text-white rotate-180 z-20 cursor-pointer"
+          className="absolute top-[calc(50%-15px)] left-10 text-white rotate-180 z-20 cursor-pointer shadow-2xl"
           onClick={() => setIndex((index - 1) % 3)}
         />
       )}
       {index !== 2 && (
         <ChevronIcon
-          className="absolute top-[calc(50%-15px)] text-white right-10 z-20 cursor-pointer"
+          className="absolute top-[calc(50%-15px)] text-white right-10 z-20 cursor-pointer shadow-2xl"
           onClick={() => setIndex((index + 1) % 3)}
         />
       )}
 
-      <div className="absolute bottom-[15%] w-14 right-[calc(50%-28px)] z-20 flex flex-row justify-around">
+      <div className="absolute bottom-[5%] w-14 right-[calc(50%-28px)] z-20 flex flex-row justify-around">
         <EllipseIcon
           onClick={() => setIndex(0)}
           className={`cursor-pointer ${
@@ -48,36 +48,42 @@ export default function Carousel() {
         />
       </div>
       <div
-        className={`flex flex-row w-full  ${indexArray[index]} z-0 duration-300 ease-in-out`}
+        className={`flex flex-row w-full ${indexArray[index]} z-0 duration-300 ease-in-out h-full`}
       >
-        <div className="relative flex-shrink-0 w-fit h-fit box-border rounded-md">
+        <div className="relative flex-shrink-0 w-fit box-border rounded-md">
           <Image
             src={Tokyo}
             priority
             alt=""
-            className={`${index === 0 ? 'z-10' : 'z-0'}  duration-500`}
+            className={`${
+              index === 0 ? 'z-10' : 'z-0'
+            } duration-500 object-cover h-full`}
           />
           <Caption
             caption="View of Tokyo 🇯🇵 Top of Tokyo Government Tower"
             location="Tokyo, Japan"
           />
         </div>
-        <div className="relative flex-shrink-0 w-fit h-fit box-border rounded-md">
+        <div className="relative flex-shrink-0 w-fit box-border rounded-md">
           <Image
             src={Singapore}
             alt=""
-            className={`${index === 1 ? 'z-10' : 'z-0'} duration-500`}
+            className={`${
+              index === 1 ? 'z-10' : 'z-0'
+            } duration-500 object-cover h-full`}
           />
           <Caption
             caption="View of Singapore's skyline at night 🇸🇬 🌌"
             location="Singapore, Singapore"
           />
         </div>
-        <div className="relative flex-shrink-0 w-fit h-fit box-border rounded-md">
+        <div className="relative flex-shrink-0 w-fit box-border rounded-md">
           <Image
             src={Austria}
             alt=""
-            className={`${index === 2 ? 'z-10' : 'z-0'}  duration-500`}
+            className={`${
+              index === 2 ? 'z-10' : 'z-0'
+            }  duration-500 object-cover h-full`}
           />
           <Caption
             caption="🇦🇹 Vienna  at sunset  🌅"
@@ -97,7 +103,7 @@ const Caption = ({
   location: string;
 }) => (
   <div
-    className="absolute top-[calc(50%-89px)] left-[104px] flex flex-col items-center w-[280px] h-[178px] justify-evenly"
+    className="dark:text-black absolute sm:bottom-[15%] sm:left-[calc(50%-140px)] bottom-[15%] left-[calc(50%-140px)] lg:top-[calc(50%-89px)] lg:left-[104px] flex flex-col items-center w-[280px] h-[178px] justify-evenly"
     style={{
       borderRadius: '20px',
       background:

@@ -4,7 +4,7 @@ import React, { useMemo, useState } from 'react';
 
 import ChevronIcon from '@/components/svg/ChevronIcon';
 import EllipseIcon from '@/components/svg/EllipseIcon';
-import { IndicatorType } from '@/app/about/page';
+import { IndicatorType } from '@/app/(profile)/about/page';
 import Text, { Weight } from '@/components/typography/Text';
 
 const indicatorColor = {

@@ -33,7 +33,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${sans.variable} ${ethereal.variable}`}
     >
-      <body className="">
+      <body>
         <Providers>{children}</Providers>
       </body>
     </html>

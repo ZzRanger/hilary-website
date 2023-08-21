@@ -1,6 +1,3 @@
-import Text, { Weight } from '@/components/typography/Text';
-import Link from 'next/link';
-
 export default function Button({
   children,
   className,

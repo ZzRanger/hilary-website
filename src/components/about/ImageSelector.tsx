@@ -15,7 +15,7 @@ export default function ImageSelector() {
   const [buttonState, setButtonState] = useState(0);
 
   return (
-    <div className="w-[420px] relative">
+    <div className="relative">
       <Image
         src={TaiwanPhoto}
         priority
@@ -68,7 +68,7 @@ function ImagePillSelector({
           'radial-gradient(97.57 % 210.75 % at 0.9 % 2.98 %, rgba(255,255,255,0.4) 0 %,    rgba(255,255,255,0) 100 %           )',
         borderRadius: '27.5px',
       }}
-      className="relative flex flex-row justify-around items-center px-2"
+      className="relative flex flex-row justify-around items-center px-2 shadow-2xl"
     >
       <span
         className={`absolute bg-white z-0 w-[35%] h-[80%] rounded-[300px] duration-200 ${marginMap[buttonState]} delay-75`}

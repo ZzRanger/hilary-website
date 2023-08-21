@@ -43,6 +43,17 @@ const projects: ReactNode[][] = [
     >
       <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
     </ProjectOverview>,
+    <ProjectOverview
+      client="@taipei-mrt"
+      title="Afrika"
+      tags={['Case Study', 'UX Research', 'UI Design', 'Mobile']}
+      subtitle="Redesign of Taipei Metro App to provide users with an online reloading feature and a modern interface."
+      period="Dec 2023 - Jan 2023"
+      ctaLink="#"
+      ctaMsg="Coming Soon"
+    >
+      <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
+    </ProjectOverview>,
   ],
   [
     <ProjectOverview

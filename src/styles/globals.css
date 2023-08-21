@@ -6,9 +6,10 @@
   background-size: 7.5%;
 }
 
+
 .bg-blobs {
   background-image: url('../../public/blobs.png');
-  background-size: 100%;
+  background-size: cover;
 }
 
 .light .bg-grid {

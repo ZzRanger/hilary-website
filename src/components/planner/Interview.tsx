@@ -7,7 +7,7 @@ import PieSurvey1 from '@/components/planner/PieSurvey1';
 import PieSurvey2 from '@/components/planner/PieSurvey2';
 import PieSurvey3 from '@/components/planner/PieSurvey3';
 import Carousel from '@/components/Carousel';
-import { IndicatorType } from '@/app/about/page';
+import { IndicatorType } from '@/app/(profile)/about/page';
 
 export default function Interview() {
   const graphs = [<PieSurvey1 />, <PieSurvey2 />, <PieSurvey3 />];

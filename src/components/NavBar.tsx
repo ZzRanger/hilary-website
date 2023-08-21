@@ -4,6 +4,7 @@ import { ReactNode, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import profilePic from '../../public/hn.png';
+import useMedia from '@/utils/useMediaQuery';
 
 export const NavBar = () => {
   const links: {
@@ -11,11 +12,13 @@ export const NavBar = () => {
     children: ReactNode;
     title: string;
     icon: ReactNode;
+    newTab: boolean;
   }[] = [
     {
       href: '/about',
       children: 'About',
       title: 'About',
+      newTab: false,
       icon: (
         <svg
           width="20"
@@ -45,6 +48,7 @@ export const NavBar = () => {
       href: '/playground',
       children: 'Play',
       title: 'Play',
+      newTab: true,
       icon: (
         <svg
           width="20"
@@ -67,6 +71,7 @@ export const NavBar = () => {
       href: '/resume.pdf',
       children: 'Resume',
       title: 'Resume',
+      newTab: true,
       icon: (
         <svg
           width="20"
@@ -88,6 +93,7 @@ export const NavBar = () => {
     {
       href: 'https://www.linkedin.com/in/hilary-nguyen/',
       title: 'LinkedIn',
+      newTab: true,
       children: (
         <svg
           width="24"
@@ -130,6 +136,7 @@ export const NavBar = () => {
     {
       href: 'mailto:nguyenhilary0907@gmail.com',
       title: 'Mail',
+      newTab: true,
       children: (
         <svg
           width="24"
@@ -167,6 +174,8 @@ export const NavBar = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [sticky, setSticky] = useState(true);
   const [open, setOpen] = useState(false);
+
+  const isSmallScreen = useMedia('(max-width: 640px)');
   useEffect(() => {
     if (ref.current) {
       const { height } = ref.current.getBoundingClientRect();
@@ -183,85 +192,98 @@ export const NavBar = () => {
   useEffect(() => {
     setOpen(false);
   }, [sticky]);
+
   return (
-    <div
-      ref={ref}
-      className={`transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl sticky top-0 ${
-        !sticky
-          ? 'bg-transparent dark:bg-transparent'
-          : 'border-b dark:border-b-white border-b-[#323943] dark:bg-neutral-900 bg-white'
-      } z-50`}
-    >
-      {sticky && (
-        <Link href="/">
-          <h1 className="tracking-tight font-black text-3xl">Hilary Nguyen</h1>
-        </Link>
-      )}
-      <div
-        className={`rounded-full shadow-md ${
-          sticky ? 'relative translate-x-1/2' : ''
-        }`}
-      >
-        <Link href="/">
-          <Image src={profilePic} alt="" className="w-16 h-16" />
-        </Link>
-      </div>
-      {sticky ? (
-        <div className="flex justify-center items-center p-0 gap-5 text-lg">
-          {links.map(({ href, children }) => (
-            <Link target="_blank" href={href} key={`-nav-${href}`}>
-              {children}
-            </Link>
-          ))}
-        </div>
+    <>
+      {!sticky || isSmallScreen ? (
+        <>
+          <div className="sticky top-8 z-50 self-start left-8 h-0">
+            <div className="flex justify-center items-center w-16 h-16">
+              <Link href="/" className="">
+                <Image src={profilePic} alt="" className="w-16 h-16 z-30" />
+              </Link>
+            </div>
+          </div>
+          <button
+            className="flex justify-start sticky top-8 z-50 self-end right-8 h-[116px] cursor-pointer"
+            onClick={() => setOpen((open) => !open)}
+          >
+            <div className="flex justify-center items-center w-12 h-12 bg-white dark:bg-black shadow-md rounded-full">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M6 10C6 8.89543 6.89543 8 8 8H32C33.1046 8 34 8.89543 34 10C34 11.1046 33.1046 12 32 12H8C6.89543 12 6 11.1046 6 10Z"
+                  fill="currentColor"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M6 20C6 18.8954 6.89543 18 8 18H32C33.1046 18 34 18.8954 34 20C34 21.1046 33.1046 22 32 22H8C6.89543 22 6 21.1046 6 20Z"
+                  fill="currentColor"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M18 30C18 28.8954 18.8954 28 20 28H32C33.1046 28 34 28.8954 34 30C34 31.1046 33.1046 32 32 32H20C18.8954 32 18 31.1046 18 30Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                className={`flex flex-col absolute top-12 right-4 bg-white dark:bg-neutral-800 shadow-md rounded-md overflow-clip my-2 ${
+                  open ? 'block' : 'hidden'
+                }`}
+              >
+                {links.map(({ href, title, icon, newTab }) => (
+                  <Link
+                    target={newTab ? '_blank' : ''}
+                    href={href}
+                    key={`-nav-hamburger-${href}`}
+                  >
+                    <div className="flex items-center text-lg px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 text-neutral-700 dark:text-neutral-200 font-medium">
+                      <span>{icon}</span>
+                      <span>{title}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </button>
+        </>
       ) : (
-        <button
-          type="button"
-          className="relative mix-blend-difference "
-          onClick={() => setOpen((o) => !o)}
+        <div
+          ref={ref}
+          className={`h-[116px] border-box transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl sticky top-0 ${
+            !sticky
+              ? 'bg-transparent dark:bg-transparent '
+              : 'border-b dark:border-b-gray-500 border-b-[#323943] dark:bg-neutral-900 bg-white'
+          } z-50`}
         >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M6 10C6 8.89543 6.89543 8 8 8H32C33.1046 8 34 8.89543 34 10C34 11.1046 33.1046 12 32 12H8C6.89543 12 6 11.1046 6 10Z"
-              fill="currentColor"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M6 20C6 18.8954 6.89543 18 8 18H32C33.1046 18 34 18.8954 34 20C34 21.1046 33.1046 22 32 22H8C6.89543 22 6 21.1046 6 20Z"
-              fill="currentColor"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M18 30C18 28.8954 18.8954 28 20 28H32C33.1046 28 34 28.8954 34 30C34 31.1046 33.1046 32 32 32H20C18.8954 32 18 31.1046 18 30Z"
-              fill="currentColor"
-            />
-          </svg>
-          <div
-            className={`flex flex-col absolute right-0 bg-white dark:bg-neutral-800 shadow-md rounded-md overflow-clip my-2 ${
-              open ? 'block' : 'hidden'
-            }`}
-          >
-            {links.map(({ href, title, icon }) => (
-              <Link target="_blank" href={href} key={`-nav-hamburger-${href}`}>
-                <div className="flex items-center text-lg px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 text-neutral-700 dark:text-neutral-200 font-medium">
-                  <span>{icon}</span>
-                  <span>{title}</span>
-                </div>
+          <Link href="/">
+            <h1 className="tracking-tight font-black text-3xl">
+              Hilary Nguyen
+            </h1>
+          </Link>
+
+          <div className="flex justify-center items-center p-0 gap-5 text-lg">
+            {links.map(({ href, children, newTab }) => (
+              <Link
+                target={newTab ? '_blank' : ''}
+                href={href}
+                key={`-nav-${href}`}
+              >
+                {children}
               </Link>
             ))}
           </div>
-        </button>
+        </div>
       )}
-    </div>
+    </>
   );
 };
