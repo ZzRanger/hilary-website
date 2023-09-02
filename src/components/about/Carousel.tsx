@@ -102,16 +102,7 @@ const Caption = ({
   caption: string;
   location: string;
 }) => (
-  <div
-    className="dark:text-black absolute sm:bottom-[15%] sm:left-[calc(50%-140px)] bottom-[15%] left-[calc(50%-140px)] lg:top-[calc(50%-89px)] lg:left-[104px] flex flex-col items-center w-[280px] h-[178px] justify-evenly"
-    style={{
-      borderRadius: '20px',
-      background:
-        'radial-gradient(220.77% 112.20% at 42.83% 0.00%, #CCC8C8 0%, rgba(255, 255, 255, 0.00) 100%)',
-      boxShadow: '0px 4px 19px 3px rgba(0, 0, 0, 0.25)',
-      backdropFilter: 'blur(21px)',
-    }}
-  >
+  <div className="text-black bg-[#CCC9C8]/90 lg:bg-inherit lg:bg-glass-2 lg:backdrop-blur-xl shadow-2xl rounded-[20px] dark:text-black z-50 absolute sm:bottom-[15%] sm:left-[calc(50%-140px)] bottom-[15%] left-[calc(50%-140px)] lg:top-[calc(50%-89px)] lg:left-[104px] flex flex-col items-center w-[280px] h-[178px] justify-evenly">
     <div className="text-center">Info</div>
     <hr className="bg-[#828282] h-[1px] w-full border-0" />
     <div className="w-60 text-center py-6">{caption}</div>

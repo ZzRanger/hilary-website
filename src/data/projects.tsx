@@ -44,13 +44,19 @@ const projects: ReactNode[][] = [
       <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
     </ProjectOverview>,
     <ProjectOverview
-      client="@taipei-mrt"
-      title="Afrika"
-      tags={['Case Study', 'UX Research', 'UI Design', 'Mobile']}
-      subtitle="Redesign of Taipei Metro App to provide users with an online reloading feature and a modern interface."
-      period="Dec 2023 - Jan 2023"
-      ctaLink="#"
-      ctaMsg="Coming Soon"
+      client="@rafiki-africa"
+      title="Somasawa"
+      tags={[
+        'Case Study',
+        'UX Research',
+        'B2C',
+        'UIDesign',
+        'Learning Management System',
+        'Mobile',
+      ]}
+      subtitle="Development of an app for Kenyan teahcers in Rafiki Africa to help streamline their workflows for students"
+      period="June 2023 - August 2023"
+      ctaLink="https://www.notion.so/developforgood/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc?pvs=4"
     >
       <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
     </ProjectOverview>,

@@ -9,8 +9,28 @@ import PieSurvey3 from '@/components/planner/PieSurvey3';
 import Carousel from '@/components/Carousel';
 import { IndicatorType } from '@/app/(profile)/about/page';
 
+type GraphType = {
+  description: string;
+  element: JSX.Element;
+};
 export default function Interview() {
-  const graphs = [<PieSurvey1 />, <PieSurvey2 />, <PieSurvey3 />];
+  const graphs: GraphType[] = [
+    {
+      description:
+        "42% of students meet advisors only when they have questions or concerns, despite the university's recommendation of meeting once per semester",
+      element: <PieSurvey1 />,
+    },
+    {
+      description:
+        '69% of students feel neutral or dissatisfied with the availability of the advisors',
+      element: <PieSurvey2 />,
+    },
+    {
+      description:
+        '42% of students feel the quality of advising support is moderately effective',
+      element: <PieSurvey3 />,
+    },
+  ];
   return (
     <>
       {/* Included wrapper div w/ black background so that top & bottom border looks rounded & meshes cleanly */}
@@ -23,15 +43,11 @@ export default function Interview() {
             gathered
             <span className="font-bold"> 141 responses</span>
           </Text>
-          <Carousel indicators={IndicatorType.outside} className="w-[90vw]">
-            {graphs.map((elm) => (
-              <div className="w-[90vw] flex flex-col justify-center items-center gap-y-20 pb-10 flex-shrink-0">
-                <div className="w-[50vw]">{elm}</div>
-                <Text weight={Weight.medium}>
-                  42% of students meet advisors only when they have questions or
-                  concerns, despite the university's recommendation of meeting
-                  once per semester.
-                </Text>
+          <Carousel indicators={IndicatorType.outside} className="w-[60vw]">
+            {graphs.map((graphElm) => (
+              <div className="w-[60vw] flex flex-col justify-center items-center gap-y-20 pb-10 flex-shrink-0">
+                <div className="w-[50vw]">{graphElm.element}</div>
+                <Text weight={Weight.medium}>{graphElm.description}</Text>
               </div>
             ))}
           </Carousel>

@@ -3,10 +3,10 @@ const ArticleBackground = ({
   children,
 }: {
   className?: string;
-  children: React.ReactElement | React.ReactElement[];
+  children: React.ReactNode;
 }) => (
   <article
-    className={`bg-white/50 dark:bg-black/50 shadow-2xl rounded-3xl dark:border-gray-500 border ${
+    className={`bg-white/60 dark:bg-black/60 shadow-2xl rounded-3xl dark:border-gray-500 border ${
       className || ''
     } `}
   >

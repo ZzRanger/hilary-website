@@ -32,7 +32,7 @@ export const ProjectOverview = ({
         <p>{period}</p>
       </div>
       <div
-        className={`bg-white/10 dark:bg-black/10 shadow-2xl flex flex-col rounded-lg overflow-clip border ${cardClasses} group dark:from-black/25 dark:to-black/15 dark:bg-gradient-to-tr dark:border-gray-500`}
+        className={`bg-white/60 lg:backdrop-blur-md lg:bg-glass-1 lg:bg-inherit dark:bg-black/60 shadow-2xl flex flex-col rounded-lg overflow-clip border ${cardClasses} group dark:from-black/25 dark:to-black/15 dark:bg-gradient-to-tr dark:border-gray-500`}
       >
         <div className="flex justify-between items-center px-10 py-8">
           <div className="flex gap-4">

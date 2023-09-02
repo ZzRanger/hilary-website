@@ -53,49 +53,48 @@ export default function About() {
   );
 }
 
-const AboutMe = () => (
-  <ArticleBackground className="flex flex-col py-10 px-5 justify-between h-full">
-    <div className="text-xl lg:text-4xl font-extrabold">
-      A little bit about me
-    </div>
-    <div className="">
-      <div className="text-base lg:text-xl leading-5 lg:leading-10 font-bold">
-        WHO I AM
-      </div>
-      <div className="text-xs leading-6 lg:leading-8 lg:text-base max-w-[700px]">
-        I'm a self-taught designer passionate about improving the lives of
-        others through my design work. I seek to learn new things every day,
-        whether that's how to format a magazine, bake a mochi cookie, or how to
-        make a perfectly fried egg!
-      </div>
-    </div>
+type AboutMeType = {
+  title: string;
+  description: string;
+};
 
-    <div className="">
-      <div className="text-base lg:text-xl leading-10 font-bold">
-        MY DESIGN JOURNEY
+const AboutMe = () => {
+  const aboutMeInfo: AboutMeType[] = [
+    {
+      title: 'WHO I AM',
+      description:
+        "I'm a self-taught designer passionate about improving the lives of others through my design work. I seek to learn new things every day, whether that's how to format a magazine, bake a mochi cookie, or how to make a perfectly fried egg!",
+    },
+    {
+      title: 'MY DESIGN JOURNEY',
+      description:
+        'I started my design journey by arming myself with a curious mind, a laptop, and Adobe Photoshop. I dedicated myself to learning and growing by attending design workshops, watching videos about accessibility in design, and applying the concepts I encountered to real-life projects such as my Lezhin App Redesign.',
+    },
+    {
+      title: 'MY ASPIRATION',
+      description:
+        "The design world is always evolving, adapting to the world's needs, and so is a designer's job. I hope to grow into a creative professional by challenging myself even more with future creative projects and to be able to design extraordinary things that can help people.",
+    },
+  ];
+  return (
+    <ArticleBackground className="flex flex-col py-10 px-5 justify-between h-full">
+      <div className="text-xl lg:text-4xl font-extrabold">
+        A little bit about me
       </div>
-      <div className="text-xs leading-6 lg:leading-8 lg:text-base max-w-[700px]">
-        I started my design journey by arming myself with a curious mind, a
-        laptop, and Adobe Photoshop. I dedicated myself to learning and growing
-        by attending design workshops, watching videos about accessibility in
-        design, and applying the concepts I encountered to real-life projects
-        such as my Lezhin App Redesign.
-      </div>
-    </div>
 
-    <div className="">
-      <div className="text-base lg:text-xl leading-10 font-bold">
-        MY ASPIRATION
-      </div>
-      <div className="text-xs leading-6 lg:leading-8 lg:text-base max-w-[700px]">
-        The design world is always evolving, adapting to the world's needs, and
-        so is a designer's job. I hope to grow into a creative professional by
-        challenging myself even more with future creative projects and to be
-        able to design extraordinary things that can help people.
-      </div>
-    </div>
-  </ArticleBackground>
-);
+      {aboutMeInfo.map((aboutMe) => (
+        <div>
+          <div className="text-base lg:text-xl leading-5 lg:leading-10 font-bold">
+            {aboutMe.title}
+          </div>
+          <div className="text-xs leading-6 lg:leading-8 lg:text-base max-w-[700px]">
+            {aboutMe.description}
+          </div>
+        </div>
+      ))}
+    </ArticleBackground>
+  );
+};
 
 const ReadingList = () => (
   <ArticleBackground className="flex justify-center items-center p-12">

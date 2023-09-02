@@ -3,7 +3,7 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import profilePic from '../../public/hn.png';
+import profilePic from '@public/hn.png';
 import useMedia from '@/utils/useMediaQuery';
 
 export const NavBar = () => {
@@ -45,7 +45,7 @@ export const NavBar = () => {
       ),
     },
     {
-      href: '/playground',
+      href: 'https://fori.io/hilary-nguyen ',
       children: 'Play',
       title: 'Play',
       newTab: true,
@@ -193,97 +193,103 @@ export const NavBar = () => {
     setOpen(false);
   }, [sticky]);
 
-  return (
-    <>
-      {!sticky || isSmallScreen ? (
-        <>
-          <div className="sticky top-8 z-50 self-start left-8 h-0">
-            <div className="flex justify-center items-center w-16 h-16">
-              <Link href="/" className="">
-                <Image src={profilePic} alt="" className="w-16 h-16 z-30" />
-              </Link>
-            </div>
-          </div>
-          <button
-            className="flex justify-start sticky top-8 z-50 self-end right-8 h-[116px] cursor-pointer"
-            onClick={() => setOpen((open) => !open)}
-          >
-            <div className="flex justify-center items-center w-12 h-12 bg-white dark:bg-black shadow-md rounded-full">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6 10C6 8.89543 6.89543 8 8 8H32C33.1046 8 34 8.89543 34 10C34 11.1046 33.1046 12 32 12H8C6.89543 12 6 11.1046 6 10Z"
-                  fill="currentColor"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6 20C6 18.8954 6.89543 18 8 18H32C33.1046 18 34 18.8954 34 20C34 21.1046 33.1046 22 32 22H8C6.89543 22 6 21.1046 6 20Z"
-                  fill="currentColor"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M18 30C18 28.8954 18.8954 28 20 28H32C33.1046 28 34 28.8954 34 30C34 31.1046 33.1046 32 32 32H20C18.8954 32 18 31.1046 18 30Z"
-                  fill="currentColor"
-                />
-              </svg>
-              <div
-                className={`flex flex-col absolute top-12 right-4 bg-white dark:bg-neutral-800 shadow-md rounded-md overflow-clip my-2 ${
-                  open ? 'block' : 'hidden'
-                }`}
-              >
-                {links.map(({ href, title, icon, newTab }) => (
-                  <Link
-                    target={newTab ? '_blank' : ''}
-                    href={href}
-                    key={`-nav-hamburger-${href}`}
-                  >
-                    <div className="flex items-center text-lg px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 text-neutral-700 dark:text-neutral-200 font-medium">
-                      <span>{icon}</span>
-                      <span>{title}</span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </button>
-        </>
-      ) : (
-        <div
-          ref={ref}
-          className={`h-[116px] border-box transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl sticky top-0 ${
-            !sticky
-              ? 'bg-transparent dark:bg-transparent '
-              : 'border-b dark:border-b-gray-500 border-b-[#323943] dark:bg-neutral-900 bg-white'
-          } z-50`}
-        >
-          <Link href="/">
-            <h1 className="tracking-tight font-black text-3xl">
-              Hilary Nguyen
-            </h1>
-          </Link>
-
-          <div className="flex justify-center items-center p-0 gap-5 text-lg">
-            {links.map(({ href, children, newTab }) => (
-              <Link
-                target={newTab ? '_blank' : ''}
-                href={href}
-                key={`-nav-${href}`}
-              >
-                {children}
-              </Link>
-            ))}
+  // For small screens and when you scroll
+  if (!sticky || isSmallScreen) {
+    return (
+      <>
+        <div className="sticky top-8 z-50 self-start left-8 h-0">
+          <div className="flex justify-center items-center w-16 h-16">
+            <Link href="/" className="">
+              <Image src={profilePic} alt="" className="w-16 h-16 z-30" />
+            </Link>
           </div>
         </div>
-      )}
-    </>
+        <button
+          className="flex justify-start sticky top-8 z-50 self-end right-8 h-[116px] cursor-pointer"
+          onClick={() => setOpen((open) => !open)}
+        >
+          <div className="flex justify-center items-center w-12 h-12 bg-white dark:bg-black shadow-md rounded-full">
+            <NavigateIcon />
+            <div
+              className={`flex flex-col absolute top-12 right-0 bg-white dark:bg-neutral-800 shadow-md rounded-md overflow-clip my-2 ${
+                open ? 'block' : 'hidden'
+              }`}
+            >
+              {links.map(({ href, title, icon, newTab }) => (
+                <Link
+                  target={newTab ? '_blank' : ''}
+                  href={href}
+                  key={`-nav-hamburger-${href}`}
+                >
+                  <div className="flex items-center text-lg px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 text-neutral-700 dark:text-neutral-200 font-medium">
+                    <span>{icon}</span>
+                    <span>{title}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </button>
+      </>
+    );
+  }
+
+  // For larger screens when you first render a page
+  return (
+    <div
+      ref={ref}
+      className={`h-[116px] border-box transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl sticky top-0 ${
+        !sticky
+          ? 'bg-transparent dark:bg-transparent '
+          : 'border-b dark:border-b-gray-500 border-b-[#323943] dark:bg-neutral-900 bg-white'
+      } z-50`}
+    >
+      <Link href="/">
+        <h1 className="tracking-tight font-black text-3xl">Hilary Nguyen</h1>
+      </Link>
+
+      <div className="flex justify-center items-center p-0 gap-5 text-lg">
+        {links.map(({ href, children, newTab }) => (
+          <Link
+            target={newTab ? '_blank' : ''}
+            href={href}
+            key={`-nav-${href}`}
+          >
+            {children}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const NavigateIcon = () => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M6 10C6 8.89543 6.89543 8 8 8H32C33.1046 8 34 8.89543 34 10C34 11.1046 33.1046 12 32 12H8C6.89543 12 6 11.1046 6 10Z"
+        fill="currentColor"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M6 20C6 18.8954 6.89543 18 8 18H32C33.1046 18 34 18.8954 34 20C34 21.1046 33.1046 22 32 22H8C6.89543 22 6 21.1046 6 20Z"
+        fill="currentColor"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M18 30C18 28.8954 18.8954 28 20 28H32C33.1046 28 34 28.8954 34 30C34 31.1046 33.1046 32 32 32H20C18.8954 32 18 31.1046 18 30Z"
+        fill="currentColor"
+      />
+    </svg>
   );
 };
