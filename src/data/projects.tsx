@@ -1,11 +1,12 @@
 import type { ReactNode } from 'react';
 import Image from 'next/image';
 import { ProjectOverview } from '@/components/ProjectOverview';
-import Decension from '../../public/zine.png';
-import { PillLink } from '../components/PillLink';
-import Planner from '../../public/planner.png';
-import Lezhin from '../../public/lezhin.png';
-import TaipeiMetro from '../../public/metro-app.png';
+import Decension from '@public/zine.png';
+import { PillLink } from '@/components/PillLink';
+import Planner from '@public/planner.png';
+import Lezhin from '@public/lezhin.png';
+import TaipeiMetro from '@public/metro-app.png';
+import Somasawa from '@public/somasawa.png';
 
 import SystemDlc from '../../public/SYSTE.png';
 import Nebula from '../../public/NEBULA LAB.png';
@@ -58,7 +59,7 @@ const projects: ReactNode[][] = [
       period="June 2023 - August 2023"
       ctaLink="https://www.notion.so/developforgood/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc?pvs=4"
     >
-      <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
+      <Image src={Somasawa} alt="" width="450" className="left right-0" />
     </ProjectOverview>,
   ],
   [
