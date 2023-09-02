@@ -33,17 +33,17 @@ const projects: ReactNode[][] = [
     >
       <Image src={Lezhin} alt="" width="450" className="left right-0" />
     </ProjectOverview>,
-    <ProjectOverview
-      client="@taipei-mrt"
-      title="Taipei Metro App"
-      tags={['Case Study', 'UX Research', 'UI Design', 'Mobile']}
-      subtitle="Redesign of Taipei Metro App to provide users with an online reloading feature and a modern interface."
-      period="Dec 2023 - Jan 2023"
-      ctaLink="#"
-      ctaMsg="Coming Soon"
-    >
-      <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
-    </ProjectOverview>,
+    // <ProjectOverview
+    //   client="@taipei-mrt"
+    //   title="Taipei Metro App"
+    //   tags={['Case Study', 'UX Research', 'UI Design', 'Mobile']}
+    //   subtitle="Redesign of Taipei Metro App to provide users with an online reloading feature and a modern interface."
+    //   period="Dec 2023 - Jan 2023"
+    //   ctaLink="#"
+    //   ctaMsg="Coming Soon"
+    // >
+    //   <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
+    // </ProjectOverview>,
     <ProjectOverview
       client="@rafiki-africa"
       title="Somasawa"
@@ -83,17 +83,17 @@ const projects: ReactNode[][] = [
     >
       <Image src={Decension} alt="" width="375" className="left right-0" />
     </ProjectOverview>,
-    <ProjectOverview
-      client="@taipei-mrt"
-      title="System DLC"
-      tags={['Branding', 'Social Media', 'Printing', 'Adobe Creative Suite']}
-      subtitle="Creating cyber-punk theme branding and social media for System DLC, a fantasy zine. "
-      period="Dec 2021 - May 2023"
-      ctaLink="#"
-      ctaMsg="Coming Soon"
-    >
-      <Image src={SystemDlc} alt="" width="375" />
-    </ProjectOverview>,
+    // <ProjectOverview
+    //   client="@taipei-mrt"
+    //   title="System DLC"
+    //   tags={['Branding', 'Social Media', 'Printing', 'Adobe Creative Suite']}
+    //   subtitle="Creating cyber-punk theme branding and social media for System DLC, a fantasy zine. "
+    //   period="Dec 2021 - May 2023"
+    //   ctaLink="#"
+    //   ctaMsg="Coming Soon"
+    // >
+    //   <Image src={SystemDlc} alt="" width="375" />
+    // </ProjectOverview>,
     <PillLink
       href="https://www.hilary-nguyen.com/playground"
       className="bg-white text-black flex items-center gap-1"
