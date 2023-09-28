@@ -47,15 +47,8 @@ const projects: ReactNode[][] = [
     <ProjectOverview
       client="@rafiki-africa"
       title="Somasawa"
-      tags={[
-        'Case Study',
-        'UX Research',
-        'B2C',
-        'UIDesign',
-        'Learning Management System',
-        'Mobile',
-      ]}
-      subtitle="Development of an app for Kenyan teahcers in Rafiki Africa to help streamline their workflows for students"
+      tags={['Case Study', 'UX Research', 'B2C', 'UI Design', 'Mobile']}
+      subtitle="Development of an app for Kenyan teachers in Rafiki Africa to help streamline their workflows for students"
       period="June 2023 - August 2023"
       ctaLink="https://www.notion.so/developforgood/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc?pvs=4"
     >
