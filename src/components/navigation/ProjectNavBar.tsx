@@ -3,7 +3,6 @@ import VerticalDotsIcon from '@/components/svg/VerticalDotsIcon';
 import ViewGridIcon from '@/components/svg/ViewGridIcon';
 import profilePic from '@public/hn.png';
 import Image from 'next/image';
-import { RefObject } from 'react';
 
 const THEMES = {
   dark: {
