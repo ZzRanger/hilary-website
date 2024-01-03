@@ -22,6 +22,8 @@ module.exports = {
           'linear-gradient(153deg, rgba(208, 208, 208, 0.25) 0%, rgba(245, 245, 245, 0.50) 100%)',
         'glass-2':
           'radial-gradient(220.77% 112.2% at 42.83% 0%, #CCC9C8 0%, rgba(255, 255, 255, 0.00) 100%)',
+        'glass-3':
+          'radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%)',
       },
     },
   },

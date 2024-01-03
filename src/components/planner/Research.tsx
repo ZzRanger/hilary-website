@@ -2,10 +2,12 @@ import Image from 'next/image';
 import H1 from '@/components/typography/H1';
 import Text, { Weight } from '@/components/typography/Text';
 import Macbook2 from '../../../public/planner/macbook2.png';
+import { ForwardedRef, forwardRef } from 'react';
 
-export default function Resaerch() {
+const Resaerch = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   return (
     <section
+      ref={ref}
       id="planner-research"
       className="grid grid-cols-[2fr_3fr] w-screen place-items-center h-[120vh]"
     >
@@ -24,4 +26,6 @@ export default function Resaerch() {
       </article>
     </section>
   );
-}
+});
+
+export default Resaerch;

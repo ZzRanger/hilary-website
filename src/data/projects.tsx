@@ -62,7 +62,7 @@ const projects: ReactNode[][] = [
       tags={['Brand Identity', 'Graphic Design', 'Illustrator', 'InDesign']}
       subtitle="Developing a branding for Nebula Labs, a student organization utilizing technology to assist students."
       period="Jan 2023 - March 2023"
-      ctaLink="https://www.hilary-nguyen.com/nebula-labs"
+      ctaLink="/nebula-labs"
     >
       <Image src={Nebula} alt="" width="350" className="left right-0" />
     </ProjectOverview>,

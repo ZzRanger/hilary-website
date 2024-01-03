@@ -1,10 +1,14 @@
 import H2 from '@/components/typography/H2';
 import Text, { Weight } from '@/components/typography/Text';
 import Link from 'next/link';
+import { ForwardedRef, forwardRef } from 'react';
 
-export default function UsabilityDescription() {
+const UsabilityDescription = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   return (
-    <section className="flex flex-col text-center items-center gap-[65px] py-[60px]">
+    <section
+      ref={ref}
+      className="flex flex-col text-center items-center gap-[65px] py-[60px]"
+    >
       <Text weight={Weight.bold} className="w-[80%]">
         Usability Test
       </Text>
@@ -71,4 +75,6 @@ export default function UsabilityDescription() {
       </article>
     </section>
   );
-}
+});
+
+export default UsabilityDescription;

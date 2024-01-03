@@ -1,9 +1,13 @@
 import H2 from '@/components/typography/H2';
 import Text, { Weight } from '@/components/typography/Text';
+import { ForwardedRef, forwardRef } from 'react';
 
-export default function Empathy() {
+const Empathy = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   return (
-    <section className="flex flex-col items-center text-center my-[20vh] gap-y-[82px]">
+    <section
+      ref={ref}
+      className="flex flex-col items-center text-center my-[20vh] gap-y-[82px]"
+    >
       <H2>👥 Empathy Map</H2>
       <Text
         weight={Weight.medium}
@@ -86,7 +90,7 @@ export default function Empathy() {
       </article>
     </section>
   );
-}
+});
 
 const EmpathySquare = ({
   className,
@@ -109,3 +113,5 @@ const EmpathySquareLabel = ({ label }: { label: string }) => (
     {label}
   </div>
 );
+
+export default Empathy;

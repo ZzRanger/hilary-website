@@ -2,9 +2,14 @@ import Image from 'next/image';
 import Text, { Weight } from '@/components/typography/Text';
 import Mockups from '../../../public/planner/mockups.png';
 
-export default function Wireframes() {
+import { ForwardedRef, forwardRef, useEffect } from 'react';
+
+const WireframesView = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   return (
-    <section className="h-fit bg-black flex flex-col text-white items-center text-center py-[10vh]">
+    <section
+      ref={ref}
+      className="h-fit bg-black flex flex-col text-white items-center text-center py-[10vh]"
+    >
       <Text weight={Weight.bold} className="mb-[40px]">
         WireFrame Sketches
       </Text>
@@ -46,7 +51,8 @@ export default function Wireframes() {
           <li>
             ✅ Enable users to
             <span className="font-bold">
-              view their transfer credits and lock certain courses/semesters{' '}
+              {' '}
+              view their transfer credits and lock certain courses or semesters{' '}
             </span>
             for better planning.
           </li>
@@ -54,4 +60,24 @@ export default function Wireframes() {
       </ol>
     </section>
   );
-}
+});
+
+// const Problem = forwardRef(
+//   (
+//     {
+//       inView,
+//       changeNavbarColor,
+//     }: { inView: boolean; changeNavbarColor: (isDark: boolean) => void },
+//     ref: ForwardedRef<HTMLElement>
+//   ) => {
+//     {
+//       useEffect(() => {
+//         changeNavbarColor(inView);
+//       }, [inView]);
+
+//       return <WireframesView ref={ref} />;
+//     }
+//   }
+// );
+
+export default WireframesView;

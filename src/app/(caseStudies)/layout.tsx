@@ -1,5 +1,5 @@
 import { NavBar } from '@/components/NavBar';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
+import ProjectNavBar from '@/components/navigation/ProjectNavBar';
 import '@/styles/globals.css';
 
 // eslint-disable-next-line camelcase

@@ -1,41 +1,66 @@
-import ArticleBackground from '@/components/about/ArticleBackground';
+'use client';
 
-export default function Asdf() {
-  return <AboutMe />;
+import PlannerOverview from '@/components/planner/Overview';
+import PlannerHero from '@/components/planner/Hero';
+import IPadGraphic from '@/components/planner/IPadGraphic';
+import Problem from '@/components/planner/Problem';
+import Research from '@/components/planner/Research';
+import Interview from '@/components/planner/Interview';
+import Advising from '@/components/planner/Advising';
+import Empathy from '@/components/planner/Empathy';
+import Usability from '@/components/planner/Usability';
+import UsabilityDescription from '@/components/planner/UsabilityDescription';
+import Pain from '@/components/planner/Pain';
+import Design from '@/components/planner/Design';
+import Wireframes from '@/components/planner/Wireframes';
+import Information from '@/components/planner/Information';
+import { Prototype } from '@/components/planner/Prototype';
+import Final from '@/components/planner/Final';
+import Conclusion from '@/components/planner/Conclusion';
+import Next from '@/components/planner/Next';
+import ScrollLink from '@/components/ScrollLink';
+import Text, { Weight } from '@/components/typography/Text';
+import ProjectNavBar from '@/components/navigation/ProjectNavBar';
+import { useEffect, useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+export default function Planner() {
+  // const { ref, inView, entry } = useInView({
+  //   root: navbarRef.current,
+  // });
+
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observe = new IntersectionObserver((a) => console.log(a), {
+      root: document.querySelector('main'),
+      threshold: 0,
+    });
+
+    let target = document.querySelector('#observe');
+    observe.observe(target);
+  }, []);
+
+  return (
+    <>
+      <main className="flex flex-col w-screen h-screen overflow-y-scroll">
+        <article
+          id="query"
+          className="fixed w-full border-blue-500 border-2 h-20"
+        >
+          Hi
+        </article>
+        <div>
+          <div className="h-[120vh] flex-shrink-0 bg-green-500 w-full">a</div>
+          <div
+            className="h-[120vh] flex-shrink-0 bg-red-500 w-full"
+            id="observe"
+          >
+            b
+          </div>
+          <div className="h-[120vh] flex-shrink-0 bg-black w-full">c</div>
+        </div>
+      </main>
+    </>
+  );
 }
-
-const AboutMe = () => (
-  <ArticleBackground className="flex flex-col py-10 pl-5 pr-[84px] justify-center  gap-y-10">
-    <div className="text-4xl font-extrabold">A little bit about me</div>
-    <div className="">
-      <div className="text-xl leading-10 font-bold">WHO I AM</div>
-      <div className="leading-8 text-base">
-        I'm a self-taught designer passionate about improving the lives of
-        others through my design work. I seek to learn new things every day,
-        whether that's how to format a magazine, bake a mochi cookie, or how to
-        make a perfectly fried egg!
-      </div>
-    </div>
-
-    <div className="">
-      <div className="text-xl leading-10 font-bold">MY DESIGN JOURNEY</div>
-      <div className="leading-8 text-base">
-        I started my design journey by arming myself with a curious mind, a
-        laptop, and Adobe Photoshop. I dedicated myself to learning and growing
-        by attending design workshops, watching videos about accessibility in
-        design, and applying the concepts I encountered to real-life projects
-        such as my Lezhin App Redesign.
-      </div>
-    </div>
-
-    <div className="">
-      <div className="text-xl leading-10 font-bold">MY ASPIRATION</div>
-      <div className="leading-8 text-base">
-        The design world is always evolving, adapting to the world's needs, and
-        so is a designer's job. I hope to grow into a creative professional by
-        challenging myself even more with future creative projects and to be
-        able to design extraordinary things that can help people.
-      </div>
-    </div>
-  </ArticleBackground>
-);

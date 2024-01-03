@@ -2,10 +2,14 @@ import Image from 'next/image';
 import H2 from '@/components/typography/H2';
 import Text, { Weight } from '@/components/typography/Text';
 import Architecture from '../../../public/planner/architecture.png';
+import { forwardRef, ForwardedRef } from 'react';
 
-export default function Information() {
+const Information = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   return (
-    <section className="flex flex-col items-center text-center my-[178px]">
+    <section
+      ref={ref}
+      className="flex flex-col items-center text-center my-[178px]"
+    >
       <Text weight={Weight.bold} className="mb-[44px]">
         Informational Architecture
       </Text>
@@ -17,4 +21,6 @@ export default function Information() {
       <Image src={Architecture} alt="image" className="w-[80%]" />
     </section>
   );
-}
+});
+
+export default Information;

@@ -2,10 +2,12 @@ import Image from 'next/image';
 import Text, { Weight } from '@/components/typography/Text';
 import H1 from '@/components/typography/H1';
 import Macbook3 from '../../../public/planner/macbook3.png';
+import { ForwardedRef, forwardRef } from 'react';
 
-export default function Usability() {
+const Usability = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   return (
     <section
+      ref={ref}
       id="planner-usability"
       className="flex flex-row h-[120vh] w-screen bg-black items-center"
     >
@@ -18,4 +20,6 @@ export default function Usability() {
       </article>
     </section>
   );
-}
+});
+
+export default Usability;
