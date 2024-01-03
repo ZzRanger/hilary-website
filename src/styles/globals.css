@@ -6,16 +6,15 @@
   background-size: 7.5%;
 }
 
-
 .bg-blobs {
-  background-image: url('../../public/blobs.png');
+  background-image: url("../../public/blobs.png");
   background-size: cover;
 }
 
 .light .bg-grid {
-  background-image: url('../../public/grid-light.svg');
+  background-image: url("../../public/grid-light.svg");
 }
 
 .dark .bg-grid {
-  background-image: url('../../public/grid-dark.svg');
+  background-image: url("../../public/grid-dark.svg");
 }

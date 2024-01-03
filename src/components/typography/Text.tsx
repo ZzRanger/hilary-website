@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 export enum Weight {
-  normal = 'font-normal',
-  medium = 'font-medium',
-  semibold = 'font-semibold',
-  bold = 'font-bold',
+  normal = "font-normal",
+  medium = "font-medium",
+  semibold = "font-semibold",
+  bold = "font-bold",
 }
 
 interface HTMLElementProps
@@ -18,7 +18,7 @@ interface HTMLElementProps
 }
 
 const Text: React.FC<HTMLElementProps> = ({
-  className = '',
+  className = "",
   weight = Weight.normal,
   children,
   ...props

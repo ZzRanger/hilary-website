@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
@@ -16,10 +16,10 @@ const ThemeSwitcher = () => {
   return (
     <button
       type="button"
-      className="transition-all dark:bg-[#374151] dark:text-white bg-[#f5f5f5] text-black rounded-full aspect-square p-3 self-end mr-5 shadow-lg hover:translate-y-1 hover:shadow-md fixed bottom-8 right-2 z-10"
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      className="fixed bottom-8 right-2 z-10 mr-5 aspect-square self-end rounded-full bg-[#f5f5f5] p-3 text-black shadow-lg transition-all hover:translate-y-1 hover:shadow-md dark:bg-[#374151] dark:text-white"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
-      {theme === 'light' ? (
+      {theme === "light" ? (
         <svg
           width="50"
           height="50"

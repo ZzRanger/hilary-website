@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from "react";
 
-import ChevronIcon from '@/components/svg/ChevronIcon';
-import EllipseIcon from '@/components/svg/EllipseIcon';
-import { IndicatorType } from '@/app/(profile)/about/page';
+import ChevronIcon from "@/components/svg/ChevronIcon";
+import EllipseIcon from "@/components/svg/EllipseIcon";
+import { IndicatorType } from "@/app/(profile)/about/page";
 
 const indicatorColor = {
-  inside: 'text-white',
-  outside: 'text-black',
+  inside: "text-white",
+  outside: "text-black",
 };
 export default function Carousel({
   children,
@@ -26,12 +26,12 @@ export default function Carousel({
   return (
     <div className="relative">
       <div
-        className={`overflow-hidden  flex flex-col flex-center items-center  rounded-md ${
-          className ?? ''
+        className={`flex-center  flex flex-col items-center overflow-hidden  rounded-md ${
+          className ?? ""
         } ${indicatorColor[indicators]}`}
       >
         <div
-          className="flex flex-row w-full z-0 duration-300 ease-in-out self-start"
+          className="z-0 flex w-full flex-row self-start duration-300 ease-in-out"
           style={{ transform: test }}
         >
           {children}
@@ -39,32 +39,32 @@ export default function Carousel({
         <div
           className={`${
             indicators === IndicatorType.inside
-              ? 'absolute bottom-[15%] right-[calc(50%-28px)]'
-              : ''
-          }bottom-[15%] w-20  flex flex-row justify-around`}
+              ? "absolute bottom-[15%] right-[calc(50%-28px)]"
+              : ""
+          }bottom-[15%] flex  w-20 flex-row justify-around`}
         >
           {children.map((_, i) => (
             <EllipseIcon
               onClick={() => setIndex(i)}
               className={`cursor-pointer ${
-                index === i ? indicatorColor[indicators] : 'text-[#D9D9D9]'
+                index === i ? indicatorColor[indicators] : "text-[#D9D9D9]"
               }`}
             />
           ))}
         </div>
       </div>
       <ChevronIcon
-        className={`absolute top-[calc(50%-15px)] rotate-180 z-20 cursor-pointer ${
-          indicators === IndicatorType.inside ? 'left-10' : '-left-10'
+        className={`absolute top-[calc(50%-15px)] z-20 rotate-180 cursor-pointer ${
+          indicators === IndicatorType.inside ? "left-10" : "-left-10"
         }
-        ${index === 0 ? 'text-gray-400' : ''}`}
+        ${index === 0 ? "text-gray-400" : ""}`}
         onClick={() => setIndex(Math.max(index - 1, 0))}
       />
 
       <ChevronIcon
         className={`absolute top-[calc(50%-15px)]   z-20 cursor-pointer ${
-          indicators === IndicatorType.inside ? 'right-10' : '-right-10'
-        } ${index === children.length - 1 ? 'text-gray-400' : ''}`}
+          indicators === IndicatorType.inside ? "right-10" : "-right-10"
+        } ${index === children.length - 1 ? "text-gray-400" : ""}`}
         onClick={() => setIndex(Math.min(index + 1, children.length - 1))}
       />
     </div>

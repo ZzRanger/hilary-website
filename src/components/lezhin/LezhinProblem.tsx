@@ -1,26 +1,26 @@
-'use client';
+"use client";
 
-import Image, { StaticImageData } from 'next/image';
-import H2 from '@/components/typography/H2';
+import Image, { StaticImageData } from "next/image";
+import H2 from "@/components/typography/H2";
 
-import Text, { Weight } from '@/components/typography/Text';
-import Doggo from '@public/lezhin/doggo.png';
-import ThumbsDown from '@public/lezhin/thumbsDown.png';
-import Charts from '@public/lezhin/charts.png';
-import X from '@public/lezhin/x.png';
+import Text, { Weight } from "@/components/typography/Text";
+import Doggo from "@public/lezhin/doggo.png";
+import ThumbsDown from "@public/lezhin/thumbsDown.png";
+import Charts from "@public/lezhin/charts.png";
+import X from "@public/lezhin/x.png";
 
 export default function LezhinProblem() {
   return (
     <section
       id="lezhin-problem"
-      className="mt-[45vh] bg-hn-lezhin flex flex-col text-white items-center w-screen rounded-[20px]"
+      className="mt-[45vh] flex w-screen flex-col items-center rounded-[20px] bg-hn-lezhin text-white"
     >
-      <div className="w-[3px] h-[20vh] mt-[calc(-20vh+1px)] bg-black" />
-      <div className="w-[3px] h-[20vh] bg-white" />
+      <div className="mt-[calc(-20vh+1px)] h-[20vh] w-[3px] bg-black" />
+      <div className="h-[20vh] w-[3px] bg-white" />
       <article className="flex flex-col items-center gap-y-[46px]">
-        <Image src={Doggo} alt="doggo" className="w-[160px] mt-[-30px]" />
+        <Image src={Doggo} alt="doggo" className="mt-[-30px] w-[160px]" />
         <H2>Who is Lezhin</H2>
-        <Text className="w-[1000px] mb-[100px]">
+        <Text className="mb-[100px] w-[1000px]">
           Lezhin is a South Korean company hosting over 400 online webtoons and
           Korean, Japanese, and English cartoons.
           <br /> <br /> Its model allows artists to monetize their work with a
@@ -33,9 +33,9 @@ export default function LezhinProblem() {
       <div className="w-[900px] text-center text-[40px] font-medium">
         However despite its success, the company faces these challenges
       </div>
-      <div className="flex flex-row w-[90%] justify-between mt-[20vh]">
+      <div className="mt-[20vh] flex w-[90%] flex-row justify-between">
         <ProblemTile image={ThumbsDown} title="Low User Ratings">
-          <ul className="text-left list-disc text-xl mx-10 leading-[30px]">
+          <ul className="mx-10 list-disc text-left text-xl leading-[30px]">
             <li>
               Lezhin's app receives a low rating of only two and a half stars
               based on over 2000 user reviews.
@@ -47,7 +47,7 @@ export default function LezhinProblem() {
           </ul>
         </ProblemTile>
         <ProblemTile image={Charts} title="User Retention Challenges">
-          <ul className="text-left list-disc text-xl mx-10 leading-[30px]">
+          <ul className="mx-10 list-disc text-left text-xl leading-[30px]">
             <li>Lezhin struggles with retaining users on its platform.</li>
             <li>
               Users are not staying engaged or returning to use the app
@@ -56,7 +56,7 @@ export default function LezhinProblem() {
           </ul>
         </ProblemTile>
         <ProblemTile image={X} title="Lagging Behind Competitors">
-          <ul className="text-left list-disc text-xl mx-16 leading-[30px]">
+          <ul className="mx-16 list-disc text-left text-xl leading-[30px]">
             <li>
               Lezhin's app performance and user satisfaction fall behind
               competing platforms like Webtoon, Bilibili, and Manta.
@@ -64,7 +64,7 @@ export default function LezhinProblem() {
           </ul>
         </ProblemTile>
       </div>
-      <article className=" mt-[100px] mb-[150px] rounded-[20px] items-center text-center gap-y-[54px] border-[3px] border-white w-[90%] flex flex-col h-[80vh] pt-[90px]">
+      <article className=" mb-[150px] mt-[100px] flex h-[80vh] w-[90%] flex-col items-center gap-y-[54px] rounded-[20px] border-[3px] border-white pt-[90px] text-center">
         <Text weight={Weight.semibold}>The Problem</Text>
         <H2 className="w-[78%] leading-[65px]">
           Why are users not staying engaged and satisfied with Lezhin's app
@@ -88,14 +88,14 @@ const ProblemTile = ({
   title: string;
   children: React.ReactElement | React.ReactElement[];
 }) => (
-  <article className="text-center animate-intro relative h-[70vh] w-[380px] rounded-3xl border-white border-2 flex flex-col justify-evenly items-center">
+  <article className="animate-intro relative flex h-[70vh] w-[380px] flex-col items-center justify-evenly rounded-3xl border-2 border-white text-center">
     <Image
       src={image}
       alt="image"
-      className=" h-32 w-32 top-[-64px] absolute"
+      className=" absolute top-[-64px] h-32 w-32"
     />
     {/* <div className="w-32 h-32 bg-[#6166f0] opacity-55 animate-ping rounded-full absolute top-[-64px]" /> */}
-    <Text weight={Weight.bold} className="leading-[44px] w-[80%]">
+    <Text weight={Weight.bold} className="w-[80%] leading-[44px]">
       {title}
     </Text>
     {children}

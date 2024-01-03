@@ -1,4 +1,4 @@
-import { FC, SVGProps } from 'react';
+import { FC, SVGProps } from "react";
 
 const VerticalDotsIcon: FC<SVGProps<SVGSVGElement> & { fill: string }> = ({
   fill,

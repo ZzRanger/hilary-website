@@ -1,20 +1,20 @@
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
 
 export default function Next() {
   return (
-    <section className="flex flex-col items-center my-[20vh] ">
+    <section className="my-[20vh] flex flex-col items-center ">
       <Text className="mb-[44px]" weight={Weight.bold}>
         What's Next
       </Text>
-      <H2 className="w-[70%] text-center mb-[100px]">
+      <H2 className="mb-[100px] w-[70%] text-center">
         Despite a successful launch, our project remains a work in progress. We
         are actively planning and working to implement the following features.
       </H2>
-      <article className="flex flex-col text-left space-y-[30px] w-[90vw] bg-[#F5F5F5] py-[82px] px-[41px] rounded-[20px]">
+      <article className="flex w-[90vw] flex-col space-y-[30px] rounded-[20px] bg-[#F5F5F5] px-[41px] py-[82px] text-left">
         <Text>
           <div>
-            <span className="font-bold text-[32px]">
+            <span className="text-[32px] font-bold">
               1. Improve Visibility of Customization Options for Courses
             </span>
             <br />
@@ -24,7 +24,7 @@ export default function Next() {
             <br /> <br />
           </div>
           <div>
-            <span className="font-bold text-[32px]">
+            <span className="text-[32px] font-bold">
               2. Improve Course Requirement’s UI
             </span>
             <br />
@@ -34,7 +34,7 @@ export default function Next() {
             <br /> <br />
           </div>
           <div>
-            <span className="font-bold text-[32px]">
+            <span className="text-[32px] font-bold">
               3. Onboarding for Plan Editor
             </span>
             <br />

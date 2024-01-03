@@ -1,5 +1,5 @@
-import H2 from '@/components/typography/H2';
-import Text from '@/components/typography/Text';
+import H2 from "@/components/typography/H2";
+import Text from "@/components/typography/Text";
 
 export default function Conclusion() {
   return (
@@ -9,10 +9,10 @@ export default function Conclusion() {
     >
       <H2>Conclusion</H2>
       <Text>
-        <article className="flex flex-col text-left space-y-[30px] w-[90vw]">
+        <article className="flex w-[90vw] flex-col space-y-[30px] text-left">
           <div>Some of my key takeaways from this project are:</div>
           <div>
-            <span className="font-bold text-[32px]">
+            <span className="text-[32px] font-bold">
               1. Improved Communication
             </span>
             <br />
@@ -21,7 +21,7 @@ export default function Conclusion() {
             better coordination and informed decision-making.
           </div>
           <div>
-            <span className="font-bold text-[32px]">
+            <span className="text-[32px] font-bold">
               2. Ongoing User Testing:
             </span>
             <br />
@@ -30,7 +30,7 @@ export default function Conclusion() {
             feedback are vital for enhancing the user experience.
           </div>
           <div>
-            <span className="font-bold text-[32px]">
+            <span className="text-[32px] font-bold">
               3. Design Feasibility:
             </span>
             <br />

@@ -1,27 +1,27 @@
-import Image from 'next/image';
-import Text, { Weight } from '@/components/typography/Text';
-import Mockups from '../../../public/planner/mockups.png';
+import Image from "next/image";
+import Text, { Weight } from "@/components/typography/Text";
+import Mockups from "../../../public/planner/mockups.png";
 
-import { ForwardedRef, forwardRef, useEffect } from 'react';
+import { ForwardedRef, forwardRef, useEffect } from "react";
 
 const WireframesView = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   return (
     <section
       ref={ref}
-      className="h-fit bg-black flex flex-col text-white items-center text-center py-[10vh]"
+      className="flex h-fit flex-col items-center bg-black py-[10vh] text-center text-white"
     >
       <Text weight={Weight.bold} className="mb-[40px]">
         WireFrame Sketches
       </Text>
-      <h1 className="text-[50px] font-semibold leading-[72px] w-[1100px] mb-[72px]">
+      <h1 className="mb-[72px] w-[1100px] text-[50px] font-semibold leading-[72px]">
         To address the identified pain points, I proposed several potential
         solutions.
       </h1>
       <Image src={Mockups} alt="image" className="w-[90%]" />
-      <ol className="list-disc w-[80%]">
-        <Text className=" text-left leading-[50px] space-y-10 my-[10vh]">
+      <ol className="w-[80%] list-disc">
+        <Text className=" my-[10vh] space-y-10 text-left leading-[50px]">
           <li>
-            ✅ Enable users to{' '}
+            ✅ Enable users to{" "}
             <span className="font-bold">
               color-code individual semesters, plans, and courses
             </span>
@@ -33,7 +33,7 @@ const WireframesView = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
             track their progress more efficiently.
           </li>
           <li>
-            ✅ Allow users to{' '}
+            ✅ Allow users to{" "}
             <span className="font-bold">
               rename their plan and change their major plan
             </span>
@@ -51,8 +51,8 @@ const WireframesView = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
           <li>
             ✅ Enable users to
             <span className="font-bold">
-              {' '}
-              view their transfer credits and lock certain courses or semesters{' '}
+              {" "}
+              view their transfer credits and lock certain courses or semesters{" "}
             </span>
             for better planning.
           </li>

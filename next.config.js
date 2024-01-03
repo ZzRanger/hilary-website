@@ -7,31 +7,31 @@ const nextConfig = {
     return {
       fallback: [
         {
-          source: '/:path*',
+          source: "/:path*",
           destination: `/rewrite/:path*`,
         },
-      ]
-    }
+      ],
+    };
   },
   async redirects() {
     return [
       {
-        source: '/s/Hilary-Nguyen-Resume-2023-Product-Design.pdf',
-        destination: '/resume',
-        permanent: false
+        source: "/s/Hilary-Nguyen-Resume-2023-Product-Design.pdf",
+        destination: "/resume",
+        permanent: false,
       },
       {
-        source: '/graphic-design',
-        destination: '/home',
-        permanent: false
+        source: "/graphic-design",
+        destination: "/home",
+        permanent: false,
       },
       {
-        source: '/case-studies',
-        destination: '/home',
-        permanent: false
-      }
-    ]
-  }
-}
+        source: "/case-studies",
+        destination: "/home",
+        permanent: false,
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

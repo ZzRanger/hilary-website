@@ -1,15 +1,15 @@
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
 
 export default function Texting() {
   return (
     <>
-      <section className="flex flex-col gap-y-[70px] items-center">
+      <section className="flex flex-col items-center gap-y-[70px]">
         <Text weight={Weight.bold}>Introduction</Text>
         <H2 className="w-[60%] text-center">
           This project began with a text from my friend
         </H2>
-        <article className="gap-y-[90px] flex flex-col w-[90vw]">
+        <article className="flex w-[90vw] flex-col gap-y-[90px]">
           <TextBubble
             message="Hilary, XXX webtoon has been released, have you read it yet? 👀"
             color={TextColor.gray}
@@ -35,7 +35,7 @@ export default function Texting() {
           This moment made me began to think on what makes began to think
         </div>
       </section>
-      <H2 className="w-[60vw] text-center mt-[220px]">
+      <H2 className="mt-[220px] w-[60vw] text-center">
         What makes Lezhin webtoon app so hard to use?
       </H2>
     </>
@@ -53,14 +53,14 @@ const TextBubble = ({
 }) => (
   <article
     className={`${color} ${
-      color === TextColor.blue ? 'text-white self-end' : 'text-black self-start'
-    } px-[32px] py-[10px] rounded-[220px] max-w-[800px] ${className || ''}`}
+      color === TextColor.blue ? "self-end text-white" : "self-start text-black"
+    } max-w-[800px] rounded-[220px] px-[32px] py-[10px] ${className || ""}`}
   >
     <Text>{message}</Text>
   </article>
 );
 
 enum TextColor {
-  blue = 'bg-[#519AF5]',
-  gray = 'bg-[#E9E9EB]',
+  blue = "bg-[#519AF5]",
+  gray = "bg-[#E9E9EB]",
 }

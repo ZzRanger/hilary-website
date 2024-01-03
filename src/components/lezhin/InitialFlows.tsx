@@ -1,15 +1,15 @@
-import Carousel from '@/components/Carousel';
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
-import Image from 'next/image';
-import Flow1 from '@public/lezhin/flow1.png';
-import Flow2 from '@public/lezhin/flow2.png';
-import Flow3 from '@public/lezhin/flow3.png';
-import Flow4 from '@public/lezhin/flow4.png';
+import Carousel from "@/components/Carousel";
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
+import Image from "next/image";
+import Flow1 from "@public/lezhin/flow1.png";
+import Flow2 from "@public/lezhin/flow2.png";
+import Flow3 from "@public/lezhin/flow3.png";
+import Flow4 from "@public/lezhin/flow4.png";
 
 export default function InitialFlows() {
   return (
-    <section className="flex flex-col text-left items-center gap-[70px] py-[60px] w-[80%]">
+    <section className="flex w-[80%] flex-col items-center gap-[70px] py-[60px] text-left">
       <Text weight={Weight.bold}>Initial User Flows</Text>
       <H2 className="text-center">
         I decided to map out Lezhin's current user journey to better map out
@@ -23,7 +23,7 @@ export default function InitialFlows() {
       </Carousel>
 
       <Text className="tabular-nums">
-        <article className="text-left flex flex-col gap-y-10  leading-[50px] bg-[#F5F5F5] rounded-[20px] p-10">
+        <article className="flex flex-col gap-y-10 rounded-[20px]  bg-[#F5F5F5] p-10 text-left leading-[50px]">
           <Text weight={Weight.bold}>
             Specific areas for improvement in specific areas:
           </Text>
@@ -43,7 +43,7 @@ export default function InitialFlows() {
           </div>
           <div>
             <span className="font-bold ">
-              3. Poor Categorization & Recommendation Features:{' '}
+              3. Poor Categorization & Recommendation Features:{" "}
             </span>
             <br />
             Vague categorization and time-consuming search for similar webtoons

@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import H1 from '@/components/typography/H1';
-import Text, { Weight } from '@/components/typography/Text';
-import ResearchPhone from '../../../public/lezhin/researchPhone.png';
+import Image from "next/image";
+import H1 from "@/components/typography/H1";
+import Text, { Weight } from "@/components/typography/Text";
+import ResearchPhone from "../../../public/lezhin/researchPhone.png";
 
 export default function LezhinResearch() {
   return (
     <section
       id="lezhin-research"
-      className="grid grid-cols-[2fr_3fr] w-screen place-items-center h-[150vh]"
+      className="grid h-[150vh] w-screen grid-cols-[2fr_3fr] place-items-center"
     >
       <article className="flex flex-col items-center">
         <H1 className=" mb-[50px] ">📝 Research</H1>

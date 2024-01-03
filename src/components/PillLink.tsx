@@ -1,6 +1,6 @@
-import type { PropsWithChildren } from 'react';
-import Link from 'next/link';
-import { PillTagProps } from './PillTag';
+import type { PropsWithChildren } from "react";
+import Link from "next/link";
+import { PillTagProps } from "./PillTag";
 
 type PillLinkProps = PillTagProps & {
   href?: string;
@@ -8,12 +8,12 @@ type PillLinkProps = PillTagProps & {
 
 export const PillLink = ({
   children,
-  className = 'bg-white text-black',
-  href = '',
+  className = "bg-white text-black",
+  href = "",
 }: PropsWithChildren<PillLinkProps>) => (
   <Link
     href={href}
-    className={`w-max transition-all rounded-full px-4 py-2 hover:-translate-y-1 hover:shadow-md dark:hover:shadow-neutral-600 border border-[#E5E7EB] ${className}`}
+    className={`w-max rounded-full border border-[#E5E7EB] px-4 py-2 transition-all hover:-translate-y-1 hover:shadow-md dark:hover:shadow-neutral-600 ${className}`}
   >
     {children}
   </Link>

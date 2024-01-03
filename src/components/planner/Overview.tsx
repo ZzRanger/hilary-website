@@ -1,20 +1,20 @@
-import ScrollLink from '@/components/ScrollLink';
-import Text, { Weight } from '@/components/typography/Text';
+import ScrollLink from "@/components/ScrollLink";
+import Text, { Weight } from "@/components/typography/Text";
 
 export default function PlannerOverview() {
   return (
     <section
       id="planner-overview"
-      className="flex flex-col text-center items-center w-screen mt-[25vh]"
+      className="mt-[25vh] flex w-screen flex-col items-center text-center"
     >
-      <h1 className="text-4xl font-extrabold mb-[30px] text-black">Overview</h1>
-      <Text className="w-[845px] mb-[90px]">
+      <h1 className="mb-[30px] text-4xl font-extrabold text-black">Overview</h1>
+      <Text className="mb-[90px] w-[845px]">
         “Nebula Planner is a software created to help students plan their
         college experience at a high level. Planner was born out of a need to
         replace Google Docs and hastily-crafted spreadsheets when planning
         degree plan.”
       </Text>
-      <article className="w-[900px] flex flex-row justify-between text-left mb-[90px]">
+      <article className="mb-[90px] flex w-[900px] flex-row justify-between text-left">
         <OverviewDescription title="Role" body="UI/UX Designer, Research" />
         <OverviewDescription
           title="Tools"
@@ -28,7 +28,7 @@ export default function PlannerOverview() {
       </article>
       <button
         type="button"
-        className="rounded-[200px] bg-[#6266F9] px-6 py-[10px] flex justify-center items-center shadow-md"
+        className="flex items-center justify-center rounded-[200px] bg-[#6266F9] px-6 py-[10px] shadow-md"
       >
         <Text className="leading-[44px] text-white" weight={Weight.medium}>
           <ScrollLink href="#planner-final">Check Out Final Product</ScrollLink>
@@ -45,8 +45,8 @@ const OverviewDescription = ({
   title: string;
   body: string;
 }) => (
-  <div className="flex flex-col max-w-[210px]">
-    <h3 className="text-[28px] font-bold text-[#687280] leading-[44px]">
+  <div className="flex max-w-[210px] flex-col">
+    <h3 className="text-[28px] font-bold leading-[44px] text-[#687280]">
       {title}
     </h3>
     <p className="text-xl leading-7 text-[#525252]">{body}</p>

@@ -1,18 +1,18 @@
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
-import Link from 'next/link';
-import CompetitiveAnalysis from '@public/lezhin/competitive.png';
-import Image from 'next/image';
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
+import Link from "next/link";
+import CompetitiveAnalysis from "@public/lezhin/competitive.png";
+import Image from "next/image";
 
 export default function Competitive() {
   return (
-    <section className="rounded-[20px] h-fit w-screen flex flex-col items-center text-center bg-black text-white py-[30vh]">
+    <section className="flex h-fit w-screen flex-col items-center rounded-[20px] bg-black py-[30vh] text-center text-white">
       <div className="flex flex-col items-center gap-y-[100px]">
         <Text weight={Weight.bold} className="]">
           Competitor Analysis
         </Text>
         {/* Change to inter */}
-        <h2 className="font-bold text-[45px] leading-[74px] w-[88vw]">
+        <h2 className="w-[88vw] text-[45px] font-bold leading-[74px]">
           A Competitive Analysis was performed to examine Lezhin's competitors
           to understand why Lezhin's app is performing poorly in the market.
         </h2>
@@ -20,7 +20,7 @@ export default function Competitive() {
         <Image src={CompetitiveAnalysis} alt="analysis" className="w-[90%]" />
 
         <button
-          className="w-[420px] rounded-[50px] border-4 border-white h-[90px]"
+          className="h-[90px] w-[420px] rounded-[50px] border-4 border-white"
           type="button"
         >
           <Link
@@ -31,8 +31,8 @@ export default function Competitive() {
           </Link>
         </button>
       </div>
-      <article className="text-left flex flex-col gap-y-10 w-[72vw]">
-        <ol className="list-decimal gap-y-10 space-y-10 mt-[20vh]">
+      <article className="flex w-[72vw] flex-col gap-y-10 text-left">
+        <ol className="mt-[20vh] list-decimal gap-y-10 space-y-10">
           <H2 className="ml-[-40px]">💡Analysis Insight</H2>
 
           <Text weight={Weight.medium}>
@@ -48,9 +48,9 @@ export default function Competitive() {
           </Text>
           <Text weight={Weight.medium}>
             <li>
-              Furthermore, these companies place{' '}
+              Furthermore, these companies place{" "}
               <span className="font-bold">
-                {' '}
+                {" "}
                 great emphasis on enhancing the user experience
               </span>
               , as reflected in their consistently high ratings

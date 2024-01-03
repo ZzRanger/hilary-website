@@ -1,14 +1,14 @@
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
 
 export default function Pain() {
   return (
-    <section className="w-screen bg-[#F5F5F5] py-[120px] flex flex-col items-center gap-y-[70px]">
+    <section className="flex w-screen flex-col items-center gap-y-[70px] bg-[#F5F5F5] py-[120px]">
       <Text weight={Weight.bold}>Pain Points</Text>
       <H2 className=" w-[70%] text-center">
         We identified various pain points with the old prototype
       </H2>
-      <article className="flex flex-row flex-wrap w-[82vw] gap-[2vw]">
+      <article className="flex w-[82vw] flex-row flex-wrap gap-[2vw]">
         <PainCard className="bg-[#312E81]">
           <div className="flex flex-col items-center text-center">
             <Text weight={Weight.bold}>No Onboarding</Text>
@@ -72,8 +72,8 @@ const PainCard = ({
   children: React.ReactNode;
 }) => (
   <div
-    className={`w-[40vw] h-[50vh] rounded-[20px] text-white flex justify-center items-center text-[25px] font-medium p-4  ${
-      className ?? ''
+    className={`flex h-[50vh] w-[40vw] items-center justify-center rounded-[20px] p-4 text-[25px] font-medium text-white  ${
+      className ?? ""
     }`}
   >
     {children}

@@ -1,30 +1,31 @@
-'use client';
+"use client";
 
-import PlannerOverview from '@/components/planner/Overview';
-import PlannerHero from '@/components/planner/Hero';
-import IPadGraphic from '@/components/planner/IPadGraphic';
-import Problem from '@/components/planner/Problem';
-import Research from '@/components/planner/Research';
-import Interview from '@/components/planner/Interview';
-import Advising from '@/components/planner/Advising';
-import Empathy from '@/components/planner/Empathy';
-import Usability from '@/components/planner/Usability';
-import UsabilityDescription from '@/components/planner/UsabilityDescription';
-import Pain from '@/components/planner/Pain';
-import Design from '@/components/planner/Design';
-import Wireframes from '@/components/planner/Wireframes';
-import Information from '@/components/planner/Information';
-import { Prototype } from '@/components/planner/Prototype';
-import Final from '@/components/planner/Final';
-import Conclusion from '@/components/planner/Conclusion';
-import Next from '@/components/planner/Next';
-import ScrollLink from '@/components/ScrollLink';
-import Text, { Weight } from '@/components/typography/Text';
-import ProjectNavBar from '@/components/navigation/ProjectNavBar';
-import { ComponentType, FunctionComponent, useEffect, useState } from 'react';
-import { useInView } from 'react-intersection-observer';
-import React from 'react';
-import throttle from 'lodash.throttle';
+import PlannerOverview from "@/components/planner/Overview";
+import PlannerHero from "@/components/planner/Hero";
+import IPadGraphic from "@/components/planner/IPadGraphic";
+import Problem from "@/components/planner/Problem";
+import Research from "@/components/planner/Research";
+import Interview from "@/components/planner/Interview";
+import Advising from "@/components/planner/Advising";
+import Empathy from "@/components/planner/Empathy";
+import Usability from "@/components/planner/Usability";
+import UsabilityDescription from "@/components/planner/UsabilityDescription";
+import Pain from "@/components/planner/Pain";
+import Design from "@/components/planner/Design";
+import Wireframes from "@/components/planner/Wireframes";
+import Information from "@/components/planner/Information";
+import { Prototype } from "@/components/planner/Prototype";
+import Final from "@/components/planner/Final";
+import Conclusion from "@/components/planner/Conclusion";
+import Next from "@/components/planner/Next";
+import ScrollLink from "@/components/ScrollLink";
+import Text, { Weight } from "@/components/typography/Text";
+
+import { ComponentType, FunctionComponent, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import React from "react";
+import throttle from "lodash.throttle";
+import ProjectNavbar from "@/components/navigation/ProjectNavBar";
 
 const NavbarWrapper = ({
   setDark,
@@ -36,13 +37,13 @@ const NavbarWrapper = ({
   color: string;
 }) => {
   const { ref, inView, entry } = useInView({
-    rootMargin: '-60px',
+    rootMargin: "-60px",
   });
 
   useEffect(() => {
-    if (entry?.boundingClientRect.y! > 0 && color === 'black') {
+    if (entry?.boundingClientRect.y! > 0 && color === "black") {
       setDark(inView ? true : false);
-    } else if (entry?.boundingClientRect.y! > 0 && color === 'white') {
+    } else if (entry?.boundingClientRect.y! > 0 && color === "white") {
       setDark(inView ? false : true);
     }
   }, [inView]);
@@ -58,7 +59,7 @@ export default function Planner() {
 
   return (
     <>
-      <main className="flex flex-col items-center bg-white w-screen">
+      <main className="flex w-screen flex-col items-center bg-white">
         <PlannerHero />
         <PlannerOverview />
         <IPadGraphic />
@@ -110,7 +111,7 @@ export default function Planner() {
         <Conclusion />
         <Next />
         <div className="fixed bottom-10 z-50">
-          <ProjectNavBar isDark={isDark} />
+          <ProjectNavbar isDark={isDark} />
         </div>
       </main>
     </>

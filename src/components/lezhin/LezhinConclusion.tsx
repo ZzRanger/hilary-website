@@ -1,18 +1,18 @@
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
-import Image from 'next/image';
-import Table from '@public/lezhin/table.png';
-import Final1 from '@public/lezhin/final1.png';
-import Final2 from '@public/lezhin/final2.png';
-import Final3 from '@public/lezhin/final3.png';
-import Final4 from '@public/lezhin/final4.png';
-import Final5 from '@public/lezhin/final5.png';
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
+import Image from "next/image";
+import Table from "@public/lezhin/table.png";
+import Final1 from "@public/lezhin/final1.png";
+import Final2 from "@public/lezhin/final2.png";
+import Final3 from "@public/lezhin/final3.png";
+import Final4 from "@public/lezhin/final4.png";
+import Final5 from "@public/lezhin/final5.png";
 
 export default function LezhinConclusion() {
   return (
     <section
       id="lezhin-conclusion"
-      className="py-[92px] w-[90vw] flex flex-col items-center space-y-[80px]"
+      className="flex w-[90vw] flex-col items-center space-y-[80px] py-[92px]"
     >
       <H2>Conclusion</H2>
       <Text className="w-[89vw] leading-[50px]">
@@ -22,8 +22,8 @@ export default function LezhinConclusion() {
         the app.
       </Text>
       <Image src={Table} alt="table" />
-      <article className="h-fit rounded-[30px] bg-[#F5F5F5] flex justify-center items-center mt-10 py-[62px]">
-        <div className="text-center flex flex-col w-[92%] tabular-nums gap-y-10 space-y-10 leading-[50px]">
+      <article className="mt-10 flex h-fit items-center justify-center rounded-[30px] bg-[#F5F5F5] py-[62px]">
+        <div className="flex w-[92%] flex-col gap-y-10 space-y-10 text-center tabular-nums leading-[50px]">
           <H2 className="ml-[-40px]">💭 Key Takeaways</H2>
           <Text weight={Weight.bold}>
             1. Prioritize features through interviews and ranking to focus on

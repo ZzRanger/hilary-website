@@ -1,14 +1,14 @@
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
-import Link from 'next/link';
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
+import Link from "next/link";
 
 export default function UserSurvey() {
   return (
     <div
       id="lezhin-usability"
-      className="bg-hn-lezhin w-full flex items-center justify-center"
+      className="flex w-full items-center justify-center bg-hn-lezhin"
     >
-      <section className="flex flex-col text-left items-center gap-[70px] py-[60px] w-[80%]  text-white">
+      <section className="flex w-[80%] flex-col items-center gap-[70px] py-[60px] text-left  text-white">
         <Text weight={Weight.bold}>Usability Test</Text>
         <H2 className="text-center">
           I conducted usability testing with 5 participants, assessing task
@@ -16,7 +16,7 @@ export default function UserSurvey() {
           impact on user usage.
         </H2>
         <button
-          className="w-fit px-[48px] py-[20px] rounded-[50px] border-4 border-white h-[90px]"
+          className="h-[90px] w-fit rounded-[50px] border-4 border-white px-[48px] py-[20px]"
           type="button"
         >
           <Link
@@ -26,8 +26,8 @@ export default function UserSurvey() {
             <Text weight={Weight.bold}>View Users' Interview/Empathy Map</Text>
           </Link>
         </button>
-        <article className="h-fit rounded-[30px] bg-[#F5F5F5] flex justify-center items-center mt-10 py-[62px] text-black">
-          <div className="text-left flex flex-col w-[80%]">
+        <article className="mt-10 flex h-fit items-center justify-center rounded-[30px] bg-[#F5F5F5] py-[62px] text-black">
+          <div className="flex w-[80%] flex-col text-left">
             <ol className="list-disc gap-y-10 space-y-10 leading-[50px]">
               <H2 className="ml-[-40px]">💡 Test Key Insight</H2>
               <Text weight={Weight.medium}>
@@ -47,17 +47,17 @@ export default function UserSurvey() {
           </div>
         </article>
 
-        <article className="text-left flex flex-col gap-y-10">
+        <article className="flex flex-col gap-y-10 text-left">
           <Text weight={Weight.bold}>
             Key findings from the usability testing and interviews:
           </Text>
 
           <Text weight={Weight.medium}>
-            <ol className="list-decimal space-y-10 ml-[40px]">
+            <ol className="ml-[40px] list-decimal space-y-10">
               <li>
                 <span className="font-bold">
                   Users rarely use the "My Library" feature
-                </span>{' '}
+                </span>{" "}
                 due to its lack of functionality and sorting options.
               </li>
               <li>
@@ -65,20 +65,20 @@ export default function UserSurvey() {
                 <span className="font-bold">
                   utilize both the app and browser site, despite the app's poor
                   quality.
-                </span>{' '}
+                </span>{" "}
                 The app offers webtoons not available on other platforms, but
                 users switch to the desktop site for mature content.
               </li>
               <li>
-                All participants expressed a{' '}
+                All participants expressed a{" "}
                 <span className="font-bold">
-                  preference for community features in the app.{' '}
-                </span>{' '}
+                  preference for community features in the app.{" "}
+                </span>{" "}
                 They have used other webtoon apps with commenting features,
                 which Lezhin lacks.
               </li>
               <li>
-                Users{' '}
+                Users{" "}
                 <span className="font-bold">
                   primarily discover new webtoons through banners and the
                   Explore section,
@@ -86,10 +86,10 @@ export default function UserSurvey() {
                 focusing on the top trending webtoons.
               </li>
               <li>
-                The{' '}
+                The{" "}
                 <span className="font-bold">
-                  ability to sort by genres is crucial to users,{' '}
-                </span>{' '}
+                  ability to sort by genres is crucial to users,{" "}
+                </span>{" "}
                 and participants are frustrated by the lack of separation
                 between BL/GL genres within the section.
               </li>
@@ -97,7 +97,7 @@ export default function UserSurvey() {
           </Text>
         </article>
         <button
-          className="w-fit px-[48px] py-[20px] rounded-[50px] border-4 border-white h-[90px]"
+          className="h-[90px] w-fit rounded-[50px] border-4 border-white px-[48px] py-[20px]"
           type="button"
         >
           <Link

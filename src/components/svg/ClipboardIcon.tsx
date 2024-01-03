@@ -1,4 +1,4 @@
-import { FC, SVGProps } from 'react';
+import { FC, SVGProps } from "react";
 
 const ClipboardIcon: FC<SVGProps<SVGSVGElement> & { fill: string }> = ({
   fill,

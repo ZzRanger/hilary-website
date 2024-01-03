@@ -1,6 +1,6 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode } from "react";
 
-interface MainProps extends React.ComponentPropsWithoutRef<'main'> {
+interface MainProps extends React.ComponentPropsWithoutRef<"main"> {
   children: ReactNode;
 }
 

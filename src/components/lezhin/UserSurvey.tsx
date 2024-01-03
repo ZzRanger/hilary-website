@@ -1,23 +1,23 @@
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
-import Link from 'next/link';
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
+import Link from "next/link";
 
 export default function UserSurvey() {
   return (
-    <section className="flex flex-col text-left items-center gap-[70px] py-[60px] w-[80%]">
+    <section className="flex w-[80%] flex-col items-center gap-[70px] py-[60px] text-left">
       <Text weight={Weight.bold}>Users Survey</Text>
       <H2 className="text-center">
         I decided to conduct an online public survey to identified unique issues
         to Lezhin that users are currently facing
       </H2>
       <Text weight={Weight.medium} className="leading-[50px]">
-        <article className="w-full flex flex-col gap-y-[40px]">
+        <article className="flex w-full flex-col gap-y-[40px]">
           <div>
             After analyzing 22 survey responses, I discovered two main reasons
             that prevent users from using Lezhin:
           </div>
           <div>
-            <span className="font-bold text-[32px] tabular-nums">
+            <span className="text-[32px] font-bold tabular-nums">
               1. Poor App Experience
             </span>
             <br />
@@ -27,7 +27,7 @@ export default function UserSurvey() {
             inferior and lacks those features.
           </div>
           <div>
-            <span className="font-bold text-[32px]">
+            <span className="text-[32px] font-bold">
               2. Expensive Coin Models
             </span>
             <br />
@@ -37,8 +37,8 @@ export default function UserSurvey() {
         </article>
       </Text>
 
-      <article className="h-fit rounded-[30px] bg-[#F5F5F5] flex justify-center items-center mt-10 py-[62px]">
-        <div className="text-left flex flex-col w-[80%]">
+      <article className="mt-10 flex h-fit items-center justify-center rounded-[30px] bg-[#F5F5F5] py-[62px]">
+        <div className="flex w-[80%] flex-col text-left">
           <ol className="list-disc gap-y-10 space-y-10 leading-[50px]">
             <H2 className="ml-[-40px]">💡 Surveyed Key Insight</H2>
             <Text weight={Weight.bold}>
@@ -59,7 +59,7 @@ export default function UserSurvey() {
         </div>
       </article>
       <button
-        className="w-[420px] rounded-[50px] border-4 border-black h-[90px]"
+        className="h-[90px] w-[420px] rounded-[50px] border-4 border-black"
         type="button"
       >
         <Link
@@ -75,9 +75,9 @@ export default function UserSurvey() {
       </Text>
       <iframe
         style={{
-          borderRadius: '30px',
-          height: '100vh',
-          width: '90vw',
+          borderRadius: "30px",
+          height: "100vh",
+          width: "90vw",
         }}
         title="User survey figjam"
         width="800"

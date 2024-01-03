@@ -7,8 +7,8 @@ export default function Button({
 }) {
   return (
     <button
-      className={`w-[420px] rounded-[50px] border-4 border-black h-[90px] ${
-        className ?? ''
+      className={`h-[90px] w-[420px] rounded-[50px] border-4 border-black ${
+        className ?? ""
       }`}
       type="button"
     >

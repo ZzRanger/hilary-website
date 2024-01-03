@@ -1,22 +1,22 @@
-import type { ReactNode } from 'react';
-import Image from 'next/image';
-import { ProjectOverview } from '@/components/ProjectOverview';
-import Decension from '@public/zine.png';
-import { PillLink } from '@/components/PillLink';
-import Planner from '@public/planner.png';
-import Lezhin from '@public/lezhin.png';
-import TaipeiMetro from '@public/metro-app.png';
-import Somasawa from '@public/somasawa.png';
+import type { ReactNode } from "react";
+import Image from "next/image";
+import { ProjectOverview } from "@/components/ProjectOverview";
+import Decension from "@public/zine.png";
+import { PillLink } from "@/components/PillLink";
+import Planner from "@public/planner.png";
+import Lezhin from "@public/lezhin.png";
+import TaipeiMetro from "@public/metro-app.png";
+import Somasawa from "@public/somasawa.png";
 
-import SystemDlc from '../../public/SYSTE.png';
-import Nebula from '../../public/NEBULA LAB.png';
+import SystemDlc from "../../public/SYSTE.png";
+import Nebula from "../../public/NEBULA LAB.png";
 
 const projects: ReactNode[][] = [
   [
     <ProjectOverview
       client="@nebula-labs"
       title="Nebula Planner"
-      tags={['Case Study', 'UX Research', 'UI Design', 'Website']}
+      tags={["Case Study", "UX Research", "UI Design", "Website"]}
       subtitle="Designing a website tool to aid UT Dallas students in planning their four-year degree."
       period="Jan 2023 - March 2023"
       ctaLink="/planner"
@@ -26,7 +26,7 @@ const projects: ReactNode[][] = [
     <ProjectOverview
       client="@lezhin-webtoon"
       title="Lezhin Comic App Redesign"
-      tags={['Case Study', 'UX Research', 'UI Design', 'Mobile']}
+      tags={["Case Study", "UX Research", "UI Design", "Mobile"]}
       subtitle="Redesign of Lezhin, a webtoon mobile app to enhance user reading experience."
       period="June 2022 - July 2022"
       ctaLink="/lezhin"
@@ -47,7 +47,7 @@ const projects: ReactNode[][] = [
     <ProjectOverview
       client="@rafiki-africa"
       title="Somasawa"
-      tags={['Case Study', 'UX Research', 'B2C', 'UI Design', 'Mobile']}
+      tags={["Case Study", "UX Research", "B2C", "UI Design", "Mobile"]}
       subtitle="Development of an app for Kenyan teachers in Rafiki Africa to help streamline their workflows for students"
       period="June 2023 - August 2023"
       ctaLink="https://www.notion.so/developforgood/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc?pvs=4"
@@ -59,7 +59,7 @@ const projects: ReactNode[][] = [
     <ProjectOverview
       client="@nebula-labs"
       title="Nebula Labs"
-      tags={['Brand Identity', 'Graphic Design', 'Illustrator', 'InDesign']}
+      tags={["Brand Identity", "Graphic Design", "Illustrator", "InDesign"]}
       subtitle="Developing a branding for Nebula Labs, a student organization utilizing technology to assist students."
       period="Jan 2023 - March 2023"
       ctaLink="/nebula-labs"
@@ -69,7 +69,7 @@ const projects: ReactNode[][] = [
     <ProjectOverview
       client="@genshinxianxia"
       title="Descension"
-      tags={['Branding', 'Printing', 'Packaging', 'Adobe Creative Suite']}
+      tags={["Branding", "Printing", "Packaging", "Adobe Creative Suite"]}
       subtitle="A for-profit magazine project inspired by Genshin Impact and the xianxia genre of Chinese literature."
       period="Dec 2021 - May 2023"
       ctaLink="https://www.hilary-nguyen.com/descension-1"
@@ -89,9 +89,9 @@ const projects: ReactNode[][] = [
     // </ProjectOverview>,
     <PillLink
       href="https://www.hilary-nguyen.com/playground"
-      className="bg-white text-black flex items-center gap-1"
+      className="flex items-center gap-1 bg-white text-black"
     >
-      Proceed to Playground{' '}
+      Proceed to Playground{" "}
       <svg
         width="11"
         height="10"

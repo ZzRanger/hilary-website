@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { ReactNode, useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import profilePic from '@public/hn.png';
-import useMedia from '@/utils/useMediaQuery';
+import { ReactNode, useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import profilePic from "@public/hn.png";
+import useMedia from "@/utils/useMediaQuery";
 
 export const NavBar = () => {
   const links: {
@@ -15,9 +15,9 @@ export const NavBar = () => {
     newTab: boolean;
   }[] = [
     {
-      href: '/about',
-      children: 'About',
-      title: 'About',
+      href: "/about",
+      children: "About",
+      title: "About",
       newTab: false,
       icon: (
         <svg
@@ -45,9 +45,9 @@ export const NavBar = () => {
       ),
     },
     {
-      href: 'https://fori.io/hilary-nguyen ',
-      children: 'Play',
-      title: 'Play',
+      href: "https://fori.io/hilary-nguyen ",
+      children: "Play",
+      title: "Play",
       newTab: true,
       icon: (
         <svg
@@ -68,9 +68,9 @@ export const NavBar = () => {
       ),
     },
     {
-      href: '/resume.pdf',
-      children: 'Resume',
-      title: 'Resume',
+      href: "/resume.pdf",
+      children: "Resume",
+      title: "Resume",
       newTab: true,
       icon: (
         <svg
@@ -91,8 +91,8 @@ export const NavBar = () => {
       ),
     },
     {
-      href: 'https://www.linkedin.com/in/hilary-nguyen/',
-      title: 'LinkedIn',
+      href: "https://www.linkedin.com/in/hilary-nguyen/",
+      title: "LinkedIn",
       newTab: true,
       children: (
         <svg
@@ -134,8 +134,8 @@ export const NavBar = () => {
       ),
     },
     {
-      href: 'mailto:nguyenhilary0907@gmail.com',
-      title: 'Mail',
+      href: "mailto:nguyenhilary0907@gmail.com",
+      title: "Mail",
       newTab: true,
       children: (
         <svg
@@ -175,16 +175,16 @@ export const NavBar = () => {
   const [sticky, setSticky] = useState(true);
   const [open, setOpen] = useState(false);
 
-  const isSmallScreen = useMedia('(max-width: 640px)');
+  const isSmallScreen = useMedia("(max-width: 640px)");
   useEffect(() => {
     if (ref.current) {
       const { height } = ref.current.getBoundingClientRect();
       const isSticky = () => {
         setSticky(!(window.scrollY >= height * 0.5));
       };
-      window.addEventListener('scroll', isSticky);
+      window.addEventListener("scroll", isSticky);
       return () => {
-        window.removeEventListener('scroll', isSticky);
+        window.removeEventListener("scroll", isSticky);
       };
     }
   }, [ref]);
@@ -197,31 +197,31 @@ export const NavBar = () => {
   if (!sticky || isSmallScreen) {
     return (
       <>
-        <div className="sticky top-8 z-50 self-start left-8 h-0">
-          <div className="flex justify-center items-center w-16 h-16">
+        <div className="sticky left-8 top-8 z-50 h-0 self-start">
+          <div className="flex h-16 w-16 items-center justify-center">
             <Link href="/" className="">
-              <Image src={profilePic} alt="" className="w-16 h-16 z-30" />
+              <Image src={profilePic} alt="" className="z-30 h-16 w-16" />
             </Link>
           </div>
         </div>
         <button
-          className="flex justify-start sticky top-8 z-50 self-end right-8 h-[116px] cursor-pointer"
+          className="sticky right-8 top-8 z-50 flex h-[116px] cursor-pointer justify-start self-end"
           onClick={() => setOpen((open) => !open)}
         >
-          <div className="flex justify-center items-center w-12 h-12 bg-white dark:bg-black shadow-md rounded-full">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md dark:bg-black">
             <NavigateIcon />
             <div
-              className={`flex flex-col absolute top-12 right-0 bg-white dark:bg-neutral-800 shadow-md rounded-md overflow-clip my-2 ${
-                open ? 'block' : 'hidden'
+              className={`absolute right-0 top-12 my-2 flex flex-col overflow-clip rounded-md bg-white shadow-md dark:bg-neutral-800 ${
+                open ? "block" : "hidden"
               }`}
             >
               {links.map(({ href, title, icon, newTab }) => (
                 <Link
-                  target={newTab ? '_blank' : ''}
+                  target={newTab ? "_blank" : ""}
                   href={href}
                   key={`-nav-hamburger-${href}`}
                 >
-                  <div className="flex items-center text-lg px-3 py-2 gap-2 hover:bg-neutral-100 hover:text-neutral-700 dark:hover:bg-neutral-700 dark:hover:text-neutral-200 text-neutral-700 dark:text-neutral-200 font-medium">
+                  <div className="flex items-center gap-2 px-3 py-2 text-lg font-medium text-neutral-700 hover:bg-neutral-100 hover:text-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:hover:text-neutral-200">
                     <span>{icon}</span>
                     <span>{title}</span>
                   </div>
@@ -238,20 +238,20 @@ export const NavBar = () => {
   return (
     <div
       ref={ref}
-      className={`h-[116px] border-box transition-all flex items-center justify-between px-7 w-full pt-8 pb-5 text-2xl sticky top-0 ${
+      className={`border-box sticky top-0 flex h-[116px] w-full items-center justify-between px-7 pb-5 pt-8 text-2xl transition-all ${
         !sticky
-          ? 'bg-transparent dark:bg-transparent '
-          : 'border-b dark:border-b-gray-500 border-b-[#323943] dark:bg-neutral-900 bg-white'
+          ? "bg-transparent dark:bg-transparent "
+          : "border-b border-b-[#323943] bg-white dark:border-b-gray-500 dark:bg-neutral-900"
       } z-50`}
     >
       <Link href="/">
-        <h1 className="tracking-tight font-black text-3xl">Hilary Nguyen</h1>
+        <h1 className="text-3xl font-black tracking-tight">Hilary Nguyen</h1>
       </Link>
 
-      <div className="flex justify-center items-center p-0 gap-5 text-lg">
+      <div className="flex items-center justify-center gap-5 p-0 text-lg">
         {links.map(({ href, children, newTab }) => (
           <Link
-            target={newTab ? '_blank' : ''}
+            target={newTab ? "_blank" : ""}
             href={href}
             key={`-nav-${href}`}
           >

@@ -1,28 +1,28 @@
-import Link from 'next/link';
-import type { ReactNode } from 'react';
+import Link from "next/link";
+import type { ReactNode } from "react";
 
 export const Footer = () => {
   const links: { href: string; children: ReactNode }[] = [
     {
-      href: '/about',
-      children: 'About',
+      href: "/about",
+      children: "About",
     },
     {
-      href: '/resume.pdf',
-      children: 'Resume',
+      href: "/resume.pdf",
+      children: "Resume",
     },
     {
-      href: 'https://www.linkedin.com/in/hilary-nguyen/',
-      children: 'LinkedIn',
+      href: "https://www.linkedin.com/in/hilary-nguyen/",
+      children: "LinkedIn",
     },
     {
-      href: 'mailto:nguyenhilary0907@gmail.com',
-      children: 'Email',
+      href: "mailto:nguyenhilary0907@gmail.com",
+      children: "Email",
     },
   ];
   return (
-    <footer className="flex flex-col items-center justify-center w-full gap-8 py-10 mb-16 border border-transparent border-t-white">
-      <div className="flex justify-center items-center p-0 gap-8 font-bold text-xl">
+    <footer className="mb-16 flex w-full flex-col items-center justify-center gap-8 border border-transparent border-t-white py-10">
+      <div className="flex items-center justify-center gap-8 p-0 text-xl font-bold">
         {links.map(({ href, children }) => (
           <Link target="_blank" href={href} key={`footer-${href}`}>
             {children}

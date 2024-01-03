@@ -1,13 +1,13 @@
-import H2 from '@/components/typography/H2';
-import Text, { Weight } from '@/components/typography/Text';
-import Link from 'next/link';
-import { ForwardedRef, forwardRef } from 'react';
+import H2 from "@/components/typography/H2";
+import Text, { Weight } from "@/components/typography/Text";
+import Link from "next/link";
+import { ForwardedRef, forwardRef } from "react";
 
 const UsabilityDescription = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   return (
     <section
       ref={ref}
-      className="flex flex-col text-center items-center gap-[65px] py-[60px]"
+      className="flex flex-col items-center gap-[65px] py-[60px] text-center"
     >
       <Text weight={Weight.bold} className="w-[80%]">
         Usability Test
@@ -26,9 +26,9 @@ const UsabilityDescription = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
         src="https://drive.google.com/file/d/1wr8oAnSEb6RfL5l0TYxvrvzbAC4U774b/preview"
         allow="autoplay"
         style={{
-          borderRadius: '30px',
-          height: '100vh',
-          width: '90vw',
+          borderRadius: "30px",
+          height: "100vh",
+          width: "90vw",
         }}
       />
 
@@ -36,16 +36,16 @@ const UsabilityDescription = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
         Nebula Planner Old Version
       </Text>
       <button
-        className="w-[420px] rounded-[50px] border-4 border-black h-[90px]"
+        className="h-[90px] w-[420px] rounded-[50px] border-4 border-black"
         type="button"
       >
         <Link href="https://beta.planner.utdnebula.com/" target="_blank">
           <Text weight={Weight.bold}>View Old Prototype</Text>
         </Link>
       </button>
-      <article className="text-left w-[90%] py-[80px] px-[40px] bg-[#F5F5F5] flex flex-col rounded-[30px]">
+      <article className="flex w-[90%] flex-col rounded-[30px] bg-[#F5F5F5] px-[40px] py-[80px] text-left">
         <Text weight={Weight.bold}>
-          <div className="text-[50px] mb-[50px]">💡 Testing Key Insight</div>
+          <div className="mb-[50px] text-[50px]">💡 Testing Key Insight</div>
           <div>
             1. Users were confused about the general UI and the purpose of
             Planner
@@ -60,9 +60,9 @@ const UsabilityDescription = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
           </div>
         </Text>
       </article>
-      <article className="h-[50vh] flex justify-center items-center">
+      <article className="flex h-[50vh] items-center justify-center">
         <button
-          className="w-fit px-[50px] py-[20px] rounded-[50px] border-4 border-black h-[90px]"
+          className="h-[90px] w-fit rounded-[50px] border-4 border-black px-[50px] py-[20px]"
           type="button"
         >
           <Link

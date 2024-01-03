@@ -5,7 +5,7 @@ const H2 = ({
   className?: string;
   children: React.ReactElement | React.ReactElement[] | string;
 }) => (
-  <article className={`text-[50px] font-bold ${className || ''}`}>
+  <article className={`text-[50px] font-bold ${className || ""}`}>
     {children}
   </article>
 );
