@@ -3,9 +3,8 @@
 import React, { useMemo, useState } from "react";
 
 import ChevronIcon from "@/components/svg/ChevronIcon";
-import EllipseIcon from "@/components/svg/EllipseIcon";
-import { IndicatorType } from "@/app/(profile)/about/page";
 import Text, { Weight } from "@/components/typography/Text";
+import { IndicatorType } from "@/utils/indicatorType";
 
 const indicatorColor = {
   inside: "text-white",
@@ -40,6 +39,7 @@ export default function Carousel({
       <div className="z-[60] flex flex-row flex-wrap justify-center gap-x-8 leading-[60px]">
         {tabs.map((tab, idx) => (
           <Text
+            key={idx}
             weight={index === idx ? Weight.bold : Weight.normal}
             className={`${index === idx ? "underline" : ""} cursor-pointer`}
             onClick={() => {
@@ -59,8 +59,10 @@ export default function Carousel({
           className=" z-0 flex w-full flex-row items-start duration-300 ease-in-out"
           style={{ transform: test }}
         >
-          {children.map((elm) => (
-            <div className="h-fit w-[800px] flex-shrink-0">{elm}</div>
+          {children.map((elm, idx) => (
+            <div key={idx} className="h-fit w-[800px] flex-shrink-0">
+              {elm}
+            </div>
           ))}
         </div>
       </div>

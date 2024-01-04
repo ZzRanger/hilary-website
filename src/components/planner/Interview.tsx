@@ -7,7 +7,7 @@ import PieSurvey1 from "@/components/planner/PieSurvey1";
 import PieSurvey2 from "@/components/planner/PieSurvey2";
 import PieSurvey3 from "@/components/planner/PieSurvey3";
 import Carousel from "@/components/Carousel";
-import { IndicatorType } from "@/app/(profile)/about/page";
+import { IndicatorType } from "@/utils/indicatorType";
 
 type GraphType = {
   description: string;
@@ -44,8 +44,11 @@ export default function Interview() {
             <span className="font-bold"> 141 responses</span>
           </Text>
           <Carousel indicators={IndicatorType.outside} className="w-[60vw]">
-            {graphs.map((graphElm) => (
-              <div className="flex w-[60vw] flex-shrink-0 flex-col items-center justify-center gap-y-20 pb-10">
+            {graphs.map((graphElm, idx) => (
+              <div
+                key={idx}
+                className="flex w-[60vw] flex-shrink-0 flex-col items-center justify-center gap-y-20 pb-10"
+              >
                 <div className="w-[50vw]">{graphElm.element}</div>
                 <Text weight={Weight.medium}>{graphElm.description}</Text>
               </div>

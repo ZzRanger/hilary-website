@@ -23,7 +23,7 @@ export default function Pain() {
             <Text weight={Weight.bold}>Better UX Copywriting</Text>
             <Text>
               Interviews revealed confusion about certain function terms like
-              "Template Plan."
+              &apos;Template Plan&apos;.
             </Text>
           </div>
         </PainCard>

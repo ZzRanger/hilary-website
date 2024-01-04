@@ -4,7 +4,7 @@ import React, { useMemo, useState } from "react";
 
 import ChevronIcon from "@/components/svg/ChevronIcon";
 import EllipseIcon from "@/components/svg/EllipseIcon";
-import { IndicatorType } from "@/app/(profile)/about/page";
+import { IndicatorType } from "@/utils/indicatorType";
 
 const indicatorColor = {
   inside: "text-white",
@@ -45,6 +45,7 @@ export default function Carousel({
         >
           {children.map((_, i) => (
             <EllipseIcon
+              key={i}
               onClick={() => setIndex(i)}
               className={`cursor-pointer ${
                 index === i ? indicatorColor[indicators] : "text-[#D9D9D9]"

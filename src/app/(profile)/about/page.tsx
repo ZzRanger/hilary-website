@@ -1,10 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
-/** Lint ignore above exists bc using svg in Image component causes problems
- * I'm lazy - here's relevant slackoverflow thread
- * https://github.com/vercel/next.js/discussions/30472
- */
-
 import Image from "next/image";
 
 import ImageSelector from "@/components/about/ImageSelector";
@@ -15,11 +8,6 @@ import SilentHearts from "@public/silent_hearts.png";
 
 import SpotifyMusic from "@/components/about/SpotifyMusic";
 import Carousel from "@/components/about/Carousel";
-
-export enum IndicatorType {
-  inside = "inside",
-  outside = "outside",
-}
 
 export default function About() {
   return (
@@ -82,8 +70,8 @@ const AboutMe = () => {
         A little bit about me
       </div>
 
-      {aboutMeInfo.map((aboutMe) => (
-        <div>
+      {aboutMeInfo.map((aboutMe, idx) => (
+        <div key={idx}>
           <div className="text-base font-bold leading-5 lg:text-xl lg:leading-10">
             {aboutMe.title}
           </div>
@@ -112,10 +100,10 @@ const ReadingList = () => (
         <div className="text-xl font-bold">Silent Hearts</div>
         <div className="pb-4 text-base text-gray-400">Jing Shui Bian</div>
         <div className="text-sm leading-8">
-          Lu Rong said, "I can't afford to want anything, but I still want you.
-          So, sometimes, don't be angry with me because of Meimei, and don't
-          break up with me." <br /> "Lin Mu, you have to know, I will love you
-          with all my heart."
+          Lu Rong said, &apos;I can&apos;t afford to want anything, but I still
+          want you. So, sometimes, don&apos;t be angry with me because of
+          Meimei, and don&apos;t break up with me.&apos; <br /> &apos;Lin Mu,
+          you have to know, I will love you with all my heart.&apos;
         </div>
       </div>
     </div>
@@ -157,8 +145,8 @@ const FavoriteQuote = () => (
     </div>
     <div className="flex max-w-[600px] flex-col items-center gap-y-12 lg:h-full">
       <div className="text-3xl font-semibold">
-        “You are mine, mine, I go shouting it to the afternoon's wind, and the
-        wind hauls on my widowed voice.”
+        “You are mine, mine, I go shouting it to the afternoon&apos;s wind, and
+        the wind hauls on my widowed voice.”
       </div>
       <div className="text-3xl font-semibold leading-[46px]">
         — In My Sky At Twilight, Pablo Neruda

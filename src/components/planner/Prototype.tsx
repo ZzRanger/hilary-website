@@ -42,8 +42,8 @@ export function Prototype() {
             4. Give users the ability to override their plan pre-requisites
           </div>
           <div>
-            5. Added in the ability for users to see courses' information from
-            UTD's Course Catalog
+            5. Added in the ability for users to see courses&apos; information
+            from UTD&apos;s Course Catalog
           </div>
         </Text>
       </article>

@@ -5,6 +5,7 @@ import Architecture from "../../../public/planner/architecture.png";
 import { forwardRef, ForwardedRef } from "react";
 
 const Information = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  Information.displayName = "Information";
   return (
     <section
       ref={ref}
