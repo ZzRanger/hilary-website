@@ -6,7 +6,7 @@ import Macbook4 from "../../../public/planner/macbook4.png";
 export default function Design() {
   return (
     <section
-      id="planner-design"
+      id="design"
       className="my-[20vh] flex h-screen w-screen flex-row items-center"
     >
       <Image src={Macbook4} alt="Macbook" className="w-[50%]" />

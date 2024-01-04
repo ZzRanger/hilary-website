@@ -4,11 +4,12 @@ import Text, { Weight } from "@/components/typography/Text";
 import Macbook2 from "../../../public/planner/macbook2.png";
 import { ForwardedRef, forwardRef } from "react";
 
-const Resaerch = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+const Research = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  Research.displayName = "Research";
   return (
     <section
       ref={ref}
-      id="planner-research"
+      id="research"
       className="grid h-[120vh] w-screen grid-cols-[2fr_3fr] place-items-center"
     >
       <article className="flex flex-col items-center">
@@ -28,4 +29,4 @@ const Resaerch = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   );
 });
 
-export default Resaerch;
+export default Research;

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ForwardedRef, forwardRef } from "react";
 
 const UsabilityDescription = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  UsabilityDescription.displayName = "UsabilityDescription";
   return (
     <section
       ref={ref}

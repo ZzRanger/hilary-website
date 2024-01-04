@@ -12,8 +12,8 @@ export default function InitialFlows() {
     <section className="flex w-[80%] flex-col items-center gap-[70px] py-[60px] text-left">
       <Text weight={Weight.bold}>Initial User Flows</Text>
       <H2 className="text-center">
-        I decided to map out Lezhin's current user journey to better map out
-        specific problems within the app
+        I decided to map out Lezhin&apos;s current user journey to better map
+        out specific problems within the app
       </H2>
       <Carousel className="w-[60vw]">
         <Image src={Flow1} priority alt="" />
@@ -52,9 +52,9 @@ export default function InitialFlows() {
           <div>
             <span className="font-bold ">4. Censorship:</span>
             <br />
-            Apple's restrictions prevented users from accessing mature content
-            within the app, forcing them to use Safari to access such content on
-            Lezhin's site.
+            Apple&apos;s restrictions prevented users from accessing mature
+            content within the app, forcing them to use Safari to access such
+            content on Lezhin&apos;s site.
           </div>
           <div>
             <span className="font-bold ">5. Lack of Community: </span>

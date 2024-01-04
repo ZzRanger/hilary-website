@@ -5,10 +5,12 @@ import Macbook3 from "../../../public/planner/macbook3.png";
 import { ForwardedRef, forwardRef } from "react";
 
 const Usability = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  Usability.displayName = "Usability";
+
   return (
     <section
       ref={ref}
-      id="planner-usability"
+      id="usability"
       className="flex h-[120vh] w-screen flex-row items-center bg-black"
     >
       <Image src={Macbook3} alt="Macbook" className="w-[65%]" />

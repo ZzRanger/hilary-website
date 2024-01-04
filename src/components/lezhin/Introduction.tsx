@@ -20,9 +20,9 @@ export default function Introduction() {
       </H2>
       <Line />
       <Text className="mt-[10vh] w-[80%]">
-        UTD's enrollment skyrockets over the past few years, prompting the need
-        for additional resources to assist students in navigating the degree
-        planning process.
+        UTD&apos;s enrollment skyrockets over the past few years, prompting the
+        need for additional resources to assist students in navigating the
+        degree planning process.
       </Text>
       <div className="mt-[20vh] flex w-[90vw] flex-row justify-around">
         <ProblemTile

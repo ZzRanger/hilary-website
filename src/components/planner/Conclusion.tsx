@@ -4,7 +4,7 @@ import Text from "@/components/typography/Text";
 export default function Conclusion() {
   return (
     <section
-      id="planner-conclusion"
+      id="conclusion"
       className="flex flex-col items-center space-y-[100px]"
     >
       <H2>Conclusion</H2>

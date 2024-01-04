@@ -6,7 +6,7 @@ import ResearchPhone from "../../../public/lezhin/researchPhone.png";
 export default function LezhinResearch() {
   return (
     <section
-      id="lezhin-research"
+      id="research"
       className="grid h-[150vh] w-screen grid-cols-[2fr_3fr] place-items-center"
     >
       <article className="flex flex-col items-center">

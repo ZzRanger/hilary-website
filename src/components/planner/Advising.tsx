@@ -1,10 +1,10 @@
 import H2 from "@/components/typography/H2";
 import Text, { Weight } from "@/components/typography/Text";
 import Link from "next/link";
-import { ForwardedRef, forwardRef, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { ForwardedRef, forwardRef } from "react";
 
 const Advising = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  Advising.displayName = "Advising";
   {
     return (
       <section

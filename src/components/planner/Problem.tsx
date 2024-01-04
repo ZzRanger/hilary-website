@@ -1,3 +1,5 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
 import H2 from "@/components/typography/H2";
 
@@ -10,11 +12,13 @@ import Person3 from "../../../public/planner/person3.png";
 import { ForwardedRef, forwardRef } from "react";
 
 const Problem = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  Problem.displayName = "Problem";
+
   {
     return (
       <section
         ref={ref}
-        id="planner-problem"
+        id="problem"
         className="flex w-screen flex-col items-center rounded-[20px] bg-black py-[120px] text-center text-white"
       >
         <Text weight={Weight.semibold} className="mb-[40px]">
@@ -26,8 +30,8 @@ const Problem = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
         </H2>
         <Line />
         <Text className="mt-[10vh] w-[80%]">
-          UTD's enrollment skyrockets over the past few years, prompting the
-          need for additional resources to assist students in navigating the
+          UTD&apos;s enrollment skyrockets over the past few years, prompting
+          the need for additional resources to assist students in navigating the
           degree planning process.
         </Text>
         <div className="mt-[20vh] flex w-[90vw] flex-row justify-around">

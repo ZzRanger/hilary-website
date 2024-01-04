@@ -18,44 +18,16 @@ import { Prototype } from "@/components/planner/Prototype";
 import Final from "@/components/planner/Final";
 import Conclusion from "@/components/planner/Conclusion";
 import Next from "@/components/planner/Next";
-import ScrollLink from "@/components/ScrollLink";
-import Text, { Weight } from "@/components/typography/Text";
 
-import { ComponentType, FunctionComponent, useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import React from "react";
-import throttle from "lodash.throttle";
-import ProjectNavbar from "@/components/navigation/ProjectNavBar";
-
-const NavbarWrapper = ({
-  setDark,
-  component: Component,
-  color,
-}: {
-  setDark: (isDark: boolean) => void;
-  component: FunctionComponent<any>;
-  color: string;
-}) => {
-  const { ref, inView, entry } = useInView({
-    rootMargin: "-60px",
-  });
-
-  useEffect(() => {
-    if (entry?.boundingClientRect.y! > 0 && color === "black") {
-      setDark(inView ? true : false);
-    } else if (entry?.boundingClientRect.y! > 0 && color === "white") {
-      setDark(inView ? false : true);
-    }
-  }, [inView]);
-  return <Component ref={ref} />;
-};
+import ProjectNavbar from "@/components/navigation/ProjectNavbar";
+import useDebouncedState from "@/utils/useDebouncedState";
+import NavbarWrapper from "@/components/navigation/NavbarWrapper";
 
 export default function Planner() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useDebouncedState(false, 100);
 
-  const handleSetDark = throttle((isDark: boolean) => {
-    setIsDark(isDark);
-  }, 1000);
+  const handleSetDark = setIsDark;
 
   return (
     <>

@@ -5,6 +5,7 @@ import Mockups from "../../../public/planner/mockups.png";
 import { ForwardedRef, forwardRef, useEffect } from "react";
 
 const WireframesView = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  WireframesView.displayName = "WireframesView";
   return (
     <section
       ref={ref}

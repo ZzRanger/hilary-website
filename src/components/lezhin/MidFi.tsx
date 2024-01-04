@@ -3,10 +3,16 @@ import Text, { Weight } from "@/components/typography/Text";
 import Link from "next/link";
 import Sketch from "@public/lezhin/sketch.png";
 import Image from "next/image";
+import { ForwardedRef, forwardRef } from "react";
 
-export default function MidFi() {
+const MidFi = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  MidFi.displayName = "MidFi";
+
   return (
-    <section className="flex h-fit w-screen flex-col items-center rounded-[20px] bg-black py-[30vh] text-center text-white">
+    <section
+      ref={ref}
+      className="flex h-fit w-screen flex-col items-center rounded-[20px] bg-black py-[30vh] text-center text-white"
+    >
       <div className="flex flex-col items-center gap-y-[100px]">
         <Text weight={Weight.bold} className="]">
           WireFrame Sketches & Mid Fidelity Prototype
@@ -74,4 +80,6 @@ export default function MidFi() {
       </div>
     </section>
   );
-}
+});
+
+export default MidFi;

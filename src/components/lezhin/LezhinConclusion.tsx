@@ -11,7 +11,7 @@ import Final5 from "@public/lezhin/final5.png";
 export default function LezhinConclusion() {
   return (
     <section
-      id="lezhin-conclusion"
+      id="conclusion"
       className="flex w-[90vw] flex-col items-center space-y-[80px] py-[92px]"
     >
       <H2>Conclusion</H2>

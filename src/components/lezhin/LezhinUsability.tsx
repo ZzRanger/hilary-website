@@ -5,15 +5,15 @@ import Link from "next/link";
 export default function UserSurvey() {
   return (
     <div
-      id="lezhin-usability"
+      id="usability"
       className="flex w-full items-center justify-center bg-hn-lezhin"
     >
       <section className="flex w-[80%] flex-col items-center gap-[70px] py-[60px] text-left  text-white">
         <Text weight={Weight.bold}>Usability Test</Text>
         <H2 className="text-center">
           I conducted usability testing with 5 participants, assessing task
-          completion time and interaction difficulties to understand the app's
-          impact on user usage.
+          completion time and interaction difficulties to understand the
+          app&apos;s impact on user usage.
         </H2>
         <button
           className="h-[90px] w-fit rounded-[50px] border-4 border-white px-[48px] py-[20px]"
@@ -23,7 +23,9 @@ export default function UserSurvey() {
             href="https://www.notion.so/xodaydream/a243681ff68b4dd9a8c52be8342417e5?v=65aa8257649c47af8d442743b2dbc8cf"
             target="_blank"
           >
-            <Text weight={Weight.bold}>View Users' Interview/Empathy Map</Text>
+            <Text weight={Weight.bold}>
+              View Users&apos; Interview/Empathy Map
+            </Text>
           </Link>
         </button>
         <article className="mt-10 flex h-fit items-center justify-center rounded-[30px] bg-[#F5F5F5] py-[62px] text-black">
@@ -33,7 +35,8 @@ export default function UserSurvey() {
               <Text weight={Weight.medium}>
                 <li>
                   3 out of 4 users took a long time trying to find a specific
-                  genre on the app due to the built of the app's search engine
+                  genre on the app due to the built of the app&apos;s search
+                  engine
                 </li>
               </Text>
               <Text weight={Weight.medium}>
@@ -56,15 +59,15 @@ export default function UserSurvey() {
             <ol className="ml-[40px] list-decimal space-y-10">
               <li>
                 <span className="font-bold">
-                  Users rarely use the "My Library" feature
+                  Users rarely use the &apos;My Library&apos; feature
                 </span>{" "}
                 due to its lack of functionality and sorting options.
               </li>
               <li>
                 Most participants
                 <span className="font-bold">
-                  utilize both the app and browser site, despite the app's poor
-                  quality.
+                  utilize both the app and browser site, despite the app&apos;s
+                  poor quality.
                 </span>{" "}
                 The app offers webtoons not available on other platforms, but
                 users switch to the desktop site for mature content.

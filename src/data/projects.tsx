@@ -14,6 +14,7 @@ import Nebula from "../../public/NEBULA LAB.png";
 const projects: ReactNode[][] = [
   [
     <ProjectOverview
+      key={0}
       client="@nebula-labs"
       title="Nebula Planner"
       tags={["Case Study", "UX Research", "UI Design", "Website"]}
@@ -24,6 +25,7 @@ const projects: ReactNode[][] = [
       <Image src={Planner} alt="" width="450" className="left right-0" />
     </ProjectOverview>,
     <ProjectOverview
+      key={1}
       client="@lezhin-webtoon"
       title="Lezhin Comic App Redesign"
       tags={["Case Study", "UX Research", "UI Design", "Mobile"]}
@@ -45,6 +47,7 @@ const projects: ReactNode[][] = [
     //   <Image src={TaipeiMetro} alt="" width="450" className="left right-0" />
     // </ProjectOverview>,
     <ProjectOverview
+      key={3}
       client="@rafiki-africa"
       title="Somasawa"
       tags={["Case Study", "UX Research", "B2C", "UI Design", "Mobile"]}
@@ -57,6 +60,7 @@ const projects: ReactNode[][] = [
   ],
   [
     <ProjectOverview
+      key={4}
       client="@nebula-labs"
       title="Nebula Labs"
       tags={["Brand Identity", "Graphic Design", "Illustrator", "InDesign"]}
@@ -67,6 +71,7 @@ const projects: ReactNode[][] = [
       <Image src={Nebula} alt="" width="350" className="left right-0" />
     </ProjectOverview>,
     <ProjectOverview
+      key={5}
       client="@genshinxianxia"
       title="Descension"
       tags={["Branding", "Printing", "Packaging", "Adobe Creative Suite"]}
@@ -88,6 +93,7 @@ const projects: ReactNode[][] = [
     //   <Image src={SystemDlc} alt="" width="375" />
     // </ProjectOverview>,
     <PillLink
+      key={6}
       href="https://www.hilary-nguyen.com/playground"
       className="flex items-center gap-1 bg-white text-black"
     >

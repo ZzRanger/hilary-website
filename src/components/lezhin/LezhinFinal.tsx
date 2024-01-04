@@ -1,14 +1,13 @@
 import H2 from "@/components/typography/H2";
 import Text, { Weight } from "@/components/typography/Text";
-import Link from "next/link";
-import Sketch from "@public/lezhin/sketch.png";
-import Image from "next/image";
+import { ForwardedRef, forwardRef } from "react";
 
-export default function LezhinFinal() {
+const LezhinFinal = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  LezhinFinal.displayName = "LezhinFinal";
   return (
     <section
       className="flex h-fit w-screen flex-col items-center gap-y-[10vh] rounded-[20px] py-[30vh] text-center"
-      id="lezhin-final"
+      id="final"
     >
       <Text weight={Weight.bold}>Final Prototype</Text>
       <H2 className="w-[80vw] leading-[74px]">
@@ -43,7 +42,7 @@ export default function LezhinFinal() {
                 <span className="font-bold">
                   My Page now includes coin balance, bonus coins, and points
                 </span>{" "}
-                due to Lezhin's top-up system.
+                due to Lezhin&apos;s top-up system.
               </li>
               <li>
                 <span className="font-bold">
@@ -64,4 +63,6 @@ export default function LezhinFinal() {
       </article>
     </section>
   );
-}
+});
+
+export default LezhinFinal;

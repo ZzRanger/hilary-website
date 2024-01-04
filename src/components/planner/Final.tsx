@@ -14,7 +14,7 @@ import Eight from "../../../public/planner/final/eight.png";
 export default function Final() {
   return (
     <section
-      id="planner-final"
+      id="final"
       className="my-[20vh] flex flex-col items-center space-y-[100px]"
     >
       <H2>Final Prototype </H2>

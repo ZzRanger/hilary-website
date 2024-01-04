@@ -2,11 +2,14 @@ import Image from "next/image";
 import Text, { Weight } from "@/components/typography/Text";
 import H1 from "@/components/typography/H1";
 import IPadMockup from "../../../public/lezhin/iPadMockup.png";
+import { ForwardedRef, forwardRef } from "react";
 
-export default function Design() {
+const Design = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  Design.displayName = "Design";
   return (
     <section
-      id="lezhin-design"
+      ref={ref}
+      id="design"
       className="flex h-[150vh] w-screen flex-row items-center gap-x-[40px] bg-black tabular-nums"
     >
       <article className="w-[50%]">
@@ -21,4 +24,6 @@ export default function Design() {
       </article>
     </section>
   );
-}
+});
+
+export default Design;

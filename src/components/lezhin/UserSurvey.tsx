@@ -1,10 +1,15 @@
 import H2 from "@/components/typography/H2";
 import Text, { Weight } from "@/components/typography/Text";
 import Link from "next/link";
+import { ForwardedRef, forwardRef } from "react";
 
-export default function UserSurvey() {
+const UserSurvey = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
+  UserSurvey.displayName = "UserSurvey";
   return (
-    <section className="flex w-[80%] flex-col items-center gap-[70px] py-[60px] text-left">
+    <section
+      ref={ref}
+      className="flex w-[80%] flex-col items-center gap-[70px] py-[60px] text-left"
+    >
       <Text weight={Weight.bold}>Users Survey</Text>
       <H2 className="text-center">
         I decided to conduct an online public survey to identified unique issues
@@ -49,10 +54,10 @@ export default function UserSurvey() {
             </Text>
             <Text weight={Weight.bold}>
               <li>
-                Students' confusion caused by varying college systems and degree
-                requirements leads to advisors spending more time answering
-                questions, resulting in delayed responses as they try to catch
-                up with degree validation work.
+                Students&apos; confusion caused by varying college systems and
+                degree requirements leads to advisors spending more time
+                answering questions, resulting in delayed responses as they try
+                to catch up with degree validation work.
               </li>
             </Text>
           </ol>
@@ -87,4 +92,6 @@ export default function UserSurvey() {
       />
     </section>
   );
-}
+});
+
+export default UserSurvey;

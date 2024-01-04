@@ -12,7 +12,7 @@ import X from "@public/lezhin/x.png";
 export default function LezhinProblem() {
   return (
     <section
-      id="lezhin-problem"
+      id="problem"
       className="mt-[45vh] flex w-screen flex-col items-center rounded-[20px] bg-hn-lezhin text-white"
     >
       <div className="mt-[calc(-20vh+1px)] h-[20vh] w-[3px] bg-black" />
@@ -37,11 +37,11 @@ export default function LezhinProblem() {
         <ProblemTile image={ThumbsDown} title="Low User Ratings">
           <ul className="mx-10 list-disc text-left text-xl leading-[30px]">
             <li>
-              Lezhin's app receives a low rating of only two and a half stars
-              based on over 2000 user reviews.
+              Lezhin&apos;s app receives a low rating of only two and a half
+              stars based on over 2000 user reviews.
             </li>
             <li>
-              Users express dissatisfaction with the app's performance,
+              Users express dissatisfaction with the app&apos;s performance,
               features, or overall experience
             </li>
           </ul>
@@ -58,7 +58,7 @@ export default function LezhinProblem() {
         <ProblemTile image={X} title="Lagging Behind Competitors">
           <ul className="mx-16 list-disc text-left text-xl leading-[30px]">
             <li>
-              Lezhin's app performance and user satisfaction fall behind
+              Lezhin&apos;s app performance and user satisfaction fall behind
               competing platforms like Webtoon, Bilibili, and Manta.
             </li>
           </ul>
@@ -67,7 +67,7 @@ export default function LezhinProblem() {
       <article className=" mb-[150px] mt-[100px] flex h-[80vh] w-[90%] flex-col items-center gap-y-[54px] rounded-[20px] border-[3px] border-white pt-[90px] text-center">
         <Text weight={Weight.semibold}>The Problem</Text>
         <H2 className="w-[78%] leading-[65px]">
-          Why are users not staying engaged and satisfied with Lezhin's app
+          Why are users not staying engaged and satisfied with Lezhin&apos;s app
           experience?
         </H2>
       </article>

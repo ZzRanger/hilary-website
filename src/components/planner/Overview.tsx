@@ -4,7 +4,7 @@ import Text, { Weight } from "@/components/typography/Text";
 export default function PlannerOverview() {
   return (
     <section
-      id="planner-overview"
+      id="overview"
       className="mt-[25vh] flex w-screen flex-col items-center text-center"
     >
       <h1 className="mb-[30px] text-4xl font-extrabold text-black">Overview</h1>
@@ -31,7 +31,7 @@ export default function PlannerOverview() {
         className="flex items-center justify-center rounded-[200px] bg-[#6266F9] px-6 py-[10px] shadow-md"
       >
         <Text className="leading-[44px] text-white" weight={Weight.medium}>
-          <ScrollLink href="#planner-final">Check Out Final Product</ScrollLink>
+          <ScrollLink href="#final">Check Out Final Product</ScrollLink>
         </Text>
       </button>
     </section>
