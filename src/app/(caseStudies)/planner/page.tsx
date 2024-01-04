@@ -20,7 +20,7 @@ import Conclusion from "@/components/planner/Conclusion";
 import Next from "@/components/planner/Next";
 
 import React from "react";
-import ProjectNavbar from "@/components/navigation/ProjectNavbar";
+import ProjectNavbar from "@/components/navigation/ProjectNavbara";
 import useDebouncedState from "@/utils/useDebouncedState";
 import NavbarWrapper from "@/components/navigation/NavbarWrapper";
 
