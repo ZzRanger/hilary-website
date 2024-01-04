@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <div className="transition dark:bg-[#171717]">
       <div className="flex flex-col items-center">
-        <NavBar />
+        {/* <NavBar /> */}
         {children}
       </div>
     </div>

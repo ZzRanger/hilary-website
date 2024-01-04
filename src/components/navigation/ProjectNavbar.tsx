@@ -6,7 +6,6 @@ import profilePic from "@public/hn.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Text, { Weight } from "@/components/typography/Text";
 import Link from "next/link";
 
 export type THEME = typeof THEMES;
@@ -16,12 +15,14 @@ const THEMES = {
     textColor: "text-white",
     icon: "#A6A6AF",
     iconBg: "bg-[#1F1F1F]",
+    clickedIconBg: "bg-[#4F4F4F]",
     navbarBg: "bg-[#2D2C2C]/90",
   },
   light: {
     textColor: "text-black",
     icon: "#A3A3A3",
     iconBg: "bg-[#FFFFFF]",
+    clickedIconBg: "bg-[#E5E5E5]",
     navbarBg: "bg-[#EEEEEE]/90",
   },
 };
@@ -47,11 +48,13 @@ const NavbarIconWrapper = ({
   onMouseLeave: () => void;
   onClick: () => void;
 }) => {
-  const { textColor, iconBg, navbarBg } = THEMES[theme];
+  const { textColor, iconBg, clickedIconBg, navbarBg } = THEMES[theme];
 
   return (
     <article
-      className={`${iconBg} relative flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-full`}
+      className={`${
+        isClicked ? clickedIconBg : iconBg
+      } relative flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-full`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onClick={onClick}
@@ -62,7 +65,11 @@ const NavbarIconWrapper = ({
         >
           {clickedText.map((text, idx) => (
             <div
-              className={`${iconBg} ${textColor} rounded-full p-2`}
+              className={`${iconBg} ${textColor} rounded-full`}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
               key={idx}
             >
               {text}
@@ -90,42 +97,42 @@ const CLICKED_TEXT = [
     <ScrollLink
       key={0}
       href="#overview"
-      className="flex  shrink-0 items-center justify-center"
+      className="flex  shrink-0 items-center justify-center p-2"
     >
       <div className="whitespace-nowrap text-sm">📓 Overview</div>
     </ScrollLink>,
     <ScrollLink
       key={1}
       href="#problem"
-      className="flex items-center justify-center"
+      className="flex items-center justify-center p-2"
     >
       <div className="whitespace-nowrap text-sm">‼️ Problem</div>
     </ScrollLink>,
     <ScrollLink
       key={2}
       href="#research"
-      className="flex items-center justify-center"
+      className="flex items-center justify-center p-2"
     >
       <div className="whitespace-nowrap text-sm">📝 Research</div>
     </ScrollLink>,
     <ScrollLink
       key={3}
       href="#usability"
-      className="flex  items-center justify-center"
+      className="flex  items-center justify-center p-2"
     >
       <div className="whitespace-nowrap text-sm">💻 Usability</div>
     </ScrollLink>,
     <ScrollLink
       key={4}
       href="#design"
-      className="flex  items-center justify-center"
+      className="flex  items-center justify-center p-2"
     >
       <div className="whitespace-nowrap text-sm">🎨 Design</div>
     </ScrollLink>,
     <ScrollLink
       key={5}
       href="#conclusion"
-      className="flex items-center justify-center"
+      className="flex items-center justify-center p-2"
     >
       <div className="whitespace-nowrap text-sm">🌟 Final</div>
     </ScrollLink>,
