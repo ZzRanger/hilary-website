@@ -15,7 +15,7 @@ import MidFi from "@/components/lezhin/MidFi";
 import LezhinFinal from "@/components/lezhin/LezhinFinal";
 import Redesign from "@/components/lezhin/Redesign";
 import LezhinConclusion from "@/components/lezhin/LezhinConclusion";
-import ProjectNavbar from "@/components/navigation/ProjectNavbara";
+import ProjectNavbar from "@/components/navigation/ProjectNavbar";
 import NavbarWrapper from "@/components/navigation/NavbarWrapper";
 import useDebouncedState from "@/utils/useDebouncedState";
 import { useEffect } from "react";
