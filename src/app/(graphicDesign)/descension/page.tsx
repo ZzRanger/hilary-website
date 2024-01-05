@@ -15,6 +15,7 @@ export default function Descension() {
       <InfoSection />
       <MagazineImages />
       <ArtboardImages />
+      <BrandingImages />
       <PromotionalImages />
       <Graphics />
     </main>
@@ -101,6 +102,8 @@ import Magazine3 from "@public/graphics/descension/magazine/marketing-03.png";
 import Magazine4 from "@public/graphics/descension/magazine/marketing-04.png";
 import Magazine5 from "@public/graphics/descension/magazine/marketing-05.png";
 
+const MagazineVideo1Placeholder =
+  "/graphics/descension/magazine/marketing-placeholder.jpg";
 const MagazineVideo1 = "/graphics/descension/magazine/marketing-06.mp4";
 
 function MagazineImages() {
@@ -108,15 +111,19 @@ function MagazineImages() {
     <section className="grid grid-cols-2 gap-8">
       <ImageTitle>Magazine</ImageTitle>
       <article className="flex flex-col gap-8">
-        <Image src={Magazine1} alt="Branding 1" />
+        <Image src={Magazine1} alt="Magazine 1" />
         <Image src={Magazine2} alt="Magazine 2" />
         <Image src={Magazine3} alt="Magazine 3" />
       </article>
       <article className="flex flex-col gap-8">
         <Image src={Magazine4} alt="Magazine 4" />
         <Image src={Magazine5} alt="Magazine 5" />
-        <video controls>
-          <source src={MagazineVideo1} type="video/mp4" />
+        <video controls poster={MagazineVideo1Placeholder}>
+          <source
+            src={MagazineVideo1}
+            placeholder={MagazineVideo1Placeholder}
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </article>
@@ -126,11 +133,12 @@ function MagazineImages() {
 
 import Artboard1 from "@public/graphics/descension/artboard/artboard-01.png";
 import Artboard2 from "@public/graphics/descension/artboard/artboard-02.png";
-
 import Artboard4 from "@public/graphics/descension/artboard/artboard-04.png";
 import Artboard5 from "@public/graphics/descension/artboard/artboard-05.png";
 import Artboard6 from "@public/graphics/descension/artboard/artboard-06.png";
 
+const ArtboardVideo1Poster =
+  "/graphics/descension/artboard/artboard-03-poster.jpg";
 const ArtboardVideo1 = "/graphics/descension/artboard/artboard-03.mp4";
 
 function ArtboardImages() {
@@ -140,7 +148,7 @@ function ArtboardImages() {
       <article className="flex flex-col gap-8">
         <Image src={Artboard1} alt="Artboard 1" />
         <Image src={Artboard2} alt="Artboard 2" />
-        <video controls>
+        <video controls poster={ArtboardVideo1Poster}>
           <source src={ArtboardVideo1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -154,8 +162,46 @@ function ArtboardImages() {
   );
 }
 
+import Branding1 from "@public/graphics/descension/branding/branding-01.png";
+import Branding2 from "@public/graphics/descension/branding/branding-02.png";
+import Branding3 from "@public/graphics/descension/branding/branding-03.png";
+import Branding4 from "@public/graphics/descension/branding/branding-04.png";
+import Branding5 from "@public/graphics/descension/branding/branding-05.png";
+import Branding6 from "@public/graphics/descension/branding/branding-06.png";
+import Branding7 from "@public/graphics/descension/branding/branding-07.png";
+import Branding8 from "@public/graphics/descension/branding/branding-08.png";
+
+function BrandingImages() {
+  return (
+    <section className="grid grid-cols-2 gap-8">
+      <ImageTitle>Branding</ImageTitle>
+      <article className="flex flex-col gap-8">
+        <Image src={Branding1} alt="Branding 1" />
+        <Image src={Branding2} alt="Branding 2" />
+        <Image src={Branding3} alt="Branding 3" />
+        <Image src={Branding4} alt="Branding 4" />
+      </article>
+
+      <article className="flex flex-col gap-8">
+        <Image src={Branding5} alt="Branding 5" />
+        <Image src={Branding6} alt="Branding 6" />
+        <Image src={Branding7} alt="Branding 7" />
+        <Image src={Branding8} alt="Branding 8" />
+      </article>
+    </section>
+  );
+}
+
 const PromotionalVideo1 = "/graphics/descension/promotional/promotional-01.mp4";
 const PromotionalVideo3 = "/graphics/descension/promotional/promotional-03.mp4";
+const PromotionalVideo5 = "/graphics/descension/promotional/promotional-05.mp4";
+
+const PromotionalVideo1Poster =
+  "/graphics/descension/promotional/promotional-01-poster.jpg";
+const PromotionalVideo3Poster =
+  "/graphics/descension/promotional/promotional-03-poster.jpg";
+const PromotionalVideo5Poster =
+  "/graphics/descension/promotional/promotional-05-poster.jpg";
 
 import Promotional2 from "@public/graphics/descension/promotional/promotional-02.png";
 import Promotional4 from "@public/graphics/descension/promotional/promotional-04.png";
@@ -173,22 +219,21 @@ function PromotionalImages() {
         check promotion.{" "}
       </div>
       <article className="flex flex-col gap-8">
-        <video controls>
+        <video controls poster={PromotionalVideo1Poster}>
           <source src={PromotionalVideo1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <Image src={Promotional2} alt="Promotional 2" />
-        <video controls>
+        <video controls poster={PromotionalVideo3Poster}>
           <source src={PromotionalVideo3} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </article>
       <article className="flex flex-col gap-8">
         <Image src={Promotional4} alt="Promotional 4" />
-        <video controls>
-          <source src={PromotionalVideo3} type="video/mov" />{" "}
-          {/* TODO: Update video later */}
-          Your browser does not support the video tag.
+        <video controls poster={PromotionalVideo5Poster}>
+          <source src={PromotionalVideo5} type="video/mp4" /> Your browser does
+          not support the video tag.
         </video>
         <Image src={Promotional6} alt="Promotional 6" />
       </article>
