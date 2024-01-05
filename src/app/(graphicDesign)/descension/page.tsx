@@ -21,6 +21,12 @@ export default function Descension() {
   );
 }
 
+function ImageTitle({ children }: { children: ReactNode }) {
+  return (
+    <div className="col-span-2 text-[30px] text-[#C88D3F]">{children}</div>
+  );
+}
+
 function InfoSection() {
   return (
     <section className="grid grid-cols-2 gap-8">
@@ -69,7 +75,7 @@ function InfoSection() {
           tape. The project received over $50k in revenue and 600 orders from
           customers around the world.
         </div>
-        <div>
+        <div className="flex flex-col gap-4 ">
           <div className="text-[30px] font-bold text-[#C88D3F]">
             Project Details
           </div>
@@ -89,19 +95,13 @@ function InfoSection() {
   );
 }
 
-function ImageTitle({ children }: { children: ReactNode }) {
-  return (
-    <div className="col-span-2 text-[30px] text-[#C88D3F]">{children}</div>
-  );
-}
-
 import Magazine1 from "@public/graphics/descension/magazine/marketing-01.png";
 import Magazine2 from "@public/graphics/descension/magazine/marketing-02.png";
 import Magazine3 from "@public/graphics/descension/magazine/marketing-03.png";
 import Magazine4 from "@public/graphics/descension/magazine/marketing-04.png";
 import Magazine5 from "@public/graphics/descension/magazine/marketing-05.png";
 
-const MagazineVideo1 = "/public/graphics/descension/magazine/marketing-06.mov";
+const MagazineVideo1 = "/graphics/descension/magazine/marketing-06.mp4";
 
 function MagazineImages() {
   return (
@@ -116,7 +116,7 @@ function MagazineImages() {
         <Image src={Magazine4} alt="Magazine 4" />
         <Image src={Magazine5} alt="Magazine 5" />
         <video controls>
-          <source src={MagazineVideo1} type="video/mov" />
+          <source src={MagazineVideo1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </article>
@@ -131,7 +131,7 @@ import Artboard4 from "@public/graphics/descension/artboard/artboard-04.png";
 import Artboard5 from "@public/graphics/descension/artboard/artboard-05.png";
 import Artboard6 from "@public/graphics/descension/artboard/artboard-06.png";
 
-const ArtboardVideo1 = "/public/graphics/descension/artboard/artboard-03.mov";
+const ArtboardVideo1 = "/graphics/descension/artboard/artboard-03.mp4";
 
 function ArtboardImages() {
   return (
@@ -141,7 +141,7 @@ function ArtboardImages() {
         <Image src={Artboard1} alt="Artboard 1" />
         <Image src={Artboard2} alt="Artboard 2" />
         <video controls>
-          <source src={ArtboardVideo1} type="video/mov" />
+          <source src={ArtboardVideo1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </article>
@@ -154,10 +154,8 @@ function ArtboardImages() {
   );
 }
 
-const PromotionalVideo1 =
-  "/public/graphics/descension/promotional/promotional-01.mov";
-const PromotionalVideo3 =
-  "/public/graphics/descension/promotional/promotional-03.mov";
+const PromotionalVideo1 = "/graphics/descension/promotional/promotional-01.mp4";
+const PromotionalVideo3 = "/graphics/descension/promotional/promotional-03.mp4";
 
 import Promotional2 from "@public/graphics/descension/promotional/promotional-02.png";
 import Promotional4 from "@public/graphics/descension/promotional/promotional-04.png";
@@ -167,7 +165,7 @@ function PromotionalImages() {
   return (
     <section className="grid grid-cols-2 gap-8">
       <ImageTitle>Promotion Material</ImageTitle>
-      <div className="">
+      <div className="col-span-2">
         As a team, we decided to promote the zine concept by reinventing Genshin
         characters&apos; lore and design to something more xianxia related. An
         animation mod was invited to the team to help animated my graphics to
@@ -176,12 +174,12 @@ function PromotionalImages() {
       </div>
       <article className="flex flex-col gap-8">
         <video controls>
-          <source src={PromotionalVideo1} type="video/mov" />
+          <source src={PromotionalVideo1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <Image src={Promotional2} alt="Promotional 2" />
         <video controls>
-          <source src={PromotionalVideo3} type="video/mov" />
+          <source src={PromotionalVideo3} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </article>
@@ -227,7 +225,7 @@ function Graphics() {
     <section className="grid grid-cols-3 gap-8">
       <div className="col-span-3 flex flex-col gap-4 text-center">
         <div>Samples of promotional graphics for zines</div>
-        <ImageTitle>GRAPHICS graphics</ImageTitle>
+        <ImageTitle>GRAPHICS GALLERY</ImageTitle>
       </div>
       <article className="flex flex-col gap-8">
         <Image src={Graphics1} alt="Graphics 1" />
