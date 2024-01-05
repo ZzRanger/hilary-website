@@ -1,4 +1,3 @@
-import { NavBar } from "@/components/NavBar";
 import "@/styles/globals.css";
 
 // eslint-disable-next-line camelcase
