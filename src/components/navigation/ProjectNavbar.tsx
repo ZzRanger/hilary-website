@@ -139,18 +139,28 @@ const CLICKED_TEXT = [
   ],
   [
     <Link
+      className="flex items-center justify-center p-2"
       key="rafiki-africa"
       href="https://www.notion.so/developforgood/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc"
     >
       📘 Rafiki Africa
     </Link>,
-    <Link key="lezhin" href="/lezhin">
+    <Link
+      className="flex items-center justify-center p-2"
+      key="lezhin"
+      href="/lezhin"
+    >
       📱 Lezhin
     </Link>,
-    <Link key="nebula-labs" href="/nebula-labs">
+    <Link
+      className="flex items-center justify-center p-2"
+      key="nebula-labs"
+      href="/nebula-labs"
+    >
       🪐 Nebula Labs
     </Link>,
     <Link
+      className="flex items-center justify-center p-2"
       key="descension"
       href="/descension" // Replace with the actual URL for Descension
     >
@@ -158,19 +168,39 @@ const CLICKED_TEXT = [
     </Link>,
   ],
   [
-    <Link key="about" href="/about">
+    <Link
+      className="flex items-center justify-center p-2"
+      key="about"
+      href="/about"
+    >
       About
     </Link>,
-    <Link key="play" href="https://www.hilary-nguyen.com/playground">
+    <Link
+      className="flex items-center justify-center p-2"
+      key="play"
+      href="https://www.hilary-nguyen.com/playground"
+    >
       Play
     </Link>,
-    <Link key="resume" href="/resume.pdf">
+    <Link
+      className="flex items-center justify-center p-2"
+      key="resume"
+      href="/resume.pdf"
+    >
       Resume
     </Link>,
-    <Link key="linkedin" href="https://www.linkedin.com/in/hilary-nguyen/">
+    <Link
+      className="flex items-center justify-center p-2"
+      key="linkedin"
+      href="https://www.linkedin.com/in/hilary-nguyen/"
+    >
       Linkedin
     </Link>,
-    <Link key="mail" href="mailto:nguyenhilary0907@gmail.com">
+    <Link
+      className="flex items-center justify-center p-2"
+      key="mail"
+      href="mailto:nguyenhilary0907@gmail.com"
+    >
       Mail
     </Link>,
   ], // TODO: Add icons
@@ -181,7 +211,7 @@ export default function ProjectNavbar({ isDark }: { isDark: boolean }) {
   const theme: keyof THEME = isDark ? "dark" : "light";
 
   const [hoveredIcon, setHoveredIcon] = useState<number | null>(null);
-  const [clickedIcon, setClickedIcon] = useState<number | null>(null);
+  const [clickedIcon, setClickedIcon] = useState<number | null>(1);
 
   const icons = [
     <Image
