@@ -45,11 +45,11 @@ const Competitive = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
             <Text weight={Weight.medium}>
               <li>
                 The competing apps stood out with their rich interactive
-                features, such as
+                features, such as{" "}
                 <span className="font-bold">
                   comment sections and a wide selection of both free and paid
                   content, setting them apart from Lezhin
-                </span>
+                </span>{" "}
                 and its offerings.
               </li>
             </Text>

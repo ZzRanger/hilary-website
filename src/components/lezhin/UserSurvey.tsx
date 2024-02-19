@@ -54,10 +54,8 @@ const UserSurvey = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
             </Text>
             <Text weight={Weight.bold}>
               <li>
-                Students&apos; confusion caused by varying college systems and
-                degree requirements leads to advisors spending more time
-                answering questions, resulting in delayed responses as they try
-                to catch up with degree validation work.
+                50% of the users found it hard for them to navigate the
+                interface to find the genre and subscription webtoons
               </li>
             </Text>
           </ol>
