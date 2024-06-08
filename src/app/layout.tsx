@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "@/app/providers";
+import { CSPostHogProvider } from "@/providers/app";
 
 // TODO: Get correct font weight for ethereal
 const ethereal = localFont({
@@ -34,7 +35,9 @@ export default function RootLayout({
       className={`${sans.variable} ${ethereal.variable}`}
     >
       <body>
-        <Providers>{children}</Providers>
+        <CSPostHogProvider>
+          <Providers>{children}</Providers>
+        </CSPostHogProvider>
       </body>
     </html>
   );
