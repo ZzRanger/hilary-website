@@ -95,7 +95,7 @@ const SpotifyMusic = () => {
       >
         <SkipIcon
           className="cursor-pointer dark:text-white"
-          onClick={() => setTrackIndex((trackIndex - 1) % 3)}
+          onClick={() => setTrackIndex((trackIndex - 1 + 3) % 3)}
         />
         {playing ? (
           <PauseIcon
