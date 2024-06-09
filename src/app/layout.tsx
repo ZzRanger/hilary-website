@@ -5,6 +5,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "@/app/providers";
 import { CSPostHogProvider } from "@/providers/app";
+import { Inter } from "next/font/google";
 
 // TODO: Get correct font weight for ethereal
 const ethereal = localFont({
@@ -23,6 +24,12 @@ const sans = Plus_Jakarta_Sans({
   variable: "--font-sans",
 });
 
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -32,7 +39,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sans.variable} ${ethereal.variable}`}
+      className={`${sans.variable} ${ethereal.variable} ${inter.className}`}
     >
       <body>
         <CSPostHogProvider>
