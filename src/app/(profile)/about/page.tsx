@@ -12,7 +12,7 @@ import Carousel from "@/components/about/Carousel";
 export default function About() {
   return (
     <>
-      <main className="grid-rows-auto grid gap-10 p-8 sm:grid-cols-1 md:grid-cols-2 lg:max-w-[1300px] lg:grid-cols-3">
+      <main className="grid-rows-auto grid gap-10 p-8 sm:grid-cols-1 md:grid-cols-2 lg:max-w-[1300px] lg:grid-cols-3 lg:p-24">
         <div className="md:row-span-2 lg:col-span-2 lg:row-span-2">
           <AboutMe />
         </div>
@@ -65,7 +65,7 @@ const AboutMe = () => {
     },
   ];
   return (
-    <ArticleBackground className="flex h-full flex-col justify-between px-5 py-10">
+    <ArticleBackground className="flex h-fit max-w-[758px] flex-col gap-10 px-5 py-10">
       <div className="text-xl font-extrabold lg:text-4xl">
         A little bit about me
       </div>
@@ -75,7 +75,7 @@ const AboutMe = () => {
           <div className="text-base font-bold leading-5 lg:text-xl lg:leading-10">
             {aboutMe.title}
           </div>
-          <div className="max-w-[700px] text-xs leading-6 lg:text-base lg:leading-8">
+          <div className="max-w-[650px] text-xs leading-6 lg:text-xl lg:leading-8">
             {aboutMe.description}
           </div>
         </div>

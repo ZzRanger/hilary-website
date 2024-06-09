@@ -25,8 +25,8 @@ export function Prototype() {
         src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FnW5wBYFetauCmIdt9e5BtA%2FNebula-Lab-Planner-Landing-Website%3Ftype%3Ddesign%26node-id%3D1107%253A8867%26mode%3Ddesign%26t%3D9X7LULgr5GVJxN8u-1"
         allowFullScreen
       />
-      <article className="flex w-[90vw] flex-col items-center justify-center rounded-[30px] bg-[#F5F5F5] px-8 py-[82px]">
-        <Text weight={Weight.medium} className="tabular-nums">
+      <article className="flex w-[90vw] flex-col items-center justify-center rounded-[30px] bg-[#F5F5F5] px-10 py-12">
+        <Text weight={Weight.normal} className="tabular-nums">
           <div>
             1. We added full titles of course names on each individual course
           </div>
@@ -42,8 +42,8 @@ export function Prototype() {
             4. Give users the ability to override their plan pre-requisites
           </div>
           <div>
-            5. Added in the ability for users to see courses&apos; information
-            from UTD&apos;s Course Catalog
+            5. Allow users to see courses&apos; information from UTD&apos;s
+            Course Catalog
           </div>
         </Text>
       </article>

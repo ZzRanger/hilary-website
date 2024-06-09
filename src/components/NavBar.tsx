@@ -238,7 +238,7 @@ export const NavBar = () => {
   return (
     <div
       ref={ref}
-      className={`border-box sticky top-0 flex h-[116px] w-full items-center justify-between px-7 pb-5 pt-8 text-2xl transition-all ${
+      className={`border-box sticky top-0 flex h-[116px] w-full items-center justify-between px-7 pb-5 pt-8 font-sans text-2xl transition-all ${
         !sticky
           ? "bg-transparent dark:bg-transparent "
           : "border-b border-b-[#323943] bg-white dark:border-b-gray-500 dark:bg-neutral-900"

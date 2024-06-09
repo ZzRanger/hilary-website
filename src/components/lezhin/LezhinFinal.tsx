@@ -6,8 +6,9 @@ const LezhinFinal = forwardRef((_, ref: ForwardedRef<HTMLElement>) => {
   LezhinFinal.displayName = "LezhinFinal";
   return (
     <section
-      className="flex h-fit w-screen flex-col items-center gap-y-[10vh] rounded-[20px] py-[30vh] text-center"
+      className="flex h-fit w-screen flex-col items-center gap-y-[10vh] rounded-[20px] border border-black py-[30vh] text-center"
       id="final"
+      ref={ref}
     >
       <Text weight={Weight.bold}>Final Prototype</Text>
       <H2 className="w-[80vw] leading-[74px]">

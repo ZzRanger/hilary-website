@@ -64,12 +64,14 @@ export default function LezhinProblem() {
           </ul>
         </ProblemTile>
       </div>
-      <article className=" mb-[150px] mt-[100px] flex h-[80vh] w-[90%] flex-col items-center gap-y-[54px] rounded-[20px] border-[3px] border-white pt-[90px] text-center">
-        <Text weight={Weight.semibold}>The Problem</Text>
-        <H2 className="w-[78%] leading-[65px]">
-          Why are users not staying engaged and satisfied with Lezhin&apos;s app
-          experience?
-        </H2>
+      <article className=" mb-[150px] mt-[100px] flex h-[80vh] w-[90%] items-center justify-center rounded-[20px] border-[3px] border-white">
+        <div className="mt-[-10px] flex flex-col items-center justify-center gap-y-[40px]">
+          <Text weight={Weight.semibold}>The Problem</Text>
+          <H2 className="w-[78%] leading-[65px]">
+            Why are users not staying engaged and satisfied with Lezhin&apos;s
+            app experience?
+          </H2>
+        </div>
       </article>
     </section>
   );
