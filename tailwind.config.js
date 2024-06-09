@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)"],
         ethereal: ["var(--font-ethereal)"],
+        jakarta: ["var(--font-sans)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
