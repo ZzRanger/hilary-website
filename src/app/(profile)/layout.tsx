@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <div className="bg-grid transition dark:bg-[#171717]">
       <div className="bg-blobs flex flex-col items-center">
+        <div className="mt-20"></div>
         <NavBar />
         {children}
-        <ThemeSwitcher />
       </div>
     </div>
   );
