@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 import { Providers } from "@/app/providers";
 import { CSPostHogProvider } from "@/providers/app";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 // TODO: Get correct font weight for ethereal
 const ethereal = localFont({
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body>
         <CSPostHogProvider>
           <Providers>{children}</Providers>
+          <Analytics />
         </CSPostHogProvider>
       </body>
     </html>
