@@ -31,21 +31,11 @@ export default function Carousel() {
       ? "May 2024 - August 2024"
       : "May 2024 - August 2024";
 
-  const { dimensions, ref } = useElementDimensions();
-  const { height, width, x, y } = dimensions ?? {};
-
-  useEffect(() => {
-    console.log({ width }, "HI");
-  }, [dimensions]);
-
   return (
     <section className="flex flex-col">
       <ProjectTopbar projectDate={projectDate} />
-      <div ref={ref} className="relative max-w-[1100px] overflow-hidden">
-        <CarouselDisplay
-          test={width?.toString() ?? "0"}
-          currentImageIndex={currentImageIndex}
-        />
+      <div className="relative max-w-[1100px] overflow-hidden">
+        <CarouselDisplay currentImageIndex={currentImageIndex} />
         <CarouselButtons
           currentImageIndex={currentImageIndex}
           goToPreviousImage={goToPreviousImage}
@@ -68,20 +58,14 @@ function ProjectTopbar({ projectDate }: { projectDate: string }) {
   );
 }
 
-function CarouselDisplay({
-  test,
-  currentImageIndex,
-}: {
-  test: string;
-  currentImageIndex: number;
-}) {
+function CarouselDisplay({ currentImageIndex }: { currentImageIndex: number }) {
   return (
     <div
       className={`flex h-[536px] flex-row duration-500 ${
         currentImageIndex === 1 && "-translate-x-full"
       }`}
     >
-      <HudlCarouselPage test={test} />
+      <HudlCarouselPage />
       <PlannerCarouselPage />
     </div>
   );
@@ -147,7 +131,7 @@ function CarouselButtons({
   );
 }
 
-function HudlCarouselPage({ test }: { test: string }) {
+function HudlCarouselPage() {
   return (
     <div
       className={`relative w-full max-w-[1100px] flex-shrink-0 bg-[url("/fan_bg.png")]`}
