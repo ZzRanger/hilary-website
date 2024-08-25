@@ -1,13 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import HudlFanBg from "@public/fan_bg.png";
-import PlannerBg from "@public/planner_bg.png";
+import { useState } from "react";
 import HudlUI from "@public/hudl_ui.png";
 import PlannerUI from "@public/planner_ui.png";
 import Image from "next/image";
 import ChevronIcon from "@/components/svg/ChevronIcon";
-import useElementDimensions from "@/utils/useElementDimensions";
 
 export default function Carousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -162,10 +159,8 @@ function PlannerCarouselPage() {
     >
       <Image
         src={PlannerUI}
-        width={685}
-        height={410}
         alt=""
-        className="absolute -right-8 top-3  w-[70%] max-w-[685px]"
+        className="absolute -right-8 top-3 w-[70%] max-w-[685px]"
       />
       <article className="absolute bottom-[calc(50%-140px)] left-6 flex w-[375px] flex-col gap-4 py-4 text-white">
         <div className="flex flex-row items-center gap-4">
