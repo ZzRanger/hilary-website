@@ -118,7 +118,7 @@ function ProjectDropdown() {
         <span>Projects</span>
         <svg
           className={`h-4 w-4 transition-transform ${
-            !isOpen ? "-rotate-180 transform" : ""
+            isOpen ? "-rotate-180 transform" : ""
           }`}
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -131,7 +131,7 @@ function ProjectDropdown() {
         </svg>
       </button>
 
-      {!isOpen && (
+      {isOpen && (
         <div className="absolute right-0 top-[74px] z-[-10] w-40 border-gray-300 bg-white shadow shadow-md">
           <ul className="py-2">
             <li className="cursor-pointer px-4 py-2 hover:bg-gray-100">
