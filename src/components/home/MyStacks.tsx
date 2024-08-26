@@ -37,8 +37,8 @@ const MyStacks = () => {
     },
   ];
   return (
-    <section className="mt-10 flex flex-col rounded-[16px] border border-[#D9D9D9] bg-white/70">
-      <article className="m-6 flex h-8 flex-row items-center justify-between">
+    <section className="flex flex-col">
+      <article className="flex h-8 flex-row items-center justify-between">
         <div className="flex flex-row items-center gap-1">
           <svg
             width="10"
@@ -55,7 +55,7 @@ const MyStacks = () => {
           My Stacks
         </div>
       </article>
-      <div className=" mx-6 mb-10 grid w-[1100px] grid-cols-2 bg-[#F5F5F5] p-5">
+      <div className="grid grid-cols-2 rounded-2xl bg-[#F5F5F5] p-4">
         {toolInfo.map((tool) => (
           <ToolArticle key={tool.textTitle} {...tool} />
         ))}

@@ -30,6 +30,7 @@ export default function RootLayout({
       <div className="bg-blobs flex flex-col items-center">
         <div className="mt-20"></div>
         <NavBar />
+        <div className="mt-20"></div>
         {children}
       </div>
     </div>

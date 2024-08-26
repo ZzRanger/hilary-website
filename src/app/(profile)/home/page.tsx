@@ -7,21 +7,27 @@ export default function Home() {
   const HomeComponents = [AboutMe, HomeCarousel, BentoBoxView, MyStacks];
   return (
     <main className="">
-      <div className="mx-12 flex max-w-[1156px] flex-col items-center">
-        {HomeComponents.map((Component, index) => (
-          <LayoutWrapper key={index}>
-            <Component />
-          </LayoutWrapper>
-        ))}
+      <div className="mx-12 flex max-w-[1156px] flex-col items-center gap-8">
+        {HomeComponents.map((Component, index) => {
+          if (index === 2) {
+            // Render BentoBoxView without LayoutWrapper
+            return <Component key={2} />;
+          }
+          return (
+            <LayoutWrapper key={index}>
+              <Component />
+            </LayoutWrapper>
+          );
+        })}
       </div>
     </main>
   );
 }
 
-const LayoutWrapper = ({ children }: { children: JSX.Element }) => {
+export function LayoutWrapper({ children }: { children: JSX.Element }) {
   return (
     <div className="box-border w-full rounded-2xl border border-[#D9D9D9] bg-white/70 p-6">
       {children}
     </div>
   );
-};
+}

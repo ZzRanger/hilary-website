@@ -48,7 +48,7 @@ function ProjectTopbar({ projectDate }: { projectDate: string }) {
     <article className="flex h-7 flex-row items-center justify-between">
       <div className="flex flex-row items-center gap-1">
         <ProjectIcon />
-        Project
+        <div>Project</div>
       </div>
       <div className="mr-6">{projectDate}</div>
     </article>
@@ -184,7 +184,7 @@ function PlannerCarouselPage() {
   );
 }
 
-const ProjectIcon = () => {
+export const ProjectIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
