@@ -4,10 +4,10 @@ import BentoBoxView from "@/components/home/BentoBoxView";
 import MyStacks from "@/components/home/MyStacks";
 
 export default function Home() {
-  const HomeComponents = [AboutMe, HomeCarousel, BentoBoxView, MyStacks];
+  const HomeComponents = [AboutMe, AboutMe, BentoBoxView, MyStacks];
   return (
     <main className="">
-      <div className="mx-12 flex max-w-[1156px] flex-col items-center gap-8">
+      <div className="mx-8 flex max-w-[1156px] flex-col items-center gap-8 lg:mx-12">
         {HomeComponents.map((Component, index) => {
           if (index === 2) {
             // Render BentoBoxView without LayoutWrapper

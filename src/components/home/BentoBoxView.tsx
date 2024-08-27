@@ -12,7 +12,7 @@ import { ProjectIcon } from "@/components/home/HomeCarousel";
 
 export default function BentoBoxView() {
   return (
-    <section className="grid grid-cols-2 gap-4">
+    <section className="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <div className="flex flex-col justify-between gap-4">
         <Somasawa />
         <Timeline />
@@ -34,9 +34,9 @@ function Somasawa() {
             <ProjectIcon />
             <div>Project</div>
           </div>
-          <div>Jan 2023 - March 2023</div>
+          <div>May 2023 - Jun 2023</div>
         </article>
-        <div className="flex flex-col items-start gap-4 rounded-2xl bg-[#0E1E6D] p-8">
+        <div className="flex flex-col items-start gap-3 rounded-2xl bg-[#0E1E6D] p-8 lg:gap-4">
           <div className="flex w-full flex-row justify-center gap-6">
             <Image src={Somasawa1} className="w-[50%]" alt="" />
             <Image src={Somasawa2} className="w-[50%]" alt="" />
@@ -46,15 +46,17 @@ function Somasawa() {
             <PillTag className="bg-[#BDBDBD]/50 text-white">B2C</PillTag>
             <PillTag className="bg-[#BDBDBD]/50 text-white">Pro-Bono</PillTag>
           </div>
-          <div className="text-[40px] font-medium leading-[48px] text-white">
+          <div className="text-2xl font-medium text-white lg:text-[40px]">
             SomaSawa
           </div>
-          <div className="text-[18px] text-white">
+          <div className="text-sm text-white lg:text-[18px]">
             Creation of an app for teachers in Rafiki Africa to help streamline
             their workflows for students
           </div>
           <div className=" flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
-            <div className="font-medium text-black">Read More</div>{" "}
+            <div className="text-sm font-medium text-black lg:text-base">
+              Read More
+            </div>{" "}
             <ChevronIcon className="h-3 w-3 text-black" />
           </div>
         </div>
@@ -75,11 +77,11 @@ function Knowverse() {
           <div>Jan 2023 - March 2023</div>
         </article>
         <div
-          className={`flex flex-col items-start gap-4 rounded-2xl bg-[url('/home/knowverse.png')] bg-cover p-8`}
+          className={`flex flex-col items-start gap-3 rounded-2xl bg-[url('/home/knowverse.png')] bg-cover p-8 lg:gap-4`}
         >
           <div className="flex w-full flex-row justify-center gap-6">
-            <Image src={Knowverse1} className="w-[50%]" alt="" />
-            <Image src={Knowverse2} className="w-[50%]" alt="" />
+            <Image src={Knowverse1} className="w-[100%]" alt="" />
+            <Image src={Knowverse2} className="w-[100%]" alt="" />
           </div>
           <div className="flex w-full flex-row justify-start gap-4">
             <PillTag className="bg-[#BDBDBD]/50 text-white">Mobile</PillTag>
@@ -87,15 +89,17 @@ function Knowverse() {
               Competition Winner
             </PillTag>
           </div>
-          <div className="text-[40px] font-medium leading-[48px] text-white">
+          <div className="text-2xl font-medium text-white lg:text-[40px]">
             KnowVerse
           </div>
-          <div className="text-[18px] text-white">
+          <div className="text-sm text-white lg:text-[18px]">
             An app for young professionals to connect with others to get support
             for emotional and skills supports
           </div>
           <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
-            <div className="font-medium text-black">Read More</div>{" "}
+            <div className="text-sm font-medium text-black lg:text-base">
+              Read More
+            </div>
             <ChevronIcon className="h-3 w-3 text-black" />
           </div>
         </div>
@@ -114,7 +118,7 @@ function CoolProjects() {
             <div>Other Cool Projects</div>
           </div>
         </article>
-        <div className="grid grid-cols-2 gap-4 text-white">
+        <div className="grid grid-cols-1 gap-4 text-white lg:grid-cols-2">
           <article className="box-border flex h-full flex-col justify-center rounded-2xl bg-[#DBE2FF] bg-gradient-to-b from-white/0 to-black/20 p-4">
             <div className="flex flex-col items-start gap-4 ">
               <Image src={NebulaLogo} alt="" />
