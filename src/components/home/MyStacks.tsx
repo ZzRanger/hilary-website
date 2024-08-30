@@ -55,7 +55,7 @@ const MyStacks = () => {
           My Stacks
         </div>
       </article>
-      <div className="grid grid-cols-2 rounded-2xl bg-[#F5F5F5] p-4">
+      <div className="grid grid-cols-1 gap-4 rounded-2xl bg-[#F5F5F5] p-4 md:grid-cols-2">
         {toolInfo.map((tool) => (
           <ToolArticle key={tool.textTitle} {...tool} />
         ))}
@@ -74,7 +74,7 @@ const ToolArticle = ({
   textDescription: string;
 }) => {
   return (
-    <article className="flex w-[400px] flex-row items-center gap-4 border-b-2 border-[#D4D4D4] p-4">
+    <article className="flex max-w-[400px] flex-row items-center gap-4 border-b-2 border-[#D4D4D4] p-4">
       <Image src={icon} width={80} alt="Figma Icon" />
       <div>
         <div className="font-[500]">{textTitle}</div>

@@ -9,7 +9,7 @@ export const PillTag = ({
   className = "bg-hn-pink text-black",
 }: PropsWithChildren<PillTagProps>) => (
   <p
-    className={`flex items-center justify-center rounded-full px-4 py-2 text-xs font-bold md:text-sm ${className}`}
+    className={`flex items-center justify-center rounded-full px-3  py-2 text-[10px] font-bold md:px-4 md:text-sm ${className}`}
   >
     {children}
   </p>

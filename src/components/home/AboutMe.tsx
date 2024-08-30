@@ -8,7 +8,7 @@ export default function AboutMe() {
   return (
     <section className="flex flex-col gap-4 lg:gap-6">
       <HilaryHeader />
-      <article className=" lg:text-[24px]">
+      <article className="text-base lg:text-[24px]">
         I&apos;m a full-stack designer that loves cross-functional work,
         data-backed design, and user research. I like to craft cool products
         that can make a difference in someone&apos;s life.
@@ -40,14 +40,14 @@ const HilaryHeader = () => {
 
 const AboutButtonSection = () => {
   return (
-    <article className="flex flex-row gap-4 lg:gap-6">
+    <article className="flex flex-row gap-2 md:gap-4 lg:gap-6">
       <AboutButton route="/about">
-        <PlusIcon />
-        <div className="text-xs lg:text-base">Connect with me</div>
+        <PlusIcon className="h-[16px] w-[16px]" />
+        <div className="text-[11px] lg:text-base">Connect with me</div>
       </AboutButton>
       <AboutButton route="https://drive.google.com/file/d/10xotuPKtsh40tKZy1ifBUVvFw47equG1/view?usp=sharing">
-        <DownloadIcon />
-        <div className="text-xs lg:text-base">My resume</div>
+        <DownloadIcon className="h-[16px] w-[16px]" />
+        <div className="text-[11px] lg:text-base">My resume</div>
       </AboutButton>
     </article>
   );
@@ -66,7 +66,7 @@ const AboutButton = ({
   }
   return (
     <Link href={route} target={target}>
-      <button className="flex cursor-pointer flex-row items-center gap-1 rounded-[8px] border border-[#CCCCCC] bg-[#F0AECE] px-4 py-2 text-white hover:-translate-y-1 hover:shadow-md lg:px-5 lg:py-3">
+      <button className="flex cursor-pointer flex-row items-center gap-0.5 rounded-[8px] border border-[#CCCCCC] bg-[#F0AECE] px-4 py-2 text-white hover:-translate-y-1 hover:shadow-md lg:px-5 lg:py-3">
         {children}
       </button>
     </Link>

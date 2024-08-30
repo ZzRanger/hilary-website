@@ -41,7 +41,7 @@ function Somasawa() {
             <Image src={Somasawa1} className="w-[50%]" alt="" />
             <Image src={Somasawa2} className="w-[50%]" alt="" />
           </div>
-          <div className="flex w-full flex-row justify-start gap-4">
+          <div className="flex w-full flex-row justify-start gap-2 md:gap-4">
             <PillTag className="bg-[#BDBDBD]/50 text-white">Mobile</PillTag>
             <PillTag className="bg-[#BDBDBD]/50 text-white">B2C</PillTag>
             <PillTag className="bg-[#BDBDBD]/50 text-white">Pro-Bono</PillTag>
@@ -120,8 +120,12 @@ function CoolProjects() {
         </article>
         <div className="grid grid-cols-1 gap-4 text-white lg:grid-cols-2">
           <article className="box-border flex h-full flex-col justify-center rounded-2xl bg-[#DBE2FF] bg-gradient-to-b from-white/0 to-black/20 p-4">
-            <div className="flex flex-col items-start gap-4 ">
-              <Image src={NebulaLogo} alt="" />
+            <div className="flex flex-col gap-4 md:items-start">
+              <Image
+                className="w-[50%] self-center md:w-full md:self-start"
+                src={NebulaLogo}
+                alt=""
+              />
               <div className="flex flex-col">
                 <div className="font-medium">Nebula Labs</div>
                 <div className="text-sm">Branding</div>
@@ -130,7 +134,11 @@ function CoolProjects() {
           </article>
           <article className="flex flex-col items-center justify-center rounded-2xl bg-black p-4">
             <div className="flex  flex-col items-start gap-4">
-              <Image src={ZineLogo} alt="" />
+              <Image
+                className="w-[50%] self-center md:w-full md:self-start"
+                src={ZineLogo}
+                alt=""
+              />
               <div className="flex flex-col">
                 <div className="font-medium">Descension</div>
                 <div className="text-sm">Printing & Branding</div>
@@ -158,12 +166,12 @@ function Timeline() {
     {
       active: false,
       title: "Nebula Labs",
-      description: "Head of Design • Aug 2023 - Jan 2024",
+      description: "Head of Design • August 2023 - January 2024",
     },
     {
       active: false,
       title: "Develop for Good",
-      description: "UX Intern • May 2023 - Aug 2023",
+      description: "UX Intern • May 2023 - August 2023",
     },
   ];
   const TimelineComponent = ({
@@ -182,6 +190,7 @@ function Timeline() {
         viewBox="0 0 68 73"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="flex-shrink-0"
       >
         <rect x="33" y="0.191757" width="2" height="18" fill="#E5E5E5" />
         <rect
@@ -202,6 +211,7 @@ function Timeline() {
         viewBox="0 0 68 73"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="flex-shrink-0"
       >
         <rect x="33" y="0.191757" width="2" height="18" fill="#F0AECE" />
         <g filter="url(#filter0_d_1633_183)">
@@ -272,8 +282,10 @@ function Timeline() {
       <div className="flex flex-row items-center">
         {icon}
         <div className="flex flex-col">
-          <div className="font-[500] text-[#171717]">{title}</div>
-          <div className="text-sm text-[#737373]">{description}</div>
+          <div className="text-sm font-[500] text-[#171717] md:text-base">
+            {title}
+          </div>
+          <div className="text-xs text-[#737373] md:text-sm">{description}</div>
         </div>
       </div>
     );
@@ -304,7 +316,7 @@ function Timeline() {
             Experience
           </div>
         </article>
-        <div className="flex flex-col bg-[#F5F5F5] p-4">
+        <div className="flex flex-col items-start rounded-2xl bg-[#F5F5F5] p-4">
           {timelineData.map((data) => (
             <TimelineComponent
               key={data.title}
