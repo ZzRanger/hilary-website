@@ -81,8 +81,8 @@ function Knowverse() {
           className={`flex flex-col items-start gap-3 rounded-2xl bg-[url('/home/knowverse.png')] bg-cover p-8 lg:gap-4`}
         >
           <div className="flex w-full flex-row justify-center gap-6">
-            <Image src={Knowverse1} className="w-[100%]" alt="" />
-            <Image src={Knowverse2} className="w-[100%]" alt="" />
+            <Image src={Knowverse1} className="w-[50%]" alt="" />
+            <Image src={Knowverse2} className="w-[50%]" alt="" />
           </div>
           <div className="flex w-full flex-row justify-start gap-4">
             <PillTag className="bg-[#BDBDBD]/50 text-white">Mobile</PillTag>
