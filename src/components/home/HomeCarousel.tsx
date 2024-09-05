@@ -58,7 +58,7 @@ function ProjectTopbar({ projectDate }: { projectDate: string }) {
 function CarouselDisplay({ currentImageIndex }: { currentImageIndex: number }) {
   return (
     <div
-      className={`flex h-[536px] flex-row duration-500 ${
+      className={`flex flex-row duration-500 sm:h-fit sm:min-h-[500px] ${
         currentImageIndex === 1 && "-translate-x-full"
       }`}
     >
@@ -131,23 +131,34 @@ function CarouselButtons({
 function HudlCarouselPage() {
   return (
     <div
-      className={`relative w-full max-w-[1100px] flex-shrink-0 bg-[url("/fan_bg.png")]`}
+      className={`flex w-full max-w-[1100px] flex-shrink-0 flex-col gap-2 bg-[url("/fan_bg.png")] bg-cover pb-20 pt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:gap-4 sm:pb-0 sm:pl-8 sm:pt-0`}
     >
-      {/* <Image src={HudlFanBg} alt="" /> */}
+      <article className="order-2 flex max-w-[375px] flex-col gap-4 py-4 pl-6 text-white sm:order-1 sm:pl-0">
+        <div className="flex flex-row items-center gap-4">
+          <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
+            Web
+          </div>
+          <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
+            B2C
+          </div>
+          <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
+            SaaS
+          </div>
+        </div>
+        <div className="text-[24px] font-medium lg:text-[40px]">Hudl Fan</div>
+        <div className="w-60 text-sm font-medium sm:w-full lg:text-[18px] ">
+          Designing a mobile experience for Hudl Ticketing on Hudl Fan app
+        </div>
+        <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
+          <div className="text-sm text-black lg:font-medium">Read More</div>{" "}
+          <ChevronIcon className="h-3 w-3 text-black" />
+        </div>
+      </article>
       <Image
         src={HudlUI}
         alt=""
-        className="absolute bottom-20 right-0 w-[70%] max-w-[685px]"
+        className="order-1 sm:order-2 sm:w-[80%] sm:max-w-[685px]"
       />
-      <article className="absolute bottom-[calc(50%-100px)] left-6 flex w-[375px] flex-col gap-4 bg-black/50 py-4 text-white">
-        <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-[18px] font-medium text-white">
-          Coming Soon
-        </div>
-        <div className="text-[40px] font-medium">Hudl Fan</div>
-        <div className="text-[18px] font-medium ">
-          Designing a mobile experience for Hudl Ticketing on Hudl Fan app
-        </div>
-      </article>
     </div>
   );
 }
@@ -155,31 +166,33 @@ function HudlCarouselPage() {
 function PlannerCarouselPage() {
   return (
     <div
-      className={`relative w-full max-w-[1100px] flex-shrink-0 ${`bg-[url("/planner_bg.png")]`}`}
+      className={`flex w-full max-w-[1100px] flex-shrink-0 flex-col bg-cover pb-10 pt-4 sm:flex-row sm:items-center sm:justify-between sm:pb-0 sm:pl-8 sm:pt-0 ${`bg-[url("/planner_bg.png")]`}`}
     >
-      <Image
-        src={PlannerUI}
-        alt=""
-        className="absolute -right-8 top-3 w-[70%] max-w-[685px]"
-      />
-      <article className="absolute bottom-[calc(50%-140px)] left-6 flex w-[375px] flex-col gap-4 py-4 text-white">
+      <article className="order-2 flex max-w-[375px] flex-col gap-2 py-4 pl-6 text-white sm:order-1 sm:gap-4">
         <div className="flex flex-row items-center gap-4">
-          <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-[18px] font-medium text-white">
+          <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
             Web
           </div>
-          <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-[18px] font-medium text-white">
+          <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
             B2C
           </div>
         </div>
-        <div className="text-[40px] font-medium">Nebula Planner</div>
-        <div className="text-[18px] font-medium ">
+        <div className="text-[24px] font-medium lg:text-[40px]">
+          Nebula Planner
+        </div>
+        <div className="text-sm font-medium lg:text-[18px] ">
           Designing a mobile experience for Hudl Ticketing on Hudl Fan app
         </div>
         <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
-          <div className="font-medium text-black">Read More</div>{" "}
+          <div className="text-sm text-black lg:font-medium">Read More</div>{" "}
           <ChevronIcon className="h-3 w-3 text-black" />
         </div>
       </article>
+      <Image
+        src={PlannerUI}
+        alt=""
+        className="order-1 w-[80%] self-center sm:order-2 sm:max-w-[685px]"
+      />
     </div>
   );
 }

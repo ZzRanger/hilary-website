@@ -4,7 +4,7 @@ import BentoBoxView from "@/components/home/BentoBoxView";
 import MyStacks from "@/components/home/MyStacks";
 
 export default function Home() {
-  const HomeComponents = [AboutMe, HomeCarousel, BentoBoxView, MyStacks];
+  const HomeComponents = [AboutMe, HomeCarousel];
   return (
     <main className="">
       <div className="mx-8 flex max-w-[1156px] flex-col items-center gap-8 lg:mx-12">
