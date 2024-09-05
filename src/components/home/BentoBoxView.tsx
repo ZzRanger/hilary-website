@@ -7,8 +7,9 @@ import NebulaLogo from "@public/home/NebulaLogo.png";
 import ZineLogo from "@public/home/ZineLogo.png";
 import ChevronIcon from "@/components/svg/ChevronIcon";
 import Image from "next/image";
-import { LayoutWrapper } from "@/app/(profile)/home/page";
+
 import { ProjectIcon } from "@/components/home/HomeCarousel";
+import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
 
 export default function BentoBoxView() {
   return (

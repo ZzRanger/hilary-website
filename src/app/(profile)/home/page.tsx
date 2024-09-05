@@ -2,6 +2,7 @@ import AboutMe from "@/components/home/AboutMe";
 import HomeCarousel from "@/components/home/HomeCarousel";
 import BentoBoxView from "@/components/home/BentoBoxView";
 import MyStacks from "@/components/home/MyStacks";
+import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
 
 export default function Home() {
   const HomeComponents = [AboutMe, HomeCarousel, BentoBoxView, MyStacks];
@@ -21,13 +22,5 @@ export default function Home() {
         })}
       </div>
     </main>
-  );
-}
-
-export function LayoutWrapper({ children }: { children: JSX.Element }) {
-  return (
-    <div className="box-border w-full rounded-2xl border border-[#D9D9D9] bg-white/70 p-6">
-      {children}
-    </div>
   );
 }
