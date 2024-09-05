@@ -62,7 +62,11 @@ function CarouselDisplay({ currentImageIndex }: { currentImageIndex: number }) {
         currentImageIndex === 1 && "-translate-x-full"
       }`}
     >
+      {/* <div className="h-full w-full flex-shrink-0 bg-blue-500">hi</div> */}
+      {/* <div className="h-full w-full flex-shrink-0 bg-green-500">hi</div> */}
       <HudlCarouselPage />
+      {/* <HudlCarouselPage /> */}
+      {/* <PlannerCarouselPage /> */}
       <PlannerCarouselPage />
     </div>
   );
@@ -131,10 +135,10 @@ function CarouselButtons({
 function HudlCarouselPage() {
   return (
     <div
-      className={`flex w-full max-w-[1100px] flex-shrink-0 flex-col gap-2 bg-[url("/fan_bg.png")] bg-cover pb-20 pt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:gap-4 sm:pb-0 sm:pl-8 sm:pt-0`}
+      className={`flex w-full max-w-[1100px] flex-shrink-0 flex-col gap-2 bg-[url("/fan_bg.png")] bg-cover pb-20 pt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:pb-0 sm:pl-8 sm:pt-0`}
     >
       <article className="order-2 flex max-w-[375px] flex-col gap-4 py-4 pl-6 text-white sm:order-1 sm:pl-0">
-        <div className="flex flex-row items-center gap-4">
+        {/* <div className="flex flex-row items-center gap-4">
           <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
             Web
           </div>
@@ -144,21 +148,22 @@ function HudlCarouselPage() {
           <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
             SaaS
           </div>
-        </div>
+        </div> */}
+
         <div className="text-[24px] font-medium lg:text-[40px]">Hudl Fan</div>
         <div className="w-60 text-sm font-medium sm:w-full lg:text-[18px] ">
           Designing a mobile experience for Hudl Ticketing on Hudl Fan app
         </div>
-        <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
+        {/* <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
           <div className="text-sm text-black lg:font-medium">Read More</div>{" "}
           <ChevronIcon className="h-3 w-3 text-black" />
-        </div>
+        </div> */}
       </article>
-      <Image
+      {/* <Image
         src={HudlUI}
         alt=""
         className="order-1 sm:order-2 sm:w-[80%] sm:max-w-[685px]"
-      />
+      /> */}
     </div>
   );
 }
@@ -188,11 +193,11 @@ function PlannerCarouselPage() {
           <ChevronIcon className="h-3 w-3 text-black" />
         </div>
       </article>
-      <Image
+      {/* <Image
         src={PlannerUI}
         alt=""
         className="order-1 w-[80%] self-center sm:order-2 sm:max-w-[685px]"
-      />
+      /> */}
     </div>
   );
 }
