@@ -1,10 +1,9 @@
 import { NavBar } from "@/components/NavBar";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+
 import "@/styles/globals.css";
 
 // eslint-disable-next-line camelcase
 import { Plus_Jakarta_Sans } from "next/font/google";
-import localFont from "next/font/local";
 
 // TODO: Get correct font weight for ethereal
 // const ethereal = localFont({
