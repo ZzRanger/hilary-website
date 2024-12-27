@@ -79,7 +79,7 @@ function CarouselButtons({
   goToNextImage: () => void;
 }) {
   return (
-    <article className="absolute bottom-12 left-6 box-border flex flex-row items-center gap-4">
+    <article className="absolute bottom-4 left-6 box-border flex flex-row items-center gap-4 sm:bottom-12">
       <button
         className={`rounded-full bg-white p-2 ${
           currentImageIndex === 0 && "bg-gray-300"
@@ -134,7 +134,7 @@ function HudlCarouselPage() {
     <div
       className={`flex w-full max-w-[1100px] flex-shrink-0 flex-col gap-2 bg-[url("/fan_bg.png")] bg-cover pb-20 pt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:pb-0 sm:pl-8 sm:pt-0`}
     >
-      <article className="order-2 flex max-w-[375px] flex-col gap-4 py-4 pl-6 text-white sm:order-1 sm:pl-0">
+      <article className="order-2 flex max-w-[270px] flex-col gap-4 py-4 pl-6 text-white sm:order-1 sm:max-w-[375px] sm:pl-0">
         <div className="flex flex-row gap-4">
           {" "}
           {/* Hacky solution */}
@@ -167,7 +167,7 @@ function HudlCarouselPage() {
       <Image
         src={HudlUI}
         alt=""
-        className="order-1 sm:order-2 sm:w-[80%] sm:max-w-[685px]"
+        className="order-1 w-[90%] self-center sm:order-2 sm:max-w-[685px]"
       />
     </div>
   );
@@ -178,7 +178,7 @@ function PlannerCarouselPage() {
     <div
       className={`flex w-full min-w-0 max-w-[1100px] flex-shrink-0 flex-col bg-cover pb-10 pt-4 sm:flex-row sm:items-center sm:justify-between sm:pb-0 sm:pl-8 sm:pt-0 ${`bg-[url("/planner_bg.png")]`}`}
     >
-      <article className="order-2 flex w-fit max-w-[400px] flex-col gap-2 py-4 text-white sm:order-1 sm:gap-4">
+      <article className="order-2 flex w-fit max-w-[250px] flex-col gap-2 py-4 pl-6 text-white sm:order-1 sm:max-w-[400px] sm:gap-4 sm:pl-0">
         <div className="flex flex-row gap-4">
           {" "}
           {/* Hacky solution */}
