@@ -132,16 +132,26 @@ function ProjectDropdown() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-[74px] z-[-10] w-40 border-gray-300 bg-white shadow shadow-md">
+        <div className="absolute right-0 top-[74px] z-[-10] w-40 border-gray-300 bg-white shadow-md">
           <ul className="py-2">
             <li className="cursor-pointer px-4 py-2 hover:bg-gray-100">
-              <a href="#">Nebula Planner</a>
+              <a href="/planner">Nebula Planner</a>
             </li>
             <li className="cursor-pointer px-4 py-2 hover:bg-gray-100">
-              <a href="#">Somasawa</a>
+              <a
+                target="_blank"
+                href="https://developforgood.notion.site/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc"
+              >
+                Somasawa
+              </a>
             </li>
             <li className="cursor-pointer px-4 py-2 hover:bg-gray-100">
-              <a href="#">KnowVerse</a>
+              <a
+                target="_blank"
+                href="https://www.figma.com/proto/MhKKJjTLqhMDuRgVScK6KL/Presentation-Slides?node-id=303-170&starting-point-node-id=303%3A170&t=CQbf6jGxESYLbwrj-1"
+              >
+                KnowVerse
+              </a>
             </li>
           </ul>
         </div>

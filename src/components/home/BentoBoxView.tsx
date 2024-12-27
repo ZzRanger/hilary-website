@@ -10,6 +10,7 @@ import Image from "next/image";
 
 import { ProjectIcon } from "@/components/home/HomeCarousel";
 import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
+import Link from "next/link";
 
 export default function BentoBoxView() {
   return (
@@ -54,12 +55,17 @@ function Somasawa() {
             Creation of an app for teachers in Rafiki Africa to help streamline
             their workflows for students
           </div>
-          <div className=" flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
-            <div className="text-sm font-medium text-black lg:text-base">
-              Read More
-            </div>{" "}
-            <ChevronIcon className="h-3 w-3 text-black" />
-          </div>
+          <Link
+            target="_blank"
+            href="https://developforgood.notion.site/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc"
+          >
+            <div className=" flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
+              <div className="text-sm font-medium text-black lg:text-base">
+                Read More
+              </div>{" "}
+              <ChevronIcon className="h-3 w-3 text-black" />
+            </div>
+          </Link>
         </div>
       </div>
     </LayoutWrapper>
@@ -97,12 +103,18 @@ function Knowverse() {
             An app for young professionals to connect with others to get support
             for emotional and skills supports
           </div>
-          <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
-            <div className="text-sm font-medium text-black lg:text-base">
-              Read More
+          <Link
+            className="w-fit cursor-pointer"
+            target="_blank"
+            href="https://www.figma.com/proto/MhKKJjTLqhMDuRgVScK6KL/Presentation-Slides?node-id=303-170&starting-point-node-id=303%3A170&t=CQbf6jGxESYLbwrj-1"
+          >
+            <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
+              <div className="text-sm font-medium text-black lg:text-base">
+                Read More
+              </div>
+              <ChevronIcon className="h-3 w-3 text-black" />
             </div>
-            <ChevronIcon className="h-3 w-3 text-black" />
-          </div>
+          </Link>
         </div>
       </div>
     </LayoutWrapper>
@@ -120,32 +132,36 @@ function CoolProjects() {
           </div>
         </article>
         <div className="grid grid-cols-1 gap-4 text-white lg:grid-cols-2">
-          <article className="box-border flex h-full flex-col justify-center rounded-2xl bg-[#DBE2FF] bg-gradient-to-b from-white/0 to-black/20 p-4">
-            <div className="flex flex-col gap-4 md:items-start">
-              <Image
-                className="w-[50%] self-center md:w-full md:self-start"
-                src={NebulaLogo}
-                alt=""
-              />
-              <div className="flex flex-col">
-                <div className="font-medium">Nebula Labs</div>
-                <div className="text-sm">Branding</div>
+          <Link href="/nebula-labs" className="cursor-pointer">
+            <article className="box-border flex h-full flex-col justify-center rounded-2xl bg-[#DBE2FF] bg-gradient-to-b from-white/0 to-black/20 p-4">
+              <div className="flex flex-col gap-4 md:items-start">
+                <Image
+                  className="w-[50%] self-center md:w-full md:self-start"
+                  src={NebulaLogo}
+                  alt=""
+                />
+                <div className="flex flex-col">
+                  <div className="font-medium">Nebula Labs</div>
+                  <div className="text-sm">Branding</div>
+                </div>
               </div>
-            </div>
-          </article>
-          <article className="flex flex-col items-center justify-center rounded-2xl bg-black p-4">
-            <div className="flex  flex-col items-start gap-4">
-              <Image
-                className="w-[50%] self-center md:w-full md:self-start"
-                src={ZineLogo}
-                alt=""
-              />
-              <div className="flex flex-col">
-                <div className="font-medium">Descension</div>
-                <div className="text-sm">Printing & Branding</div>
+            </article>
+          </Link>
+          <Link className="cursor-pointer" href="/descension">
+            <article className="flex flex-col items-center justify-center rounded-2xl bg-black p-4">
+              <div className="flex  flex-col items-start gap-4">
+                <Image
+                  className="w-[50%] self-center md:w-full md:self-start"
+                  src={ZineLogo}
+                  alt=""
+                />
+                <div className="flex flex-col">
+                  <div className="font-medium">Descension</div>
+                  <div className="text-sm">Printing & Branding</div>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </Link>
         </div>
       </section>
     </LayoutWrapper>

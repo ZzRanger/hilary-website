@@ -5,6 +5,7 @@ import HudlUI from "@public/hudl_ui.png";
 import PlannerUI from "@public/planner_ui.png";
 import Image from "next/image";
 import ChevronIcon from "@/components/svg/ChevronIcon";
+import Link from "next/link";
 
 export default function Carousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -26,7 +27,7 @@ export default function Carousel() {
   const projectDate =
     currentImageIndex === 0
       ? "May 2024 - August 2024"
-      : "May 2024 - August 2024";
+      : "January 2023 - May 2023";
 
   return (
     <section className="flex flex-col">
@@ -134,7 +135,7 @@ function HudlCarouselPage() {
       className={`flex w-full max-w-[1100px] flex-shrink-0 flex-col gap-2 bg-[url("/fan_bg.png")] bg-cover pb-20 pt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:pb-0 sm:pl-8 sm:pt-0`}
     >
       <article className="order-2 flex max-w-[375px] flex-col gap-4 py-4 pl-6 text-white sm:order-1 sm:pl-0">
-        <div className="grid grid-cols-3">
+        <div className="flex flex-row gap-4">
           {" "}
           {/* Hacky solution */}
           <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
@@ -152,10 +153,16 @@ function HudlCarouselPage() {
         <div className=" text-sm font-medium sm:w-full lg:text-[18px] ">
           Designing a mobile experience for Hudl Ticketing on Hudl Fan app
         </div>
-        <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
-          <div className="text-sm text-black lg:font-medium">Read More</div>{" "}
-          <ChevronIcon className="h-3 w-3 text-black" />
-        </div>
+        <Link
+          className="w-fit cursor-pointer"
+          target="_blank"
+          href="https://www.figma.com/slides/MN5rVdJHC4mujeIfymyq9t/Hudl-Fan---Complimentary-Ticket?node-id=8-157&t=qzHjvAaIef8IZfTe-1"
+        >
+          <button className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
+            <div className="text-sm text-black lg:font-medium">Read More</div>
+            <ChevronIcon className="h-3 w-3 text-black" />
+          </button>
+        </Link>
       </article>
       <Image
         src={HudlUI}
@@ -171,8 +178,8 @@ function PlannerCarouselPage() {
     <div
       className={`flex w-full min-w-0 max-w-[1100px] flex-shrink-0 flex-col bg-cover pb-10 pt-4 sm:flex-row sm:items-center sm:justify-between sm:pb-0 sm:pl-8 sm:pt-0 ${`bg-[url("/planner_bg.png")]`}`}
     >
-      <article className="order-2 flex w-fit max-w-[200px] flex-col gap-2 py-4 pl-6 text-white sm:order-1 sm:gap-4">
-        <div className="grid grid-cols-2">
+      <article className="order-2 flex w-fit max-w-[400px] flex-col gap-2 py-4 text-white sm:order-1 sm:gap-4">
+        <div className="flex flex-row gap-4">
           {" "}
           {/* Hacky solution */}
           <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
@@ -186,17 +193,20 @@ function PlannerCarouselPage() {
           Nebula Planner
         </div>
         <div className="text-sm font-medium lg:text-[18px] ">
-          Designing a mobile experience for Hudl Ticketing on Hudl Fan app
+          Designing a website tool to aid UT Dallas students in planning their
+          four-year degree
         </div>
-        <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
-          <div className="text-sm text-black lg:font-medium">Read More</div>{" "}
-          <ChevronIcon className="h-3 w-3 text-black" />
-        </div>
+        <Link className="w-fit cursor-pointer" href="/planner">
+          <button className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
+            <div className="text-sm text-black lg:font-medium">Read More</div>{" "}
+            <ChevronIcon className="h-3 w-3 text-black" />
+          </button>
+        </Link>
       </article>
       <Image
         src={PlannerUI}
         alt=""
-        className="order-1 w-[80%] self-center sm:order-2 sm:max-w-[685px]"
+        className="order-1 w-[80%] self-center rounded-l-lg sm:order-2 sm:max-w-[560px]"
       />
     </div>
   );
