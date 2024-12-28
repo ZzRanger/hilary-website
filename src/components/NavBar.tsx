@@ -5,7 +5,7 @@ import Link from "next/link";
 import MenuOverlay from "@/components/home/MobileOverlay";
 import { useMediaQuery } from "usehooks-ts";
 
-const links: {
+export const links: {
   href?: string;
   children: ReactNode;
   title: string;
@@ -148,7 +148,7 @@ function BigNavbar() {
       ref={ref}
       className=" h-[75px] w-[1156px] rounded-[100px] bg-[#101828]/10"
     >
-      <div className="border-box relative z-50 flex h-full w-full items-center justify-between rounded-[100px] bg-white/60 px-12 font-sans shadow-xl backdrop-blur-xl">
+      <div className="border-box relative z-30 flex h-full w-full items-center justify-between rounded-[100px] bg-white/60 px-12 font-sans shadow-xl backdrop-blur-xl">
         <Link href="/">
           <h1 className="text-3xl font-black tracking-tight">Hilary Nguyen.</h1>
         </Link>
@@ -184,16 +184,16 @@ function SmallNavbar({
   setNavbarOpen: (open: boolean) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  if (navbarOpen) {
-    return <></>;
-  }
+  // if (navbarOpen) {
+  //   return <></>;
+  // }
 
   return (
     <div
       ref={ref}
       className=" h-[60px]  w-[calc(100%-60px)] rounded-[100px] bg-[#101828]/10"
     >
-      <div className="border-box relative z-50 flex h-full w-full items-center justify-between rounded-[100px] bg-white/60 px-12 font-sans shadow-xl backdrop-blur-xl">
+      <div className="border-box relative z-30 flex h-full w-full items-center justify-between rounded-[100px] bg-white/60 px-12 font-sans shadow-xl backdrop-blur-xl">
         <Link href="/">
           <h1 className="text-3xl font-black tracking-tight">HN.</h1>
         </Link>

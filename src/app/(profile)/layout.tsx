@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-grid transition">
+    <div className="bg-grid bg-white text-black transition">
       <div className="bg-blobs flex flex-col items-center">
         <div className="mt-20"></div>
         <NavBar />

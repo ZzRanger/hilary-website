@@ -3,7 +3,6 @@ import HomeCarousel from "@/components/home/HomeCarousel";
 import BentoBoxView from "@/components/home/BentoBoxView";
 import MyStacks from "@/components/home/MyStacks";
 import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
-import MenuOverlay from "@/components/home/MobileOverlay";
 
 export default function Home() {
   const HomeComponents = [AboutMe, HomeCarousel, BentoBoxView, MyStacks];
