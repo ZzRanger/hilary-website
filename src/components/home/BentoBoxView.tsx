@@ -172,6 +172,11 @@ function Timeline() {
   const timelineData = [
     {
       active: true,
+      title: "Center for BrainHealth",
+      description: "UX Designer • September 2024 - Current",
+    },
+    {
+      active: false,
       title: "Hudl",
       description: "Product Designer Intern • May 2024 - August 2024",
     },
@@ -333,7 +338,7 @@ function Timeline() {
             Experience
           </div>
         </article>
-        <div className="flex flex-col items-start rounded-2xl bg-[#F5F5F5] p-4">
+        <div className="flex h-[324px] flex-col items-start overflow-y-scroll rounded-2xl bg-[#F5F5F5] p-4">
           {timelineData.map((data) => (
             <TimelineComponent
               key={data.title}
