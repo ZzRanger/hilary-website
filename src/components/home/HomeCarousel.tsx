@@ -30,7 +30,7 @@ export default function Carousel() {
       : "January 2023 - May 2023";
 
   return (
-    <section className="flex flex-col">
+    <section className="flex w-full flex-col">
       <ProjectTopbar projectDate={projectDate} />
       <div className="relative max-w-[1100px] overflow-hidden">
         <CarouselDisplay currentImageIndex={currentImageIndex} />
@@ -135,7 +135,7 @@ function HudlCarouselPage() {
       className={`flex w-full max-w-[1100px] flex-shrink-0 flex-col gap-2 bg-[url("/fan_bg.png")] bg-cover pb-20 pt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:pb-0 sm:pl-8 sm:pt-0`}
     >
       <article className="order-2 flex max-w-[270px] flex-col gap-4 py-4 pl-6 text-white sm:order-1 sm:max-w-[375px] sm:pl-0">
-        <div className="flex flex-row gap-4">
+        <div className="flex w-0 flex-row gap-4">
           {" "}
           {/* Hacky solution */}
           <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
@@ -179,7 +179,7 @@ function PlannerCarouselPage() {
       className={`flex w-full min-w-0 max-w-[1100px] flex-shrink-0 flex-col bg-cover pb-10 pt-4 sm:flex-row sm:items-center sm:justify-between sm:pb-0 sm:pl-8 sm:pt-0 ${`bg-[url("/planner_bg.png")]`}`}
     >
       <article className="order-2 flex w-fit max-w-[250px] flex-col gap-2 py-4 pl-6 text-white sm:order-1 sm:max-w-[400px] sm:gap-4 sm:pl-0">
-        <div className="flex flex-row gap-4">
+        <div className="flex w-0 flex-row gap-4">
           {" "}
           {/* Hacky solution */}
           <div className="w-fit rounded-[100px] bg-[#BDBDBD]/50 px-4 py-2 text-center text-xs font-medium text-white lg:text-[18px]">
