@@ -189,10 +189,7 @@ function SmallNavbar({
   // }
 
   return (
-    <div
-      ref={ref}
-      className=" h-[60px]  w-[calc(100%-60px)] rounded-[100px] bg-[#101828]/10"
-    >
+    <div ref={ref} className=" h-[60px] w-full rounded-[100px] bg-[#101828]/10">
       <div className="border-box relative z-30 flex h-full w-full items-center justify-between rounded-[100px] bg-white/60 px-12 font-sans shadow-xl backdrop-blur-xl">
         <Link href="/">
           <h1 className="text-3xl font-black tracking-tight">HN.</h1>

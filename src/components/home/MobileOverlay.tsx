@@ -21,7 +21,7 @@ export const links: {
   },
 ];
 
-// Trigger build
+// TODO: Line up mobile overlay with navbar
 const MenuOverlay = ({
   navbarOpen,
   setNavbarOpen,
@@ -30,12 +30,12 @@ const MenuOverlay = ({
   setNavbarOpen: (open: boolean) => void;
 }) => {
   return (
-    <nav
+    <section
       className={`fixed left-0 top-0 z-50 flex h-screen w-full transform bg-white/90 bg-opacity-100 p-10 transition-all delay-100 duration-300 ${
         navbarOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
     >
-      <section className="flex w-full flex-col items-center px-10 pt-[52px] text-black">
+      <section className="flex w-full flex-col items-center px-10  text-black">
         <article className="flex w-full flex-row justify-between ">
           <h1 className="text-3xl font-black tracking-tight">HN.</h1>
           <button onClick={() => setNavbarOpen(false)}>
@@ -90,7 +90,7 @@ const MenuOverlay = ({
           </div>
         </article>
       </section>
-    </nav>
+    </section>
   );
 };
 
