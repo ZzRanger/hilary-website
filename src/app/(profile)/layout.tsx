@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <BackgroundGrid>
-      <div className="flex flex-col items-center gap-10 px-4 py-10">
+      <div className="flex flex-col items-center gap-10 px-4 py-10 text-black">
         <NavBar />
         {children}
       </div>
