@@ -13,9 +13,9 @@ const ClipboardIcon: FC<
     <path
       d="M10 5.9231V15.9231M15 10.9231L5 10.9231"
       stroke="white"
-      stroke-width="1.67"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.67"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

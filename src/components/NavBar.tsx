@@ -115,10 +115,10 @@ function ProjectDropdown() {
       {isOpen && (
         <div className="absolute right-0 top-[74px] z-[-10] w-40 border-gray-300 bg-white shadow-md">
           <ul className="py-2">
-            <li className="cursor-pointer px-4 py-2 hover:bg-gray-100">
+            <li key={0} className="cursor-pointer px-4 py-2 hover:bg-gray-100">
               <a href="/planner">Nebula Planner</a>
             </li>
-            <li className="cursor-pointer px-4 py-2 hover:bg-gray-100">
+            <li key={1} className="cursor-pointer px-4 py-2 hover:bg-gray-100">
               <a
                 target="_blank"
                 href="https://developforgood.notion.site/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc"
@@ -126,7 +126,7 @@ function ProjectDropdown() {
                 Somasawa
               </a>
             </li>
-            <li className="cursor-pointer px-4 py-2 hover:bg-gray-100">
+            <li key={2} className="cursor-pointer px-4 py-2 hover:bg-gray-100">
               <a
                 target="_blank"
                 href="https://www.figma.com/proto/MhKKJjTLqhMDuRgVScK6KL/Presentation-Slides?node-id=303-170&starting-point-node-id=303%3A170&t=CQbf6jGxESYLbwrj-1"
@@ -154,7 +154,7 @@ function BigNavbar() {
         </Link>
 
         <div className="flex items-center justify-center gap-5 p-0 text-lg">
-          {links.map(({ href, children, newTab }) => {
+          {links.map(({ href, children, newTab }, i) => {
             // For edge cases, default to just rendering the children
             if (!href) {
               return children;
@@ -164,7 +164,7 @@ function BigNavbar() {
               <Link
                 target={newTab ? "_blank" : ""}
                 href={href}
-                key={`-nav-${href}`}
+                key={`-nav-${i}}`}
               >
                 {children}
               </Link>
@@ -199,22 +199,7 @@ function SmallNavbar({
         </Link>
 
         <div className="flex items-center justify-center gap-5 p-0 text-lg">
-          {links.slice(0, 1).map(({ href, children, newTab }) => {
-            // For edge cases, default to just rendering the children
-            if (!href) {
-              return children;
-            }
-
-            return (
-              <Link
-                target={newTab ? "_blank" : ""}
-                href={href}
-                key={`-nav-${href}`}
-              >
-                {children}
-              </Link>
-            );
-          })}
+          <ProjectDropdown />
           <button onClick={() => setNavbarOpen(true)}>
             <HambugerIcon />
           </button>
@@ -234,20 +219,20 @@ function HambugerIcon() {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M3 5C3 4.44772 3.44772 4 4 4H16C16.5523 4 17 4.44772 17 5C17 5.55228 16.5523 6 16 6H4C3.44772 6 3 5.55228 3 5Z"
         fill="#171717"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M3 10C3 9.44772 3.44772 9 4 9H16C16.5523 9 17 9.44772 17 10C17 10.5523 16.5523 11 16 11H4C3.44772 11 3 10.5523 3 10Z"
         fill="#171717"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M9 15C9 14.4477 9.44772 14 10 14H16C16.5523 14 17 14.4477 17 15C17 15.5523 16.5523 16 16 16H10C9.44772 16 9 15.5523 9 15Z"
         fill="#171717"
       />
