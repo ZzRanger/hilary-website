@@ -5,10 +5,8 @@ import Decension from "@public/zine.png";
 import { PillLink } from "@/components/PillLink";
 import Planner from "@public/planner.png";
 import Lezhin from "@public/lezhin.png";
-import TaipeiMetro from "@public/metro-app.png";
 import Somasawa from "@public/somasawa.png";
 
-import SystemDlc from "../../public/SYSTE.png";
 import Nebula from "../../public/NEBULA LAB.png";
 
 const projects: ReactNode[][] = [
