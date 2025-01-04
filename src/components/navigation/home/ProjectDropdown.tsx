@@ -8,7 +8,7 @@ export default function ProjectDropdown() {
   };
 
   return (
-    <div className="relative flex h-[75px] items-center justify-center px-10">
+    <div className="px:4 relative flex h-[75px] items-center justify-center sm:px-10">
       <button
         className="flex items-center justify-center gap-1"
         onClick={toggleDropdown}
