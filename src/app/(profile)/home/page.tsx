@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="mx-8 flex max-w-[1156px] flex-col items-center gap-8 lg:mx-12">
+      <div className="flex max-w-[1156px] flex-col items-center gap-8 lg:mx-12">
         {HomeComponents.map((Component, index) => {
           if (index === 2) {
             // Render BentoBoxView without LayoutWrapper
