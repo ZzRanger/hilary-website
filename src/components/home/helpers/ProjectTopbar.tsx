@@ -4,7 +4,7 @@ export default function ProjectTopbar({
   projectDate: string;
 }) {
   return (
-    <article className="flex h-7 flex-row items-center justify-between">
+    <article className="mb-4 flex flex-row items-center justify-between">
       <div className="flex flex-row items-center gap-1">
         <ProjectIcon />
         <div className="text-sm font-medium sm:text-base">Project</div>
@@ -42,3 +42,11 @@ const ProjectIcon = () => {
     </svg>
   );
 };
+
+export function SectionLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <article className="mb-4 flex flex-row items-center justify-between">
+      {children}
+    </article>
+  );
+}

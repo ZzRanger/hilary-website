@@ -10,7 +10,9 @@ import Image from "next/image";
 
 import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
 import Link from "next/link";
-import ProjectTopbar from "@/components/home/helpers/ProjectTopbar";
+import ProjectTopbar, {
+  SectionLayout,
+} from "@/components/home/helpers/ProjectTopbar";
 
 export default function BentoBoxView() {
   return (
@@ -113,12 +115,12 @@ function CoolProjects() {
   return (
     <LayoutWrapper>
       <section className="flex flex-col">
-        <article className="flex h-8 flex-row items-center justify-between">
+        <SectionLayout>
           <div className="flex flex-row items-center gap-1">
             <SparkleIcon />
             <div>Other Cool Projects</div>
           </div>
-        </article>
+        </SectionLayout>
         <div className="grid grid-cols-1 gap-4 text-white lg:grid-cols-2">
           <Link href="/nebula-labs" className="cursor-pointer">
             <article className="box-border flex h-full flex-col justify-center rounded-2xl bg-[#DBE2FF] bg-gradient-to-b from-white/0 to-black/20 p-4">
@@ -303,7 +305,7 @@ function Timeline() {
   return (
     <LayoutWrapper>
       <section className="flex flex-col">
-        <article className="flex h-8 flex-row items-center justify-between">
+        <SectionLayout>
           <div className="flex flex-row items-center gap-1">
             <svg
               width="20"
@@ -325,7 +327,7 @@ function Timeline() {
             </svg>
             Experience
           </div>
-        </article>
+        </SectionLayout>
         <div className="scrollbar-hidden flex h-[324px] flex-col items-start overflow-y-scroll rounded-2xl bg-[#F5F5F5] p-4">
           {timelineData.map((data) => (
             <TimelineComponent

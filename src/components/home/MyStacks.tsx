@@ -7,6 +7,7 @@ import NotionIcon from "@public/home/NotionIcon.png";
 import MiroIcon from "@public/home/MiroIcon.png";
 import FramerIcon from "@public/home/FramerIcon.png";
 import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
+import { SectionLayout } from "@/components/home/helpers/ProjectTopbar";
 
 export default function MyStacksLayout() {
   return (
@@ -47,7 +48,7 @@ const MyStacks = () => {
   ];
   return (
     <section className="flex flex-col">
-      <article className="flex h-8 flex-row items-center justify-between">
+      <SectionLayout>
         <div className="flex flex-row items-center gap-1">
           <svg
             width="10"
@@ -63,7 +64,7 @@ const MyStacks = () => {
           </svg>
           My Stacks
         </div>
-      </article>
+      </SectionLayout>
       <div className="grid grid-cols-1 gap-4 rounded-2xl bg-[#F5F5F5] p-4 md:grid-cols-2">
         {toolInfo.map((tool) => (
           <ToolArticle key={tool.textTitle} {...tool} />
