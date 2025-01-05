@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <BlobGridBackground>
       <div title="Flex container" className="flex items-center justify-center">
-        <div className="flex max-w-[1156px] flex-col items-center gap-10 self-center px-4 py-10">
+        <div className="scrollbar-hidden flex max-w-[1156px] flex-col items-center gap-10 self-center px-4 py-10">
           <NavBar />
           {children}
         </div>
