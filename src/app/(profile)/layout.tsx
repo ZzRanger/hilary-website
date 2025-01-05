@@ -25,16 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <BackgroundGrid>
-      <div className="flex flex-col items-center gap-10 px-4 py-10 text-black">
-        <NavBar />
-        {children}
+    <BlobGridBackground>
+      <div title="Flex container" className="flex items-center justify-center">
+        <div className="flex max-w-[1156px] flex-col items-center gap-10 self-center px-4 py-10">
+          <NavBar />
+          {children}
+        </div>
       </div>
-    </BackgroundGrid>
+    </BlobGridBackground>
   );
 }
 
-function BackgroundGrid({ children }: { children: React.ReactNode }) {
+function BlobGridBackground({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-grid">
       <div className="bg-blobs">{children}</div>

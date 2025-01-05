@@ -1,14 +1,23 @@
+import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
 import DownloadIcon from "@/components/svg/DownloadIcon";
 import PlusIcon from "@/components/svg/PlusIcon";
 import profilePic from "@public/hn.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutMe() {
+export default function AboutMeLayout() {
+  return (
+    <LayoutWrapper>
+      <AboutMe />
+    </LayoutWrapper>
+  );
+}
+
+function AboutMe() {
   return (
     <section className="flex flex-col gap-4 lg:gap-6">
       <HilaryHeader />
-      <article className="text-base lg:text-[24px]">
+      <article className="text-base leading-6 lg:text-[24px] lg:leading-9">
         I&apos;m a full-stack designer that loves cross-functional work,
         data-backed design, and user research. I like to craft cool products
         that can make a difference in someone&apos;s life.
@@ -60,13 +69,9 @@ const AboutButton = ({
   route: string;
   children: JSX.Element[];
 }) => {
-  let target = "_blank";
-  if (route.startsWith("https://")) {
-    target = "_self";
-  }
   return (
-    <Link href={route} target={target}>
-      <button className="flex cursor-pointer flex-row items-center gap-0.5 rounded-[8px] border border-[#CCCCCC] bg-[#F0AECE] px-4 py-2 text-white hover:-translate-y-1 hover:shadow-md lg:px-5 lg:py-3">
+    <Link href={route} target="_blank">
+      <button className="flex cursor-pointer flex-row items-center gap-0.5 rounded-[8px] border-[0.5px] border-[#CCCCCC] bg-[#F0AECE] px-4 py-2 text-white hover:-translate-y-1 hover:shadow-md lg:px-5 lg:py-3">
         {children}
       </button>
     </Link>

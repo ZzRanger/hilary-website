@@ -6,6 +6,15 @@ import AdobeIcon from "@public/home/AdobeIcon.png";
 import NotionIcon from "@public/home/NotionIcon.png";
 import MiroIcon from "@public/home/MiroIcon.png";
 import FramerIcon from "@public/home/FramerIcon.png";
+import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
+
+export default function MyStacksLayout() {
+  return (
+    <LayoutWrapper>
+      <MyStacks />
+    </LayoutWrapper>
+  );
+}
 
 const MyStacks = () => {
   const toolInfo = [
@@ -83,5 +92,3 @@ const ToolArticle = ({
     </article>
   );
 };
-
-export default MyStacks;

@@ -8,14 +8,14 @@ export default function BigNavbar({ className }: { className?: string }) {
   return (
     <div
       ref={ref}
-      className={`${className} h-[75px] w-[1156px] rounded-[100px] bg-[#101828]/10 lg:block`}
+      className={`${className} h-[75px] w-full rounded-[100px] bg-[#101828]/10 lg:block`}
     >
       <div className="border-box relative z-30 flex h-full w-full items-center justify-between rounded-[100px] bg-white/60 px-12 font-sans shadow-xl backdrop-blur-xl">
         <Link href="/">
           <h1 className="text-3xl font-black tracking-tight">Hilary Nguyen.</h1>
         </Link>
 
-        <div className="flex items-center justify-center gap-5 p-0 text-lg">
+        <div className="flex items-center justify-center gap-8 p-0 text-lg">
           {links.map(({ href, children, newTab }, i) => {
             // For edge cases, default to just rendering the children
             if (!href) {
@@ -27,6 +27,7 @@ export default function BigNavbar({ className }: { className?: string }) {
                 target={newTab ? "_blank" : ""}
                 href={href}
                 key={`-nav-${i}}`}
+                className="font-semibold"
               >
                 {children}
               </Link>

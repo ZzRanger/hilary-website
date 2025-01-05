@@ -8,9 +8,9 @@ export default function ProjectDropdown() {
   };
 
   return (
-    <div className="px:4 relative flex h-[75px] items-center justify-center sm:px-10">
+    <div className="relative flex h-[75px] w-[100px] items-center justify-center">
       <button
-        className="flex items-center justify-center gap-1"
+        className="flex items-center justify-center gap-3 font-semibold"
         onClick={toggleDropdown}
       >
         <span>Projects</span>
@@ -30,12 +30,12 @@ export default function ProjectDropdown() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-[74px] z-[-10] w-40 border-gray-300 bg-white shadow-md">
-          <ul className="py-2">
-            <li key={0} className="cursor-pointer px-4 py-2 hover:bg-gray-100">
+        <div className="absolute right-[-18px] top-[74px] z-[-10] w-[136px] border-gray-300 bg-white text-sm font-normal shadow-md">
+          <ul className="flex flex-col gap-4 px-3 py-2">
+            <li key={0} className="cursor-pointer hover:bg-gray-100">
               <a href="/planner">Nebula Planner</a>
             </li>
-            <li key={1} className="cursor-pointer px-4 py-2 hover:bg-gray-100">
+            <li key={1} className="cursor-pointer hover:bg-gray-100">
               <a
                 target="_blank"
                 href="https://developforgood.notion.site/Case-Study-Rafiki-Africa-666b829b2a724943903d0269dca36fcc"
@@ -43,7 +43,7 @@ export default function ProjectDropdown() {
                 Somasawa
               </a>
             </li>
-            <li key={2} className="cursor-pointer px-4 py-2 hover:bg-gray-100">
+            <li key={2} className="cursor-pointer hover:bg-gray-100">
               <a
                 target="_blank"
                 href="https://www.figma.com/proto/MhKKJjTLqhMDuRgVScK6KL/Presentation-Slides?node-id=303-170&starting-point-node-id=303%3A170&t=CQbf6jGxESYLbwrj-1"

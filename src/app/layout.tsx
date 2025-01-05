@@ -39,7 +39,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sans.variable} ${ethereal.variable} ${inter.className}`}
+      className={`${sans.variable} ${ethereal.variable} ${inter.className} text-black`}
     >
       <body>
         <CSPostHogProvider>
