@@ -8,9 +8,9 @@ import ZineLogo from "@public/home/ZineLogo.png";
 import ChevronIcon from "@/components/svg/ChevronIcon";
 import Image from "next/image";
 
-import { ProjectIcon } from "@/components/home/HomeCarousel";
 import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
 import Link from "next/link";
+import ProjectTopbar from "@/components/home/helpers/ProjectTopbar";
 
 export default function BentoBoxView() {
   return (
@@ -31,13 +31,7 @@ function Somasawa() {
   return (
     <LayoutWrapper>
       <div className="flex flex-col">
-        <article className="flex h-8 flex-row items-center justify-between">
-          <div className="flex flex-row items-center gap-1">
-            <ProjectIcon />
-            <div>Project</div>
-          </div>
-          <div>May 2023 - Jun 2023</div>
-        </article>
+        <ProjectTopbar projectDate="May 2023 - Jun 2023" />
         <div className="flex flex-col items-start gap-3 rounded-2xl bg-[#0E1E6D] p-8 lg:gap-4">
           <div className="flex w-full flex-row justify-center gap-6">
             <Image src={Somasawa1} className="w-[50%]" alt="" />
@@ -76,13 +70,7 @@ function Knowverse() {
   return (
     <LayoutWrapper>
       <div className=" flex flex-col">
-        <article className="flex h-8 flex-row items-center justify-between">
-          <div className="flex flex-row items-center gap-1">
-            <ProjectIcon />
-            <div>Project</div>
-          </div>
-          <div>Jan 2023 - March 2023</div>
-        </article>
+        <ProjectTopbar projectDate="Jan 2023 - Mar 2023" />
         <div
           className={`flex flex-col items-start gap-3 rounded-2xl bg-[url('/home/knowverse.png')] bg-cover p-8 lg:gap-4`}
         >
@@ -90,7 +78,7 @@ function Knowverse() {
             <Image src={Knowverse1} className="w-[50%]" alt="" />
             <Image src={Knowverse2} className="w-[50%]" alt="" />
           </div>
-          <div className="flex w-full flex-row justify-start gap-4">
+          <div className="flex w-full flex-row justify-start gap-1 sm:gap-4">
             <PillTag className="bg-[#BDBDBD]/50 text-white">Mobile</PillTag>
             <PillTag className="bg-[#BDBDBD]/50 text-white">
               Competition Winner

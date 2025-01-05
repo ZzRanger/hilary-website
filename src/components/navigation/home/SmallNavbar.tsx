@@ -30,7 +30,7 @@ function SmallNavbar({
       ref={ref}
       className="h-[60px] w-full rounded-[100px] bg-[#101828]/10 lg:hidden"
     >
-      <div className="border-box relative z-30 flex h-full w-full items-center justify-between rounded-[100px] bg-white/60 px-12 font-sans shadow-xl backdrop-blur-xl">
+      <div className="border-box relative z-30 flex h-full w-full items-center justify-between rounded-[100px] bg-white/60 px-6 font-sans shadow-xl backdrop-blur-xl">
         <Link href="/">
           <h1 className="text-3xl font-black tracking-tight">HN.</h1>
         </Link>
