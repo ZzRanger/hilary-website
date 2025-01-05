@@ -326,7 +326,7 @@ function Timeline() {
             Experience
           </div>
         </article>
-        <div className="flex h-[324px] flex-col items-start overflow-y-scroll rounded-2xl bg-[#F5F5F5] p-4">
+        <div className="scrollbar-hidden flex h-[324px] flex-col items-start overflow-y-scroll rounded-2xl bg-[#F5F5F5] p-4">
           {timelineData.map((data) => (
             <TimelineComponent
               key={data.title}

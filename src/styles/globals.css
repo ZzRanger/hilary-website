@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+}
+
 .bg-grid {
   background-size: 7.5%;
   background-image: url("../../public/grid-light.svg");
@@ -12,3 +24,4 @@
   background-image: url("../../public/blobs.png");
   background-size: cover;
 }
+
