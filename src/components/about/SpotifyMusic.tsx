@@ -76,7 +76,7 @@ const SpotifyMusic = () => {
       />
       <div className="flex flex-col text-center text-xl">
         <div
-          className={`font-bold duration-500 dark:text-white ${
+          className={`font-bold duration-500 ${
             mouseOver || playing ? "text-white" : "text-black"
           }`}
         >
@@ -94,12 +94,12 @@ const SpotifyMusic = () => {
         } flex h-12 w-60 flex-row items-center justify-center gap-x-10 rounded-[200px] border-2 duration-500`}
       >
         <SkipIcon
-          className="cursor-pointer dark:text-white"
+          className="cursor-pointer"
           onClick={() => setTrackIndex((trackIndex - 1 + 3) % 3)}
         />
         {playing ? (
           <PauseIcon
-            className="cursor-pointer dark:text-white"
+            className="cursor-pointer"
             onClick={() => {
               audioRef.current?.pause();
               setPlaying(false);
@@ -107,7 +107,7 @@ const SpotifyMusic = () => {
           />
         ) : (
           <PlayIcon
-            className="cursor-pointer dark:text-white"
+            className="cursor-pointer"
             onClick={() => {
               audioRef.current?.play();
               setPlaying(true);
@@ -116,7 +116,7 @@ const SpotifyMusic = () => {
         )}
         <SkipIcon
           onClick={() => setTrackIndex((trackIndex + 1) % 3)}
-          className="rotate-180 cursor-pointer dark:text-white"
+          className="rotate-180 cursor-pointer"
         />
       </div>
 

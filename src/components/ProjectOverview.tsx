@@ -32,7 +32,7 @@ export const ProjectOverview = ({
         <p>{period}</p>
       </div>
       <div
-        className={`flex flex-col overflow-clip rounded-lg border bg-white/60 shadow-2xl dark:bg-black/60 lg:bg-inherit lg:bg-glass-1 lg:backdrop-blur-md ${cardClasses} dark:to-black/15 group dark:border-gray-500 dark:bg-gradient-to-tr dark:from-black/25`}
+        className={`flex flex-col overflow-clip rounded-lg border bg-white/60 shadow-2xl lg:bg-inherit lg:bg-glass-1 lg:backdrop-blur-md ${cardClasses} group`}
       >
         <div className="flex items-center justify-between px-10 py-8">
           <div className="flex gap-4">
@@ -62,7 +62,7 @@ export const ProjectOverview = ({
           </svg>
         </div>
         <div className="flex items-center justify-between">
-          <div className="flex flex-col gap-8 p-10 text-black dark:text-white">
+          <div className="flex flex-col gap-8 p-10 text-black">
             <h3 className="text-4xl font-bold">{title}</h3>
             <p>{subtitle}</p>
             <PillLink

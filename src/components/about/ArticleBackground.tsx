@@ -6,9 +6,7 @@ const ArticleBackground = ({
   children: React.ReactNode;
 }) => (
   <article
-    className={`rounded-3xl border bg-white/60 shadow-2xl dark:border-gray-500 dark:bg-black/60 ${
-      className || ""
-    } `}
+    className={`rounded-3xl border bg-white/60 shadow-2xl ${className || ""} `}
   >
     {children}
   </article>

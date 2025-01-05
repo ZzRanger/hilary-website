@@ -12,7 +12,7 @@ import Carousel from "@/components/about/Carousel";
 export default function About() {
   return (
     <>
-      <main className="grid-rows-auto grid gap-10 p-8 sm:grid-cols-1 md:grid-cols-2 lg:max-w-[1300px] lg:grid-cols-3 lg:p-24">
+      <main className="grid-rows-auto grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <div className="md:row-span-2 lg:col-span-2 lg:row-span-2">
           <AboutMe />
         </div>

@@ -102,7 +102,7 @@ const Caption = ({
   caption: string;
   location: string;
 }) => (
-  <div className="absolute bottom-[15%] left-[calc(50%-140px)] z-50 flex h-[178px] w-[280px] flex-col items-center justify-evenly rounded-[20px] bg-[#CCC9C8]/90 text-black shadow-2xl dark:text-black sm:bottom-[15%] sm:left-[calc(50%-140px)] lg:left-[104px] lg:top-[calc(50%-89px)] lg:bg-inherit lg:bg-glass-2 lg:backdrop-blur-xl">
+  <div className="absolute bottom-[15%] left-[calc(50%-140px)] z-50 flex h-[178px] w-[280px] flex-col items-center justify-evenly rounded-[20px] bg-[#CCC9C8]/90 text-black shadow-2xl sm:bottom-[15%] sm:left-[calc(50%-140px)] lg:left-[104px] lg:top-[calc(50%-89px)] lg:bg-inherit lg:bg-glass-2 lg:backdrop-blur-xl">
     <div className="text-center">Info</div>
     <hr className="h-[1px] w-full border-0 bg-[#828282]" />
     <div className="w-60 py-6 text-center">{caption}</div>

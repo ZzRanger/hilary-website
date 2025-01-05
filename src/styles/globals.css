@@ -2,8 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+}
+
 .bg-grid {
   background-size: 7.5%;
+  background-image: url("../../public/grid-light.svg");
+  background-color: white;
 }
 
 .bg-blobs {
@@ -11,10 +25,3 @@
   background-size: cover;
 }
 
-.light .bg-grid {
-  background-image: url("../../public/grid-light.svg");
-}
-
-.dark .bg-grid {
-  background-image: url("../../public/grid-dark.svg");
-}
