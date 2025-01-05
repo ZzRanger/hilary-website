@@ -31,13 +31,19 @@ const MenuOverlay = ({
 }) => {
   return (
     <section
-      className={`fixed left-0 top-0 z-50 flex h-screen w-full transform bg-white/90 bg-opacity-100 p-10 transition-all delay-100 duration-300 ${
+      className={`shadow-3xl fixed left-0 top-0 z-50 flex h-screen w-full transform  bg-white/60  p-10 backdrop-blur-md transition-all delay-100 duration-300 ${
         navbarOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
     >
       <section className="flex w-full flex-col items-center px-10  text-black">
         <article className="flex w-full flex-row justify-between ">
-          <h1 className="text-3xl font-black tracking-tight">HN.</h1>
+          <Link
+            className="cursor-pointer"
+            href="/home"
+            onClick={() => setNavbarOpen(false)}
+          >
+            <h1 className="text-3xl font-semibold tracking-tight">HN.</h1>
+          </Link>
           <button onClick={() => setNavbarOpen(false)}>
             <CloseIcon />
           </button>
@@ -48,8 +54,11 @@ const MenuOverlay = ({
               <Link
                 href={href ?? ""}
                 key={i}
-                className="text-3xl font-black"
+                className="text-3xl"
                 target={newTab ? "_blank" : ""}
+                onClick={() => {
+                  if (!newTab) setNavbarOpen(false);
+                }}
               >
                 {title}
               </Link>
