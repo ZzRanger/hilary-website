@@ -50,7 +50,7 @@ const HilaryHeader = () => {
 const AboutButtonSection = () => {
   return (
     <article className="flex flex-row gap-2 md:gap-4 lg:gap-6">
-      <AboutButton route="/about">
+      <AboutButton route="https://www.linkedin.com/in/hilary-nguyen/">
         <PlusIcon className="h-[16px] w-[16px]" />
         <div className="text-[11px] lg:text-base">Connect with me</div>
       </AboutButton>
