@@ -4,7 +4,9 @@ import { ThemeProvider } from "next-themes";
 import { usePathname } from "next/navigation";
 
 const getForcedTheme = (pathname: string) => {
-  if (["/planner", "/lezhin"].includes(pathname)) {
+  if (
+    ["/planner", "/lezhin", "/nebula-labs", "/descension"].includes(pathname)
+  ) {
     return "light";
   }
   return undefined;
