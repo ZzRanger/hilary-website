@@ -16,17 +16,17 @@ import ProjectTopbar, {
 
 export default function BentoBoxView() {
   return (
-    <section className="grid grid-cols-1 grid-rows-4 gap-4 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-2">
-      <div className="h-full">
+    <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
+      <div className="[&>*]:h-full">
         <Somasawa />
       </div>
-      <div className="h-full">
+      <div className="[&>*]:h-full">
         <CoolProjects />
       </div>
-      <div className="h-full">
+      <div className="[&>*]:h-full">
         <Timeline />
       </div>
-      <div className="h-full">
+      <div className="[&>*]:h-full">
         <Knowverse />
       </div>
     </section>
