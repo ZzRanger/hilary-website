@@ -16,13 +16,17 @@ import ProjectTopbar, {
 
 export default function BentoBoxView() {
   return (
-    <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
-      <div className="flex flex-col gap-4">
+    <section className="grid grid-cols-1 grid-rows-4 gap-4 md:grid-cols-2 md:grid-rows-2 xl:grid-cols-2">
+      <div className="h-full">
         <Somasawa />
+      </div>
+      <div className="h-full">
+        <CoolProjects />
+      </div>
+      <div className="h-full">
         <Timeline />
       </div>
-      <div className="flex flex-col gap-4 md:col-span-1 xl:col-span-1">
-        <CoolProjects />
+      <div className="h-full">
         <Knowverse />
       </div>
     </section>
@@ -110,7 +114,7 @@ function Knowverse() {
           <Link
             className="w-fit cursor-pointer"
             target="_blank"
-            href="https://www.figma.com/proto/MhKKJjTLqhMDuRgVScK6KL/Presentation-Slides?node-id=303-170&starting-point-node-id=303%3A170&t=CQbf6jGxESYLbwrj-1"
+            href="https://www.figma.com/deck/aECsGcATaEhzONWSyl4AY3/Knowverse-5-Min-Presentation-Slide?node-id=1-110&viewport=-26019%2C-206%2C0.92&t=zF2gqQDRqQDOAUMi-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
           >
             <div className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
               <div className="text-sm font-medium text-black lg:text-base">
@@ -188,11 +192,6 @@ function Timeline() {
       active: false,
       title: "Hudl",
       description: "Product Designer Intern • May 2024 - August 2024",
-    },
-    {
-      active: false,
-      title: "Develop for Good",
-      description: "UX Intern • May 2023 - August 2023",
     },
   ];
   const TimelineComponent = ({

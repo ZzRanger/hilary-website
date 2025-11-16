@@ -152,7 +152,7 @@ function HudlCarouselPage() {
         <Link
           className="w-fit cursor-pointer"
           target="_blank"
-          href="https://www.figma.com/slides/MN5rVdJHC4mujeIfymyq9t/Hudl-Fan---Complimentary-Ticket?node-id=8-157&t=qzHjvAaIef8IZfTe-1"
+          href="https://hilary-nguyen.notion.site/Hudl-Ticketing-Complimentary-Ticket-763728ade4f84ad5ad494c9ffc015b3c?source=copy_link"
         >
           <button className="flex w-fit flex-row items-center gap-2 rounded-[100px] bg-white px-4 py-2 text-center text-[18px] ">
             <div className="text-sm text-black lg:font-medium">Read More</div>
@@ -188,7 +188,7 @@ function PlannerCarouselPage() {
         <div className="text-[24px] font-medium lg:text-[40px]">
           Nebula Planner
         </div>
-        <div className="text-sm font-medium lg:text-[18px] ">
+        <div className="text-sm font-medium sm:max-w-[300px] lg:w-full lg:text-[18px]">
           Designing a website tool to aid UT Dallas students in planning their
           four-year degree
         </div>
@@ -202,7 +202,7 @@ function PlannerCarouselPage() {
       <Image
         src={PlannerUI}
         alt=""
-        className="order-1 w-[80%] self-center sm:order-2 sm:max-w-[560px]"
+        className="order-1 w-[80%] self-center rounded-lg  sm:order-2 sm:max-w-[560px]"
       />
     </div>
   );
