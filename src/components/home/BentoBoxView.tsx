@@ -1,3 +1,5 @@
+"use client";
+
 import Somasawa1 from "@public/home/Somasawa1.png";
 import Somasawa2 from "@public/home/Somasawa2.png";
 import Knowverse1 from "@public/home/Knowverse1.png";
@@ -7,6 +9,7 @@ import NebulaLogo from "@public/home/NebulaLogo.png";
 import ZineLogo from "@public/home/ZineLogo.png";
 import ChevronIcon from "@/components/svg/ChevronIcon";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 import { LayoutWrapper } from "@/components/layout/LayoutWrapper";
 import Link from "next/link";
@@ -15,19 +18,47 @@ import ProjectTopbar, {
 } from "@/components/home/helpers/ProjectTopbar";
 
 export default function BentoBoxView() {
+  const leftColRef = useRef<HTMLDivElement>(null);
+  const rightColRef = useRef<HTMLDivElement>(null);
+  const [leftPad, setLeftPad] = useState(0);
+  const [rightPad, setRightPad] = useState(0);
+
+  useEffect(() => {
+    const measure = () => {
+      const leftH = leftColRef.current?.offsetHeight ?? 0;
+      const rightH = rightColRef.current?.offsetHeight ?? 0;
+      if (leftH === 0 && rightH === 0) return;
+      if (leftH > rightH) {
+        setLeftPad(0);
+        setRightPad(leftH - rightH);
+      } else if (rightH > leftH) {
+        setRightPad(0);
+        setLeftPad(rightH - leftH);
+      } else {
+        setLeftPad(0);
+        setRightPad(0);
+      }
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    const id = setInterval(measure, 250);
+    return () => {
+      window.removeEventListener("resize", measure);
+      clearInterval(id);
+    };
+  }, []);
+
   return (
     <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
-      <div className="[&>*]:h-full">
+      <div ref={leftColRef} className="flex flex-col gap-4">
         <Somasawa />
-      </div>
-      <div className="[&>*]:h-full">
-        <CoolProjects />
-      </div>
-      <div className="[&>*]:h-full">
         <Timeline />
+        <div style={{ height: leftPad }} />
       </div>
-      <div className="[&>*]:h-full">
+      <div ref={rightColRef} className="flex flex-col gap-4">
+        <CoolProjects />
         <Knowverse />
+        <div style={{ height: rightPad }} />
       </div>
     </section>
   );
