@@ -16,7 +16,7 @@ const ThemeSwitcher = () => {
   return (
     <button
       type="button"
-      className="fixed bottom-8 right-2 z-10 mr-5 aspect-square self-end rounded-full bg-[#f5f5f5] p-3 text-black shadow-lg transition-all hover:translate-y-1 hover:shadow-md dark:bg-[#374151] dark:text-white"
+      className="fixed bottom-8 right-2 z-10 mr-5 aspect-square self-end rounded-full bg-[#f5f5f5] p-3 text-black shadow-lg transition-all hover:translate-y-1 hover:shadow-md"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (

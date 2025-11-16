@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="transition dark:bg-[#171717]">
+    <div className="transition">
       <div className="flex flex-col items-center">
         {/* <NavBar /> */}
         {children}
