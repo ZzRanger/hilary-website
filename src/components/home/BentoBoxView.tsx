@@ -16,12 +16,12 @@ import ProjectTopbar, {
 
 export default function BentoBoxView() {
   return (
-    <section className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-      <div className="flex flex-col justify-between gap-4">
+    <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
+      <div className="flex flex-col gap-4">
         <Somasawa />
         <Timeline />
       </div>
-      <div className="flex flex-col justify-between gap-4">
+      <div className="flex flex-col gap-4 md:col-span-1 xl:col-span-1">
         <CoolProjects />
         <Knowverse />
       </div>
@@ -34,12 +34,20 @@ function Somasawa() {
     <LayoutWrapper>
       <div className="flex flex-col">
         <ProjectTopbar projectDate="May 2023 - Jun 2023" />
-        <div className="flex flex-col items-start gap-3 rounded-2xl bg-[#0E1E6D] p-8 lg:gap-4">
-          <div className="flex w-full flex-row justify-center gap-6">
-            <Image src={Somasawa1} className="w-[50%]" alt="" />
-            <Image src={Somasawa2} className="w-[50%]" alt="" />
+        <div className="flex flex-col items-start gap-4 rounded-2xl bg-[#0E1E6D] p-6 sm:p-8">
+          <div className="flex w-full flex-wrap justify-center gap-4 sm:gap-6">
+            <Image
+              src={Somasawa1}
+              className="min-w-[140px] basis-[45%]"
+              alt=""
+            />
+            <Image
+              src={Somasawa2}
+              className="min-w-[140px] basis-[45%]"
+              alt=""
+            />
           </div>
-          <div className="flex w-full flex-row justify-start gap-2 md:gap-4">
+          <div className="flex flex-wrap gap-2 md:gap-3">
             <PillTag className="bg-[#BDBDBD]/50 text-white">Mobile</PillTag>
             <PillTag className="bg-[#BDBDBD]/50 text-white">B2C</PillTag>
             <PillTag className="bg-[#BDBDBD]/50 text-white">Pro-Bono</PillTag>
@@ -73,14 +81,20 @@ function Knowverse() {
     <LayoutWrapper>
       <div className=" flex flex-col">
         <ProjectTopbar projectDate="Jan 2023 - Mar 2023" />
-        <div
-          className={`flex flex-col items-start gap-3 rounded-2xl bg-[url('/home/knowverse.png')] bg-cover p-8 lg:gap-4`}
-        >
-          <div className="flex w-full flex-row justify-center gap-6">
-            <Image src={Knowverse1} className="w-[50%]" alt="" />
-            <Image src={Knowverse2} className="w-[50%]" alt="" />
+        <div className="flex flex-col items-start gap-4 rounded-2xl bg-[url('/home/knowverse.png')] bg-cover p-6 sm:p-8">
+          <div className="flex w-full flex-wrap justify-center gap-4 sm:gap-6">
+            <Image
+              src={Knowverse1}
+              className="min-w-[140px] basis-[45%]"
+              alt=""
+            />
+            <Image
+              src={Knowverse2}
+              className="min-w-[140px] basis-[45%]"
+              alt=""
+            />
           </div>
-          <div className="flex w-full flex-row justify-start gap-1 sm:gap-4">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             <PillTag className="bg-[#BDBDBD]/50 text-white">Mobile</PillTag>
             <PillTag className="bg-[#BDBDBD]/50 text-white">
               Competition Winner
@@ -121,12 +135,12 @@ function CoolProjects() {
             <div>Other Cool Projects</div>
           </div>
         </SectionLayout>
-        <div className="grid grid-cols-1 gap-4 text-white lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 text-white sm:grid-cols-2">
           <Link href="/nebula-labs" className="cursor-pointer">
             <article className="box-border flex h-full flex-col justify-center rounded-2xl bg-[#DBE2FF] bg-gradient-to-b from-white/0 to-black/20 p-4">
-              <div className="flex flex-col gap-4 md:items-start">
+              <div className="flex flex-col gap-4 sm:items-start">
                 <Image
-                  className="w-[50%] self-center md:w-full md:self-start"
+                  className="mx-auto w-1/2 sm:mx-0 sm:w-2/3"
                   src={NebulaLogo}
                   alt=""
                 />
@@ -141,7 +155,7 @@ function CoolProjects() {
             <article className="flex flex-col items-center justify-center rounded-2xl bg-black p-4">
               <div className="flex  flex-col items-start gap-4">
                 <Image
-                  className="w-[50%] self-center md:w-full md:self-start"
+                  className="mx-auto w-1/2 sm:mx-0 sm:w-2/3"
                   src={ZineLogo}
                   alt=""
                 />
@@ -162,23 +176,18 @@ function Timeline() {
   const timelineData = [
     {
       active: true,
+      title: "Capital One",
+      description: "Product Designer • August 2025 - Current",
+    },
+    {
+      active: false,
       title: "Center for BrainHealth",
-      description: "UX Designer • September 2024 - Current",
+      description: "UX Designer • September 2024 - August 2025",
     },
     {
       active: false,
       title: "Hudl",
       description: "Product Designer Intern • May 2024 - August 2024",
-    },
-    {
-      active: false,
-      title: "Dialexa",
-      description: "UX Apprentice • January 2024 - April 2024",
-    },
-    {
-      active: false,
-      title: "Nebula Labs",
-      description: "Head of Design • August 2023 - January 2024",
     },
     {
       active: false,
@@ -328,7 +337,7 @@ function Timeline() {
             Experience
           </div>
         </SectionLayout>
-        <div className="scrollbar-hidden flex h-[324px] flex-col items-start overflow-y-scroll rounded-2xl bg-[#F5F5F5] p-4">
+        <div className="scrollbar-hidden flex max-h-[60vh] flex-col items-start overflow-y-auto rounded-2xl bg-[#F5F5F5] p-4 sm:max-h-[420px]">
           {timelineData.map((data) => (
             <TimelineComponent
               key={data.title}
