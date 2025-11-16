@@ -20,24 +20,16 @@ import ProjectTopbar, {
 export default function BentoBoxView() {
   const leftColRef = useRef<HTMLDivElement>(null);
   const rightColRef = useRef<HTMLDivElement>(null);
-  const [leftPad, setLeftPad] = useState(0);
-  const [rightPad, setRightPad] = useState(0);
+  const [rightHeight, setRightHeight] = useState<number>(0);
+  const [isTwoCols, setIsTwoCols] = useState<boolean>(false);
 
   useEffect(() => {
     const measure = () => {
-      const leftH = leftColRef.current?.offsetHeight ?? 0;
+      const width = window.innerWidth;
+      const twoCols = width >= 768; // md breakpoint
+      setIsTwoCols(twoCols);
       const rightH = rightColRef.current?.offsetHeight ?? 0;
-      if (leftH === 0 && rightH === 0) return;
-      if (leftH > rightH) {
-        setLeftPad(0);
-        setRightPad(leftH - rightH);
-      } else if (rightH > leftH) {
-        setRightPad(0);
-        setLeftPad(rightH - leftH);
-      } else {
-        setLeftPad(0);
-        setRightPad(0);
-      }
+      setRightHeight(twoCols ? rightH : 0);
     };
     measure();
     window.addEventListener("resize", measure);
@@ -50,15 +42,17 @@ export default function BentoBoxView() {
 
   return (
     <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
-      <div ref={leftColRef} className="flex flex-col gap-4">
+      <div
+        ref={leftColRef}
+        className={`flex flex-col ${isTwoCols ? "justify-between" : "gap-4"}`}
+        style={isTwoCols && rightHeight ? { height: rightHeight } : undefined}
+      >
         <Somasawa />
         <Timeline />
-        <div style={{ height: leftPad }} />
       </div>
       <div ref={rightColRef} className="flex flex-col gap-4">
         <CoolProjects />
         <Knowverse />
-        <div style={{ height: rightPad }} />
       </div>
     </section>
   );
