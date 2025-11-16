@@ -28,7 +28,7 @@ export default function BentoBoxView() {
   useEffect(() => {
     const measure = () => {
       const width = window.innerWidth;
-      const twoCols = width >= 768; // md breakpoint
+      const twoCols = width >= 640; // sm breakpoint
       setIsTwoCols(twoCols);
       const leftH = leftColRef.current?.offsetHeight ?? 0;
       const rightH = rightColRef.current?.offsetHeight ?? 0;
@@ -45,14 +45,18 @@ export default function BentoBoxView() {
     };
   }, []);
 
-  const leftShouldStretch = isTwoCols && targetHeight > 0 && leftHeight < targetHeight;
-  const rightShouldStretch = isTwoCols && targetHeight > 0 && rightHeight < targetHeight;
+  const leftShouldStretch =
+    isTwoCols && targetHeight > 0 && leftHeight < targetHeight;
+  const rightShouldStretch =
+    isTwoCols && targetHeight > 0 && rightHeight < targetHeight;
 
   return (
     <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
       <div
         ref={leftColRef}
-        className={`flex flex-col ${leftShouldStretch ? "justify-between" : isTwoCols ? "gap-2" : "gap-4"}`}
+        className={`flex flex-col ${
+          leftShouldStretch ? "justify-between" : isTwoCols ? "gap-2" : "gap-4"
+        }`}
         style={leftShouldStretch ? { height: targetHeight } : undefined}
       >
         <Somasawa />
@@ -60,7 +64,9 @@ export default function BentoBoxView() {
       </div>
       <div
         ref={rightColRef}
-        className={`flex flex-col ${rightShouldStretch ? "justify-between" : isTwoCols ? "gap-2" : "gap-4"}`}
+        className={`flex flex-col ${
+          rightShouldStretch ? "justify-between" : isTwoCols ? "gap-2" : "gap-4"
+        }`}
         style={rightShouldStretch ? { height: targetHeight } : undefined}
       >
         <CoolProjects />
