@@ -186,6 +186,7 @@ const CLICKED_TEXT = [
       className="flex items-center justify-center p-2"
       key="resume"
       href="/resume.pdf"
+      target="_blank"
     >
       Resume
     </Link>,
