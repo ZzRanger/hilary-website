@@ -20,7 +20,9 @@ import ProjectTopbar, {
 export default function BentoBoxView() {
   const leftColRef = useRef<HTMLDivElement>(null);
   const rightColRef = useRef<HTMLDivElement>(null);
+  const [leftHeight, setLeftHeight] = useState<number>(0);
   const [rightHeight, setRightHeight] = useState<number>(0);
+  const [targetHeight, setTargetHeight] = useState<number>(0);
   const [isTwoCols, setIsTwoCols] = useState<boolean>(false);
 
   useEffect(() => {
@@ -28,8 +30,11 @@ export default function BentoBoxView() {
       const width = window.innerWidth;
       const twoCols = width >= 768; // md breakpoint
       setIsTwoCols(twoCols);
+      const leftH = leftColRef.current?.offsetHeight ?? 0;
       const rightH = rightColRef.current?.offsetHeight ?? 0;
+      setLeftHeight(twoCols ? leftH : 0);
       setRightHeight(twoCols ? rightH : 0);
+      setTargetHeight(twoCols ? Math.max(leftH, rightH) : 0);
     };
     measure();
     window.addEventListener("resize", measure);
@@ -40,17 +45,24 @@ export default function BentoBoxView() {
     };
   }, []);
 
+  const leftShouldStretch = isTwoCols && targetHeight > 0 && leftHeight < targetHeight;
+  const rightShouldStretch = isTwoCols && targetHeight > 0 && rightHeight < targetHeight;
+
   return (
     <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
       <div
         ref={leftColRef}
-        className={`flex flex-col ${isTwoCols ? "justify-between" : "gap-4"}`}
-        style={isTwoCols && rightHeight ? { height: rightHeight } : undefined}
+        className={`flex flex-col ${leftShouldStretch ? "justify-between" : isTwoCols ? "gap-2" : "gap-4"}`}
+        style={leftShouldStretch ? { height: targetHeight } : undefined}
       >
         <Somasawa />
         <Timeline />
       </div>
-      <div ref={rightColRef} className="flex flex-col gap-4">
+      <div
+        ref={rightColRef}
+        className={`flex flex-col ${rightShouldStretch ? "justify-between" : isTwoCols ? "gap-2" : "gap-4"}`}
+        style={rightShouldStretch ? { height: targetHeight } : undefined}
+      >
         <CoolProjects />
         <Knowverse />
       </div>
